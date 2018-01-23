@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+
+# jf
+.idea
+build
+dist
