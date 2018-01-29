@@ -1,0 +1,36 @@
+<div class="check_progress_page">
+
+    <!--通用进度条-->
+
+    <div class="progress_bar">
+        <!--当前处于哪一步则添加class值show,如果接下来还有步骤则添加class值more-->
+        <div class="step show">
+            <p class="title">已还清</p>
+            <p class="min_text">已还清<span>￥3010.00</span>，其中逾期费用<span>￥10.00</span></p>
+            <span class="time">2018-01-17 08:45</span>
+        </div>
+        <div class="step">
+            <p class="title">分期成功</p>
+            <p class="min_text">￥2935.00<span>x3月</span></p>
+            <span class="time">2018-01-17 08:45</span>
+        </div>
+        <div class="step">
+            <p class="title">分期申请提交完成</p>
+            <p class="min_text">嘉福平台消费</p>
+            <p class="min_text">金额<span>￥3000.00</span>、<span class="step_green">退款</span><span class="step_green">￥0.00</span></p>
+            <p class="min_text">服务费<span>￥60.00</span></p>
+            <span class="time">2018-01-12 08:45</span>
+        </div>
+    </div>
+
+</div>
+
+<%- include('../basic/one_greenborder_btn.ejs',{
+"hrefone":"../mine/return_record.html",
+"btntext":"还款记录"
+})%>
+
+<%- include('../basic/one_green_btn.ejs',{
+"hrefone":"main.html",
+"btntext":"还款计划"
+})%>

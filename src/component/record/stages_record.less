@@ -1,0 +1,202 @@
+.salary_record{
+  width: 100%;
+  padding: 20px 0;
+
+  .main_record{
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
+    background: #ffffff;
+    box-shadow: 0 2px 3px #e9e9e9;
+
+    a.record_lists{
+      &:active{
+        background: rgba(0, 0, 0, 0.05);
+      }
+
+      &:active:after{
+        content: "";
+        border-bottom: solid 1px #dddddd;
+      }
+
+      &:visited:after{
+        content: "";
+        border-bottom: solid 1px #dddddd;
+      }
+    }
+
+    .record_lists{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 10px;
+      position: relative;
+
+      &:after{
+        content: "";
+        position: absolute;
+        width: 92%;
+        margin: 0 auto;
+        bottom: 0;
+        left: 4%;
+        height: 1px;
+        border-bottom: solid 1px #dddddd;
+        transform: scaleY(0.7);
+      }
+
+      &:last-child:after{
+        content:"";
+        border-bottom: none;
+      }
+
+
+
+
+      >div{
+
+        &:first-child{
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          img{
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+          }
+          >span{
+            color: #4a4a4a;
+            font-size: 18px;
+          }
+          >p{
+            >span{
+              display: block;
+              color: #ababab;
+
+              &:first-child{
+                font-size: 16px;
+                color: #4a4a4a;
+              }
+            }
+          }
+        }
+        &:last-child{
+          position: relative;
+          padding-right: 25px;
+
+          >p{
+            font-size: 18px;
+          }
+
+          &:after{
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 10px;
+            width: 18px;
+            height: 18px;
+            background: url("../images/icon_more.png")center no-repeat;
+            background-size: 100%;
+          }
+
+          span{
+            display: block;
+            text-align: right;
+
+            &:last-child{
+              color: #ababab;
+            }
+          }
+        }
+
+      }
+    }
+
+    .approve.record_lists{
+      > div:last-child span {
+        &:first-child{
+          color: #4fba9c;
+        }
+
+      }
+    }
+    .return.record_lists{
+      > div:last-child span {
+        &:first-child{
+          color: #ffa316;
+        }
+
+      }
+    }
+
+    .finished.record_lists{
+      > div:last-child span {
+        &:first-child{
+          color: #4fba9c;
+        }
+
+      }
+    }
+
+    .nopassed.record_lists{
+      > div:last-child span {
+        &:first-child{
+          color: #4a4a4a;
+        }
+
+      }
+
+      > div:first-child > span {
+        color: #ababab;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .no_more_record{
+    position: relative;
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+
+    img{
+      width: 24px;
+      height: 24px;
+    }
+
+    p{
+      color: #ababab;
+      font-size: 12px;
+    }
+    &:after{
+      content: "";
+      position: absolute;
+      width: 38%;
+      height: 1px;
+      left: 0;
+      top: 50%;
+      background: #dddddd;
+
+    }
+
+    &:before{
+      content: "";
+      position: absolute;
+      width: 38%;
+      height: 1px;
+      right: 0;
+      top: 50%;
+      background: #dddddd;
+    }
+  }
+}
+
+.return_record.salary_record{
+  .main_record .record_lists > div:last-child {
+    position: relative;
+    padding-right: 0;
+    &:after{
+      content: "";
+      background: none;
+    }
+  }
+}
