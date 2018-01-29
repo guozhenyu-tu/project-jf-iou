@@ -27,6 +27,8 @@ function devEjs() {
 
                 var addHtml = "";
 
+                addHtml += "<meta charset='UTF-8' >\n";
+
                 addHtml += "<meta name='viewport' content='width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1, maximum-scale=1'>\n";
 
                 addHtml += "<meta name='apple-mobile-web-app-capable' content='yes' />\n";
