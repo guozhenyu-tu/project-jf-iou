@@ -9,6 +9,14 @@
   .return_list_plate {
     padding: 0;
 
+    span {
+
+      &:nth-child(1) {
+        padding-left: 20px;
+      }
+
+    }
+
     &:before {
       display: none;
     }
@@ -43,52 +51,52 @@
 
 }
 
-/**************逾期标签**************/
-.money_left {
+/********“逾期”标签，及橙色字体*******/
+.return_list_orange {
+
+  .grey_font {
+    color: #f39800;
+  }
+
+  .zero_font {
+    color: #f39800;
+  }
 
   .return_list_plate {
-    position: relative;
 
     span {
 
       &:nth-child(1) {
-        padding-left: 20px;
+        position: relative;
+
+        &:before {
+          content: '逾期';
+          position: absolute;
+          width: 25px;
+          height: 12px;
+          border-radius: 2px;
+          background-color: #f39800;
+          color: #ffffff;
+          left: -6px;
+          top: -8px;
+          font-size: 10px;
+          line-height: 13px;
+          text-align: center;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          height:0;
+          width:0;
+          left: 10px;
+          top: 2px;
+          border-top:solid 4px #f39800;
+          border-left:solid 8px transparent;
+        }
+
       }
 
-    }
-
-  }
-
-}
-.be_overdue {
-
-  .return_list_plate {
-    position: relative;
-
-    &:before {
-      content: '逾期';
-      position: absolute;
-      width: 30px;
-      height: 15px;
-      border-radius: 2px;
-      background-color: #f39800;
-      color: #ffffff;
-      left: -10px;
-      top: 5px;
-      font-size: 12px;
-      line-height: 15px;
-      text-align: center;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      height:0;
-      width:0;
-      left: 10px;
-      top: 18px;
-      border-top:solid 4px #f39800;
-      border-left:solid 8px transparent;
     }
 
   }
