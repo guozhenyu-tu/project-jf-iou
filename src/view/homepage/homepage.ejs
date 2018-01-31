@@ -1,18 +1,42 @@
 <html>
+
 <head>
+
     <title>嘉白条</title>
+
+</head>
+
 <body>
 
-<div>
+<%- include('../../component/homepage/iou_homepage_top.ejs')%>
 
-    <%- include('../../component/homepage/iou_homepage_top.ejs')%>
+<%- include('../../component/homepage/iou_homepage_center.ejs')%>
 
-    <%- include('../../component/homepage/iou_homepage_center.ejs')%>
-
-    <%- include('../../component/homepage/iou_homepage_bottom.ejs')%>
-
-</div>
+<%- include('../../component/homepage/iou_homepage_bottom.ejs')%>
 
 </body>
-</head>
+
 </html>
+
+<script>
+
+    /*当月转出额度超限*/
+    document.getElementsByClassName('left_img_font')[0].addEventListener('click',function(){
+
+        jfShowTips.dialogShow({
+            "mainText": "嘉白条逾期提醒",
+            "minText": "截至今日，共有2笔逾期，待还总金额￥2120.00。",
+            "noCheck": false,
+            "noCancel": false,
+            "checkBtnText":"去还款",
+            "checkFn": function () {
+                jfShowTips.dialogRemove()
+
+            }
+        });
+
+    },false)
+
+</script>
+
+
