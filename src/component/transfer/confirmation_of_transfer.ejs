@@ -201,15 +201,11 @@
     //点击弹出层，关闭按钮，隐藏弹出层
     popupClick.addEventListener('click',function () {
 
+        console.log(repaymentPlan.className.indexOf('popup_use_block') >-1)
+
         if (takeNow.className.indexOf('popup_use_block') >-1) {
 
             takeNow.className = 'selective_use';
-
-        }
-
-        if (repaymentPlan.className.indexOf('popup_use_block') >-1) {
-
-            repaymentPlan.className = 'repayment_plan';
 
         }
 
