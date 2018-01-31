@@ -62,4 +62,3 @@ typings/
 .idea
 build
 dist
-gulp/config.js
