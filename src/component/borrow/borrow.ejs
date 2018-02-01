@@ -1,83 +1,104 @@
 <div class="jf_salary">
 
     <div class="salary_main">
-        <p class="title">借款金额(元)</p>
 
-        <p class="num"><span class="money_num">2000</span></p>
-
-        <!--滚动条区域-->
-        <div class="move_bar">
-            <div class="gray"></div>
-            <div class="green"></div>
-            <div class="move_coin"></div>
-        </div>
-
-        <div class="limmit_num">
-            <span class="min">500</span>
-            <span class="max">5000</span>
-        </div>
-
-        <div class="get_money">
+        <!--流程图-->
+        <div class="main_top">
             <div>
-                <p>4995.00</p>
-                <p>到账金额(元)</p>
+                <img src="../../images/icon_iou_logo.png">
+                <p>白条额度</p>
+            </div>
+            <p>转让额度</p>
+            
+            <div>
+                <img src="../../images/icon_welfare_market.png">
+                <p>福利集市</p>
             </div>
 
-            <!--存在手续费时，去掉class值noreduced-->
+            <p>成功后提现</p>
 
-            <div class="noreduced">
-                <p>0</p>
-                <p>已优惠手续费(元)</p>
+            <div>
+                <img src="../../images/icon_iou_card.png">
+                <p>银行卡</p>
+            </div>
+            
+        </div>
+
+        <div class="main_mid">
+            <p class="title">转让白条额度</p>
+
+            <p class="num"><span class="money_num">2000</span></p>
+
+            <!--滚动条区域-->
+            <div class="move_bar">
+                <div class="gray"></div>
+                <div class="green"></div>
+                <div class="move_coin"></div>
             </div>
 
+            <div class="limmit_num">
+                <span class="min">500</span>
+                <span class="max">5000</span>
+            </div>
+
+            <div class="get_money">
+                <!--存在手续费时，去掉class值noreduced-->
+                    <span>转让服务费：</span>
+                    <span>5.00</span>
+            </div>
         </div>
 
         <div class="date_main">
-            <p class="title">借款期限</p>
+            <p class="title">后付款方式</p>
 
-            <div class="date">
-                <p class="choosed">7天</p>
-                <p>14天</p>
-                <p class="nochoosed">30天</p>
+            <div class="date_tab">
+                <label>
+                    <input type="radio" class="choose_radio" name="dateData" checked>
+                    <div>
+                        <p><span>2000.00</span> x 1期</p>
+                        <p>包含服务费<span>90.00</span>/月</p>
+                    </div>
+                </label>
+                <label>
+                    <input type="radio" class="choose_radio" name="dateData">
+                    <div>
+                        <p><span>2100.00</span> x 2期</p>
+                        <p>包含服务费<span>100.00</span>/月</p>
+                    </div>
+                </label>
+
+
             </div>
-
         </div>
+
     </div>
 
 
 
 </div>
 
-
-<div class="bottom_btn homepage_btn">
-    <a href="../certification/main.html">借钱</a>
-</div>
-
-
 <div class="salary_bottom">
     <a onclick="jfCustomerService.click()">
-        <img src="../../images/icon_customer.png">
+        <img src="../../images/bottom_images/online_service.png">
         <span>在线客服</span>
     </a>
 
 
     <a>
-        <img src="../../images/icon_helpcenter_gary.png">
+        <img src="../../images/bottom_images/common_problem.png">
         <span>常见问题</span>
     </a>
 </div>
 
 
+<div class="bottom_btn borrow_fixed_btn">
+    <div class="fix_bar"></div>
+    <div class="fix_btn"><a href="confirm_borrow.html">去转让获取现金</a></div>
+
+</div>
+
+
 <script>
-
-    chooseDate({//选择借款天数点击
-
-        fn:function(){//点击的时候执行的脚本
-            console.log("111")
-        }
-    })
-
-
 
 
     addEventListener("load",function(){

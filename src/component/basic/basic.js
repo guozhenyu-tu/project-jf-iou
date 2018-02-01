@@ -409,18 +409,18 @@ var jfShowTips = {
         var thisBg=_this.addBg('dialog_bg');
 
         var thisInnerHtml='<div class="text_dialog_container"><div class="text_big">'+mainText+'</div><div class="text_small">'+minText+'</div><div class="dialog_button">';
+        if(!hasCancel){
 
+            thisInnerHtml+='<a class="dialog_cancel" href="javascript:void(0)">'+cancleBtnText+'</a>'
+
+        }
         if(!hasCheck){
 
             thisInnerHtml+='<a class="dialog_check" href='+thisUrl+'>'+checkBtnText+'</a>'
 
         }
 
-        if(!hasCancel){
 
-            thisInnerHtml+='<a class="dialog_cancel" href="javascript:void(0)">'+cancleBtnText+'</a>'
-
-        }
 
         thisInnerHtml+='</div></div>';
 

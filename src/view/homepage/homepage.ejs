@@ -18,44 +18,32 @@
 
 <script>
 
-    /*当月转出额度超限*/
-    document.getElementsByClassName('repayment_money')[0].addEventListener('click',function(){
 
+    addEventListener('load',function () {
+
+        //预期提醒
         jfShowTips.dialogShow({
-            "mainText": "嘉白条逾期提醒",
-            "minText": "截至今日，共有2笔逾期，待还总金额￥2120.00。",
-            "noCheck": false,
-            "noCancel": false,
-            "checkBtnText":"去还款",
-            "checkFn": function () {
-                jfShowTips.dialogRemove()
+
+            "mainText": "嘉白条逾期提醒",//标题
+
+            "minText": "截至今日，共有<span style='color: #f39800'>2</span>笔逾期，待还总金额<span style='color: #f39800'>￥2120.00</span>。",//解释性文案
+
+            "noCheck": false,//确认按钮（默认为false,即存在）
+
+            "noCancel": false,//取消按钮（默认为false,即存在）
+
+            "checkBtnText":"去还款",//确认按钮文字
+
+            "cancleBtnText":"稍后再还",//取消按钮文字
+
+            "checkFn": function () {//弹框消失后发生的脚本
+
+                jfShowTips.dialogRemove();//弹框消失的方法
+
+                window.location.href='../return/return.html'
 
             }
         });
-
-    },false)
-
-    //页面加载完，显示去激活弹窗
-    var activationNone=document.getElementsByClassName('activation_popup')[0]; //父级元素
-
-    window.onload=function () {
-
-        activationNone.className = 'activation_popup activation_popup_block';
-
-    }
-
-    //点击“去激活”按钮，关闭弹窗
-    document.getElementsByClassName('activation_btn')[0].addEventListener('click',function () {
-
-        activationNone.className = 'activation_popup';
-
-    },false)
-
-    //点击关闭按钮，关闭弹窗
-    document.getElementsByClassName('activation_close_btn')[0].addEventListener('click',function () {
-
-        activationNone.className = 'activation_popup';
-
     },false)
 
 
