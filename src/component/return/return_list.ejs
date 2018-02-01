@@ -28,7 +28,7 @@
     <div class="list_shadow_plate return_list_orange">
 
         <label class="checkbox_font">
-            <input class="administrator_radio part_checked" type="checkbox" name="radio" checked>
+            <input class="administrator_radio part_checked" type="checkbox" name="radio" checked data-num="1060.00">
         </label>
 
         <a class="return_list_plate grey_font" href="return_details.html">
@@ -46,7 +46,7 @@
     <div class="list_shadow_plate return_list_orange">
 
         <label class="checkbox_font">
-            <input class="administrator_radio part_checked" type="checkbox" name="radio">
+            <input class="administrator_radio part_checked" type="checkbox" name="radio" data-num="1060.00">
         </label>
 
         <a class="return_list_plate grey_font" href="return_details.html">
@@ -64,7 +64,7 @@
     <div class="list_shadow_plate">
 
         <label class="checkbox_font">
-            <input class="administrator_radio part_checked" type="checkbox" name="radio">
+            <input class="administrator_radio part_checked" type="checkbox" name="radio" data-num="1060.00">
         </label>
 
         <a class="return_list_plate grey_font" href="return_details.html">
@@ -82,7 +82,7 @@
     <div class="list_shadow_plate">
 
         <label class="checkbox_font">
-            <input class="administrator_radio part_checked" type="checkbox" name="radio">
+            <input class="administrator_radio part_checked" type="checkbox" name="radio" data-num="1060.00">
         </label>
 
         <a class="return_list_plate grey_font" href="return_details.html">
@@ -100,7 +100,7 @@
     <div class="list_shadow_plate">
 
         <label class="checkbox_font">
-            <input class="administrator_radio part_checked" type="checkbox" name="radio">
+            <input class="administrator_radio part_checked" type="checkbox" name="radio" data-num="1060.00">
         </label>
 
         <a class="return_list_plate grey_font" href="return_details.html">
@@ -118,7 +118,7 @@
     <div class="list_shadow_plate">
 
         <label class="checkbox_font">
-            <input class="administrator_radio part_checked" type="checkbox" name="radio">
+            <input class="administrator_radio part_checked" type="checkbox" name="radio" data-num="1060.00">
         </label>
 
         <a class="return_list_plate grey_font" href="return_details.html">
@@ -136,7 +136,7 @@
     <div class="list_shadow_plate">
 
         <label class="checkbox_font">
-            <input class="administrator_radio part_checked" type="checkbox" name="radio">
+            <input class="administrator_radio part_checked" type="checkbox" name="radio" data-num="1060.00">
         </label>
 
         <a class="return_list_plate grey_font" href="return_details.html">
@@ -153,76 +153,20 @@
 
 </div>
 
-<%- include('../basic/one_green_btn.ejs',{
-"hrefone":"../return/return_fail.html",
-"btntext":"立即还款 ￥3180.00"
-})%>
+<div class="bottom_btn">
+
+    <a href="../return/return_fail.html">立即还款￥<span>2120.00</span></a>
+</div>
+
+
 
 <script>
 
+addEventListener('load',function () {
 
-    //全选按钮是否被选中（只要一个没选就不全选）
-    window.onload=function () {
+    checkBoxFn()
 
-        var allChecked=document.getElementsByClassName('all_checked')[0];
-
-        var partChecked=document.getElementsByClassName('part_checked');
-
-        allChecked.onclick=function () {
-
-            for (var i=0;i<partChecked.length;i++) {
-
-                partChecked[i].checked = this.checked;
-
-            }
-
-        }
-
-        for ( var i = 0; i < partChecked.length; i++) {
-
-            partChecked[i].onclick=function () {
-
-                if (this.checked == false) {
-
-                    allChecked.checked = false;
-
-                }
-
-                var ifChecked=myChecked();
-
-                function myChecked() {
-
-                    for (var i=0;i<partChecked.length;i++) {
-
-                        if (partChecked[i].checked == false) {
-
-                            return false;
-
-                        }
-
-                    }
-
-                    return true;
-
-                }
-
-                if (ifChecked == false) {
-
-                    allChecked.checked = false;
-
-                }
-
-                if (ifChecked == true) {
-
-                    allChecked.checked = true;
-
-                }
-
-            }
-
-        }
-
-    }
+},false)
 
 
 </script>
