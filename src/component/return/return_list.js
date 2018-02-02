@@ -43,7 +43,7 @@ function checkBoxFn() {
 
             nextBtn.getElementsByTagName('a')[0].innerHTML='立即还款'
 
-            nextBtn.getElementsByTagName('a')[0].setAttribute('href','')
+            nextBtn.getElementsByTagName('a')[0].removeAttribute('href');
         }
     }
 
@@ -103,7 +103,7 @@ function checkBoxFn() {
 
                 nextBtn.getElementsByTagName('a')[0].innerHTML='立即还款'
 
-                nextBtn.getElementsByTagName('a')[0].setAttribute('href','')
+                nextBtn.getElementsByTagName('a')[0].removeAttribute('href')
             }else {
 
                 waitMoney=parseFloat(waitMoney).toFixed(2)
