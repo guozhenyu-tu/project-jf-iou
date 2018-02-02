@@ -52,7 +52,7 @@ input {
 
       .orange_fonts {
         color: #f39800;
-        font-size: 14px;
+        font-size: 16px;
       }
 
       .input_form{
@@ -256,14 +256,13 @@ input {
   z-index: 688;
   width: 90%;
   border-radius: 5px;
-  height: 260px;
+  max-height: 85%;
   background-color: #ffffff;
   position: absolute;
-  top: -30%;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,-62%,0);
+  margin: 0 auto;
   padding: 5px 0;
   display: none;
 
@@ -304,12 +303,16 @@ input {
     margin: 15px;
 
     .selective_use_list {
-      width: 55%;
-      margin: 15px auto;
+      width: 80%;
+      margin: 0 auto;
+      padding-left: 20%;
+
 
       .radio_fonts {
-        width: 70%;
+        width: 100%;
         color: #4a4a4a;
+        display: block;
+        padding: 8px 0;
        input{
          margin-right:15px;
        }
@@ -349,17 +352,16 @@ input {
   }
 
   .plan_details_list {
-    width: 90%;
+    width: 95%;
     margin: 15px auto 0 auto;
     background-color: #ffffff;
-    height: 25px;
     border: 1px #dddddd solid;
     border-bottom: none;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
 
     &:nth-child(4) {
-      height: 90px;
+     // height: 90px;
       overflow: scroll;
       margin: 0 auto;
       border-top: none;
@@ -368,10 +370,12 @@ input {
       border-top-right-radius: 0;
       border-bottom-left-radius: 3px;
       border-bottom-right-radius: 3px;
+      min-width: 150px;
+      max-height: 300px;
 
       .plan_inline_list {
 
-        padding: 8px 0;
+        padding: 10px 0;
 
         &:last-child {
 
@@ -386,7 +390,7 @@ input {
     }
 
     .plan_inline_list {
-      padding: 5px 0;
+      padding: 10px 0;
       display: flex;
       justify-content: space-between;
       line-height: 15px;
