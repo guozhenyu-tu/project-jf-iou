@@ -65,7 +65,7 @@ var jfCustomerService = {
                 s = ei.getElementsByTagName(q)[0];
                 j.async = true;
                 j.charset = 'UTF-8';
-                j.src = '//static.meiqia.com/dist/meiqia.js';
+                j.src = '//static.meiqia.com/dis/meiqia.js';
                 s.parentNode.insertBefore(j, s);
             })(window, document, 'script', '_MEIQIA');
             _MEIQIA('entId', '39750');
