@@ -1,0 +1,209 @@
+
+
+<div class="contact_info">
+    <!--地区信息-->
+    <div>
+        <label class="input_list showmore" onclick="contactAddress.show({fn:
+
+function(){
+
+     shoppingCart.run({
+     api: '../../api/address.json',
+     type: 'get',
+     targetDom:document.getElementById('life_address_show'),
+     fn:function() {
+      contactAddress.hide();
+
+        //console.log(chooseAdressId);//当前选择地址ID
+     }
+
+     })
+}
+
+})">
+            <div class="title">所在地区</div>
+            <div class="input_form">
+                <input type="text" placeholder="请选择所在地区" readonly UNSELECTABLE="on" id="life_address_show" onfocus="this.blur()">
+            </div>
+        </label>
+
+        <label class="input_list no_line">
+            <div class="title">居住地址</div>
+            <div  class="input_form">
+                <textarea placeholder="请填写详细地址" rows="2"  oninput="this.style.posHeight=this.scrollHeight" onfocus="this.style.posHeight=this.scrollHeight"></textarea>
+            </div>
+        </label>
+    </div>
+
+    <!--联系人信息-->
+
+    <p>联系人信息</p>
+    <div>
+
+        <label class="input_list showmore">
+            <div class="title">关系</div>
+            <div class="input_form">
+               <select>
+                   <option disabled selected class="showoptionstips">请选择与您的关系</option>
+                   <option>父亲</option>
+                   <option>母亲</option>
+                   <option>配偶</option>
+                   <option>儿子</option>
+                   <option>女儿</option>
+                   <option>哥哥</option>
+                   <option>弟弟</option>
+                   <option>姐姐</option>
+                   <option>妹妹</option>
+               </select>
+            </div>
+        </label>
+
+        <label class="input_list">
+            <div class="title">姓名</div>
+            <div class="input_form">
+                <input type="text" placeholder="请输入联系人姓名">
+            </div>
+        </label>
+
+        <label class="input_list ">
+            <div class="title">手机号码</div>
+            <div class="input_form">
+                <input type="tel" pattern="[0-9*]" placeholder="请输入联系人手机号码">
+            </div>
+        </label>
+
+
+        <label class="input_list showmore">
+            <div class="title">关系</div>
+            <div class="input_form">
+                <select>
+                    <option disabled selected class="showoptionstips">请选择与您的关系</option>
+                    <option>父亲</option>
+                    <option>母亲</option>
+                    <option>配偶</option>
+                    <option>儿子</option>
+                    <option>女儿</option>
+                    <option>哥哥</option>
+                    <option>弟弟</option>
+                    <option>姐姐</option>
+                    <option>妹妹</option>
+                </select>
+            </div>
+        </label>
+
+
+        <label class="input_list">
+            <div class="title">姓名</div>
+            <div class="input_form">
+                <input type="text" placeholder="请输入联系人姓名">
+            </div>
+        </label>
+
+        <label class="input_list no_line">
+            <div class="title">手机号码</div>
+            <div class="input_form">
+                <input type="tel" pattern="[0-9*]" placeholder="请输入联系人手机号码">
+            </div>
+        </label>
+    </div>
+
+    <!--工作单位信息-->
+    <p>工作单位信息</p>
+    <div>
+        <label class="input_list">
+            <div class="title">单位全称</div>
+            <div class="input_form">
+                <input type="text" placeholder="请输入单位全称">
+            </div>
+        </label>
+
+        <label class="input_list">
+            <div class="title">单位电话</div>
+            <div class="input_form">
+                <input type="tel" pattern="[0-9*]" placeholder="请输入单位电话">
+            </div>
+        </label>
+
+        <label class="input_list showmore" onclick="contactAddress.show({fn:
+
+function(){
+
+     shoppingCart.run({
+     api: '../../api/address.json',
+     type: 'get',
+     targetDom:document.getElementById('work_address_show'),
+     fn:function() {
+      contactAddress.hide();
+
+        //console.log(chooseAdressId);//当前选择地址ID
+     }
+
+     })
+}
+
+})">
+            <div class="title">所在地区</div>
+            <div class="input_form">
+                <input type="text" placeholder="请选择所在地区" readonly UNSELECTABLE="on" id="work_address_show" onfocus="this.blur()">
+            </div>
+        </label>
+
+        <label class="input_list no_line">
+            <div class="title">单位地址</div>
+            <div  class="input_form">
+                <textarea placeholder="请填写单位地址" rows="4"></textarea>
+            </div>
+        </label>
+    </div>
+
+    <span class="tips">*手机号码不能为空</span>
+
+
+
+</div>
+
+
+
+<%- include('../basic/one_green_btn.ejs',{
+"hrefone":"#",
+"btntext":"提交"
+})%>
+
+
+
+<!--地址弹出框-->
+<%- include('address.ejs')%>
+
+
+<script>
+
+    //地址弹出框
+    var contactAddress = new jfShowPop({
+
+        'ele': 'product_address'
+    })
+
+
+    document.getElementsByClassName('bottom_btn')[0].addEventListener("click",function(){
+
+        //loading动画,10s后会自动移除
+        jfShowTips.loadingShow({
+            "text":"加载中"
+        })
+
+        setTimeout(function(){
+
+            jfShowTips.loadingRemove(); //loading动画
+
+
+            window.location.href="success.html"
+
+        },3000)
+
+    },false)
+
+
+
+
+
+</script>
