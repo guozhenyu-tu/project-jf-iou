@@ -1,0 +1,51 @@
+
+<!--完善信息-->
+
+<div class="certification_main">
+    <p>完善信息</p>
+
+      <div>
+        <a class="need" href="id_card.html">
+            <p><img src="../../images/icon_id_card.png"></p>
+            <p>身份认证</p>
+        </a>
+
+        <a class="need" href="contact_info.html">
+            <p><img src="../../images/icon_contact.png"></p>
+            <p>联系信息</p>
+        </a>
+
+        <a class="noneed">
+            <p><img src="../../images/icon_phone.png"></p>
+            <p>手机认证</p>
+        </a>
+
+        <a class="cancle">
+            <p><img src="../../images/icon_bank_card.png"></p>
+            <p>银行卡认证</p>
+        </a>
+
+    </div>
+</div>
+
+
+<div class="agreement">
+    <label><input type="checkbox" class="">我已经阅读并同意</label><a href="authorise_agreement.html">《信息授权协议》</a>
+</div>
+
+
+<%- include('../basic/one_green_btn.ejs',{
+"hrefone":"progress.html",
+"btntext":"提交"
+})%>
+
+
+
+<script>
+    document.getElementsByClassName('cancle')[0].addEventListener("click",function(){
+
+        jfShowTips.toastShow({
+            "text":"暂时不需认证"
+        })
+    },false)
+</script>

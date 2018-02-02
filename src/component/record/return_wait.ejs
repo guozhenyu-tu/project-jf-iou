@@ -2,13 +2,13 @@
 
     <!--通用进度条-->
 
+    <!--有 class 值 orange_show ，是黄色字体，删除 class 值，则是绿色字体-->
     <div class="progress_bar">
         <!--当前处于哪一步则添加class值show,如果接下来还有步骤则添加class值more-->
         <div class="step show">
             <p class="title">待还款</p>
             <p class="min_text">最近待还<span class="green_text">￥3010.00</span>，其中逾期费用<span>￥0.00</span></p>
             <p class="min_text"><span class="green_text">1/3期</span><span>最迟还款日：</span><span class="green_text">2018/01/15</span></p>
-            <p class="min_text">已还款<span>￥310.00</span>，其中逾期费用<span>￥0.00</span></p>
             <span class="time">2018-01-15 08:45</span>
         </div>
         <div class="step">
@@ -28,11 +28,11 @@
 </div>
 
 <%- include('../basic/one_greenborder_btn.ejs',{
-"hrefone":"../mine/return_record.html",
+"hrefone":"return_record.html",
 "btntext":"还款记录"
 })%>
 
 <%- include('../basic/one_green_btn.ejs',{
-"hrefone":"main.html",
+"hrefone":"stages_record_list.html",
 "btntext":"还款计划"
 })%>

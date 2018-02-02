@@ -88,16 +88,6 @@
         color: #ababab;
       }
 
-      .step_orange {
-        color: #f39800;
-        opacity: .80;
-      }
-
-      .step_green {
-        color: #4fba9c;
-        opacity: .80;
-      }
-
     }
 
     .show.step{
@@ -120,23 +110,10 @@
       }
     }
 
-    .orange_show.step{
-      &:after{
-        content: "";
-        background: #f39800;
-      }
-      .title{
-        color: #f39800;
-        &:after{
-          content: "";
-          background: #f39800;
-        }
-      }
-      .min_text{
-        color: #4a4a4a;
-        span.green_text{
-          color: #f39800;
-        }
+    .step {
+      .step_green {
+        color: #4fba9c;
+        opacity: .80;
       }
     }
 
@@ -182,6 +159,35 @@
   .bottom_btn{
     margin-top: 50px;
   }
+
+  .orange_show {
+    .show.step {
+      &:after {
+        content: "";
+        background: #f39800;
+      }
+      .title {
+        color: #f39800;
+        &:after {
+          content: "";
+          background: #f39800;
+        }
+      }
+      .min_text{
+        color: #4a4a4a;
+        span.green_text{
+          color: #f39800;
+        }
+      }
+    }
+    .step {
+      span.step_green {
+        color: #f39800;
+        opacity: .80;
+      }
+    }
+  }
+
 }
 
 

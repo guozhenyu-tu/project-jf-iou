@@ -1,0 +1,97 @@
+<div class="jf_salary helpcenter">
+
+    <div class="salary_main">
+        <p class="title">常见问题</p>
+
+
+        <div class="common_lists">
+            <a class="list arrow" href="help_list.html" >
+                <div class="icon">Q</div>
+                <div class="title">借钱影不影响我的征信？</div>
+                <div class="balance"></div>
+            </a>
+
+            <a class="list arrow" href="help_list1.html">
+                <div class="icon">Q</div>
+                <div class="title">借钱有哪些费用？</div>
+                <div class="balance"></div>
+            </a>
+
+            <a class="list arrow" href="help_list2.html">
+                <div class="icon">Q</div>
+                <div class="title">借款审核一般需要多久？</div>
+                <div class="balance"></div>
+            </a>
+
+            <a class="list arrow no_line" href="help_list3.html">
+                <div class="icon">Q</div>
+                <div class="title">按时还款有哪些好处？</div>
+                <div class="balance"></div>
+            </a>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="jf_salary helpcenter">
+
+    <div class="salary_main">
+        <p class="title">更多问题分类</p>
+
+
+        <div class="category_box">
+            <a href="help_borrow.html">
+                <img src="../../images/icon_helpcenter_borrow.png">
+                <p>借钱相关</p>
+            </a>
+
+            <a href="help_payback.html" >
+                <img src="../../images/icon_helpcenter_return.png">
+                <p>还钱相关</p>
+            </a>
+
+            <a href="help_examine.html">
+                <img src="../../images/icon_helpcenter_certificate.png">
+                <p>认证相关</p>
+            </a>
+
+            <a href="help_other.html">
+                <img src="../../images/icon_helpcenter_other.png">
+                <p>其他问题</p>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="bottom_btn" onclick="jfCustomerService.click()">
+    <a>联系客服</a>
+</div>
+
+<script src="../../js/jquery-3.0.0.min.js"></script>
+<script>
+
+    //客服模块
+    jfCustomerService.init(
+            {//用户信息
+                name: '阿陈',// 名字
+                address: '西伯利亚',// 地址
+                email: '1313@qq.com',// 邮箱
+                age: '16',// 年龄
+                tel: '110',// 电话
+                comment: '很帅',// 备注
+                gender: '男',// 性别
+                qq: '1234567',// QQ
+                weibo: '',// 微博
+                weixin: '',// 微信
+                '公司名称': '上海淘略数据有限公司',
+                '公司编号': '123ksuhdaf891274',
+                '员工编号': '1234567890123456'
+            },
+            //指定客服
+            'b040d96757bf55ea302f9fbfb0ecd062'
+    );
+
+</script>

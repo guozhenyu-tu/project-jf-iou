@@ -1,0 +1,230 @@
+<div class="contact_info">
+    <!--身份认证-->
+    <div>
+        <label class="input_list">
+            <div class="title">转让额度：</div>
+            <div class="orange_fonts">3000.00</div>
+        </label>
+
+        <label class="input_list">
+            <div class="title">转让服务费：</div>
+            <div class="input_form">60.00</div>
+        </label>
+
+        <label class="input_list">
+            <div class="title">分期服务费：</div>
+            <div class="input_form">3%/月</div>
+        </label>
+
+        <a class="list arrow" href="#" onclick="myPlan()">
+            <div class="title">还款计划：</div>
+            <div class="input_form">1060.00元x3期</div>
+        </a>
+
+        <a class="list arrow" href="#" onclick="myUse()">
+            <div class="title">取现用途：</div>
+            <div class="input_form check_use" >个人日常消费</div>
+        </a>
+
+        <label class="input_list">
+            <div class="title">平台到账：</div>
+            <div class="orange_fonts">3000.00</div>
+        </label>
+    </div>
+
+
+    <!---------------弹出框“选择用途”---------------->
+    <div class="selective_use">
+
+        <div class="selective_use_popup"></div>
+
+        <div class="selective_use_plate">
+            <div class="selective_use_heard">
+                <p>选择用途</p>
+
+                <p>禁止用于购房、投资等非消费场景</p>
+                
+                <butotn class="close_plate">
+                    <img src="../../images/icon_close.png">
+                </butotn>
+            </div>
+
+            <div class="selective_use_classify">
+                <div class="selective_use_list">
+
+                    <label class="radio_fonts">
+                        <input class="administrator_radio" type="radio" name="radio" id="consumption" checked="true">
+                        个人日常消费
+                    </label>
+                </div>
+
+                <div class="selective_use_list">
+
+
+                    <label class="radio_fonts" for="renovation"> <input class="administrator_radio" type="radio" name="radio" id="renovation">装修</label>
+                </div>
+
+                <div class="selective_use_list">
+
+
+                    <label class="radio_fonts" for="tourism"> <input class="administrator_radio" type="radio" name="radio" id="tourism">旅游</label>
+                </div>
+
+                <div class="selective_use_list">
+
+
+                    <label class="radio_fonts" for="medical_care"><input class="administrator_radio" type="radio" name="radio" id="medical_care">医疗</label>
+                </div>
+
+                <div class="selective_use_list">
+
+
+                    <label class="radio_fonts" for="education"><input class="administrator_radio" type="radio" name="radio" id="education">教育</label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!---------------弹出框“还款计划”---------------->
+    <div class="repayment_plan">
+
+        <div class="selective_use_popup"></div>
+
+        <div class="selective_use_plate">
+            <div class="selective_use_heard">
+                <p>还款计划</p>
+
+                <button class="close_plate">
+                    <img src="../../images/icon_close.png">
+                </button>
+            </div>
+
+            <div class="repayment_plan_list">
+                <div class="plan_inline_list">
+                    <span>借款总额</span>
+
+                    <span>借款期限</span>
+
+                    <span>总服务费</span>
+                </div>
+
+                <div class="plan_inline_list">
+                    <span>3000.00</span>
+
+                    <span>3/月</span>
+
+                    <span>180.00</span>
+                </div>
+            </div>
+
+            <div class="plan_details_list">
+                <div class="plan_inline_list">
+                    <span>期数</span>
+
+                    <span>还款时间</span>
+
+                    <span>还款金额</span>
+                </div>
+            </div>
+
+            <div class="plan_details_list">
+                <div class="plan_inline_list">
+                    <span>1/3</span>
+
+                    <span>2018-01-14</span>
+
+                    <span>1030.00</span>
+                </div>
+
+                <div class="plan_inline_list">
+                    <span>2/3</span>
+
+                    <span>2018-02-14</span>
+
+                    <span>1030.00</span>
+                </div>
+
+                <div class="plan_inline_list">
+                    <span>3/3</span>
+
+                    <span>2018-03-14</span>
+
+                    <span>1030.00</span>
+                </div>
+
+                <div class="plan_inline_list">
+                    <span>2/3</span>
+
+                    <span>2018-02-14</span>
+
+                    <span>1030.00</span>
+                </div>
+
+                <div class="plan_inline_list">
+                    <span>3/3</span>
+
+                    <span>2018-03-14</span>
+
+                    <span>1030.00</span>
+                </div>
+
+                <div class="plan_inline_list">
+                    <span>2/3</span>
+
+                    <span>2018-02-14</span>
+
+                    <span>1030.00</span>
+                </div>
+
+                <div class="plan_inline_list">
+                    <span>3/3</span>
+
+                    <span>2018-03-14</span>
+
+                    <span>1030.00</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<%- include('../basic/one_green_btn.ejs',{
+"hrefone":"borrow_success.html",
+"btntext":"确认转让"
+})%>
+
+
+<script>
+
+   addEventListener('load',showChooseBox,false)
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

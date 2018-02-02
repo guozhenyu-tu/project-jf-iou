@@ -1,0 +1,139 @@
+<div class="jf_salary">
+
+    <div class="salary_main">
+
+        <!--流程图-->
+        <div class="main_top">
+            <div>
+                <img src="../../images/icon_iou_logo.png">
+                <p>白条额度</p>
+            </div>
+            <p>转让额度</p>
+            
+            <div>
+                <img src="../../images/icon_welfare_market.png">
+                <p>福利集市</p>
+            </div>
+
+            <p>成功后提现</p>
+
+            <div>
+                <img src="../../images/icon_iou_card.png">
+                <p>银行卡</p>
+            </div>
+            
+        </div>
+
+        <div class="main_mid">
+            <p class="title">转让白条额度</p>
+
+            <p class="num"><span class="money_num">2000</span></p>
+
+            <!--滚动条区域-->
+            <div class="move_bar">
+                <div class="gray"></div>
+                <div class="green"></div>
+                <div class="move_coin"></div>
+            </div>
+
+            <div class="limmit_num">
+                <span class="min">500</span>
+                <span class="max">5000</span>
+            </div>
+
+            <div class="get_money">
+                <!--存在手续费时，去掉class值noreduced-->
+                    <span>转让服务费：</span>
+                    <span>5.00</span>
+            </div>
+        </div>
+
+        <div class="date_main">
+            <p class="title">后付款方式</p>
+
+            <div class="date_tab">
+                <label>
+                    <input type="radio" class="choose_radio" name="dateData" checked>
+                    <div>
+                        <p><span>2000.00</span> x 1期</p>
+                        <p>包含服务费<span>90.00</span>/月</p>
+                    </div>
+                </label>
+                <label>
+                    <input type="radio" class="choose_radio" name="dateData">
+                    <div>
+                        <p><span>2100.00</span> x 2期</p>
+                        <p>包含服务费<span>100.00</span>/月</p>
+                    </div>
+                </label>
+
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<div class="salary_bottom">
+    <a onclick="jfCustomerService.click()">
+        <img src="../../images/bottom_images/online_service.png">
+        <span>在线客服</span>
+    </a>
+
+
+    <a href="../helpcenter/category.html">
+        <img src="../../images/bottom_images/common_problem.png">
+        <span>常见问题</span>
+    </a>
+</div>
+
+
+<div class="bottom_btn borrow_fixed_btn">
+    <div class="fix_bar"></div>
+    <div class="fix_btn"><a href="confirm_borrow.html">去转让获取现金</a></div>
+
+</div>
+
+
+<script>
+
+
+    addEventListener("load",function(){
+
+        chooseSalary.init({
+
+            fn:function(){//钱币移动的时候执行的脚本
+
+                console.log(chooseSalary.run.data());//金额值
+            }
+        });
+
+
+    },false)//滑动选择金额
+
+
+    //客服模块
+    jfCustomerService.init(
+        {//用户信息
+            name: '阿陈',// 名字
+            address: '西伯利亚',// 地址
+            email: '1313@qq.com',// 邮箱
+            age: '16',// 年龄
+            tel: '110',// 电话
+            comment: '很帅',// 备注
+            gender: '男',// 性别
+            qq: '1234567',// QQ
+            weibo: '',// 微博
+            weixin: '',// 微信
+            '公司名称': '上海淘略数据有限公司',
+            '公司编号': '123ksuhdaf891274',
+            '员工编号': '1234567890123456'
+        },
+        //指定客服
+        'b040d96757bf55ea302f9fbfb0ecd062'
+    );
+
+</script>

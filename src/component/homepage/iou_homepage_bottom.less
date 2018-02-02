@@ -89,3 +89,143 @@
   }
 
 }
+
+
+/***************激活弹窗**************/
+.activation_plate {
+  width: 88%;
+  height: 260px;
+  z-index: 888;
+  position: absolute;
+  top: -20%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  display: none;
+
+  &:nth-child(3) {
+    z-index: 999;
+
+    .activation_white_plate {
+      background-color: #ffffff;
+      width: 60%;
+      margin: 46% auto;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      padding: 15px 0;
+
+      @media screen and(min-width: 412px) {
+        margin: 42% auto;
+      }
+
+      .activation_btn {
+        width: 50%;
+        margin: 0 auto;
+        background-color: #39a47c;
+        padding: 5px 0;
+        font-size: 14px;
+        color: #ffffff;
+        border: none;
+        border-radius: 20px;
+        display: block;
+        text-align: center;
+
+        &:active {
+          opacity: .60;
+        }
+
+      }
+
+    }
+
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .green_center_plate {
+    width: 60%;
+    margin: 35px auto;
+
+    .activation_green_plate {
+      background-color: #39a47c;
+      width: 100%;
+      position: relative;
+      padding: 35px 0;
+      margin: 0 auto;
+      top: 16%;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      text-align: center;
+
+      p {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 16px;
+        color: #ffffff;
+        line-height: 25px;
+      }
+
+    }
+
+  }
+
+  .activation_close_btn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 11.5%;
+    right: 19%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+
+}
+
+.activation_popup_block {
+
+  .selective_use_popup {
+    display: block;
+  }
+
+  .activation_plate {
+    display: block;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

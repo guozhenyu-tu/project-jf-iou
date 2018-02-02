@@ -25,11 +25,40 @@
   background-color: #ffffff;
   box-shadow: 0 2px 3px #e9e9e9;
 
+  .list_inline_plate {
+
+    span {
+
+      &:nth-child(2) {
+        padding-left: 15px;
+      }
+
+    }
+
+  }
+
   .list_shadow_plate {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
+
+    &:active {
+      opacity: .60;
+    }
+
+    .return_list_plate {
+
+      span {
+
+        &:nth-child(1) {
+          padding-left: 15px;
+          font-size: 16px;
+        }
+
+      }
+
+    }
 
     &:last-child {
       &:after {
@@ -53,8 +82,8 @@
 
     .left_icon {
       position: relative;
-      width: 11px;
-      height: 11px;
+      width: 8px;
+      height: 8px;
       margin-right: 15px;
       transform: rotate(-45deg);
 
@@ -91,6 +120,7 @@
   align-items: center;
   font-size: 14px;
   position: relative;
+  color: #4a4a4a;
 
   &:last-child {
     &:after {
@@ -112,6 +142,57 @@
   color: #ababab;
 }
 
+/********“逾期”标签，及橙色字体*******/
+.return_ing_orange {
+
+  .list_inline_plate {
+
+    color: #f39800;
+
+    .orange_font {
+
+      position: relative;
+
+      &:before {
+        content: '逾期';
+        position: absolute;
+        width: 25px;
+        height: 12px;
+        border-radius: 2px;
+        background-color: #f39800;
+        color: #ffffff;
+        left: -8px;
+        top: -8px;
+        font-size: 10px;
+        line-height: 13px;
+        text-align: center;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        height:0;
+        width:0;
+        left: 8px;
+        top: 2px;
+        border-top:solid 4px #f39800;
+        border-left:solid 8px transparent;
+      }
+
+    }
+
+  }
+
+}
+
+/********还清灰色字体*******/
+.pays_off_grey {
+
+  .list_inline_plate{
+    color: #ababab;
+  }
+
+}
 
 
 
