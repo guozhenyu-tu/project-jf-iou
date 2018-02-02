@@ -30,5 +30,16 @@ function showGoActive() {
 
     },false)
 
+    //点击遮罩层，关闭弹窗
+    document.getElementsByClassName('selective_use_popup')[0].addEventListener('click',function () {
+
+        activationNone.className = 'activation_popup';
+
+        document.getElementsByTagName('body')[0].className='';
+
+        document.getElementsByTagName('html')[0].className='';
+
+    },false)
+
 
 }
