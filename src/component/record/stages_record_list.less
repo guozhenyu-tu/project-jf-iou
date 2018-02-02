@@ -120,6 +120,7 @@
   align-items: center;
   font-size: 14px;
   position: relative;
+  color: #4a4a4a;
 
   &:last-child {
     &:after {
@@ -144,47 +145,38 @@
 /********“逾期”标签，及橙色字体*******/
 .return_ing_orange {
 
-  .grey_font {
-    color: #f39800;
-  }
-
-  .black_font {
-    color: #f39800;
-  }
-
   .list_inline_plate {
 
-    span {
+    color: #f39800;
 
-      &:nth-child(2) {
-        position: relative;
+    .orange_font {
 
-        &:before {
-          content: '逾期';
-          position: absolute;
-          width: 25px;
-          height: 12px;
-          border-radius: 2px;
-          background-color: #f39800;
-          color: #ffffff;
-          left: -8px;
-          top: -8px;
-          font-size: 10px;
-          line-height: 13px;
-          text-align: center;
-        }
+      position: relative;
 
-        &:after {
-          content: '';
-          position: absolute;
-          height:0;
-          width:0;
-          left: 8px;
-          top: 2px;
-          border-top:solid 4px #f39800;
-          border-left:solid 8px transparent;
-        }
+      &:before {
+        content: '逾期';
+        position: absolute;
+        width: 25px;
+        height: 12px;
+        border-radius: 2px;
+        background-color: #f39800;
+        color: #ffffff;
+        left: -8px;
+        top: -8px;
+        font-size: 10px;
+        line-height: 13px;
+        text-align: center;
+      }
 
+      &:after {
+        content: '';
+        position: absolute;
+        height:0;
+        width:0;
+        left: 8px;
+        top: 2px;
+        border-top:solid 4px #f39800;
+        border-left:solid 8px transparent;
       }
 
     }
@@ -196,11 +188,7 @@
 /********还清灰色字体*******/
 .pays_off_grey {
 
-  .grey_font {
-    color: #ababab;
-  }
-
-  .black_font {
+  .list_inline_plate{
     color: #ababab;
   }
 

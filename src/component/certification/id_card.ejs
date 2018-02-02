@@ -1,0 +1,49 @@
+
+
+<div class="contact_info">
+    <!--身份认证-->
+    <div>
+        <label class="input_list">
+            <div class="title">姓名</div>
+            <div class="input_form">葫芦娃</div>
+        </label>
+
+        <label class="input_list no_line">
+            <div class="title">身份证号码</div>
+            <div  class="input_form">
+                <input placeholder="请输入身份证号码" type="text"/>
+            </div>
+        </label>
+    </div>
+
+</div>
+
+
+
+<%- include('../basic/one_green_btn.ejs',{
+"hrefone":"#",
+"btntext":"提交"
+})%>
+
+
+<script>
+
+    document.getElementsByClassName('bottom_btn')[0].addEventListener("click",function(){
+
+        //loading动画,10s后会自动移除
+        jfShowTips.loadingShow({
+            "text":"加载中"
+        })
+
+        setTimeout(function(){
+
+            //jfShowTips.loadingRemove(); //loading动画
+
+
+          //  window.location.href="fail.html"
+
+        },3000)
+
+    },false)
+
+</script>
