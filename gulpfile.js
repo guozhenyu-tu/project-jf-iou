@@ -75,7 +75,7 @@ var distHtml = require('./gulp/dis/html.dist.js');
 
 gulp.task('distHtml', distHtml);
 
-gulp.task('.dis', ['imageMinDev', 'changeLessDev', 'changeJsDev', 'fileIncludeDev','distClean'],function () {
+gulp.task('.dist', ['imageMinDev', 'changeLessDev', 'changeJsDev', 'fileIncludeDev','distClean'],function () {
 
     gulp.start('distJs', 'distCss', 'distImg', 'distHtml')
 
