@@ -10,17 +10,8 @@ function showGoActive() {
 
     document.getElementsByTagName('html')[0].className='ovfHiden';
 
-    //点击“去激活”按钮，关闭弹窗
-    document.getElementsByClassName('activation_btn')[0].addEventListener('click',function () {
-
-        activationNone.className = 'activation_popup';
-
-        window.location.href='../certification/main.html'
-
-    },false)
-
     //点击关闭按钮，关闭弹窗
-    document.getElementsByClassName('activation_close_btn')[0].addEventListener('click',function () {
+    document.getElementsByClassName('close_round')[0].addEventListener('click',function () {
 
         activationNone.className = 'activation_popup';
 
