@@ -290,8 +290,35 @@
       display: flex;
       flex-flow: row wrap;
       background-color: #ffffff;
+      position: relative;
+
+      .consumption_stage_popup {
+        width: 50%;
+        height: 68px;
+        background-position: center;
+        background-image: url("../images/white_stripes/consumption_popup.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        position: absolute;
+        margin-top: 0;
+        right: 0;
+        z-index: 444;
+
+        @media screen and(max-width: 320px) {
+          height: 52px;
+        }
+
+      }
 
       .left_img_font {
+
+        &:first-child {
+
+          &:before {
+            display: none;
+          }
+
+        }
 
         &:last-child {
 
