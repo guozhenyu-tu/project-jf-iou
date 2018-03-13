@@ -163,11 +163,33 @@
     margin: 25% auto;
     background-repeat: no-repeat;
     display: inline-block;
+    background-position: center;
+
+    @media screen and(min-width: 750px) {
+
+      height: 80px;
+      margin: 35% auto;
+
+    }
+
+    @media screen and(min-width: 1024px) {
+      height: 110px;
+    }
 
     p {
       color: #ffffff;
-      line-height: 25px;
+      line-height: 35px;
       font-size: 16px;
+
+      @media screen and(min-width: 750px) {
+        line-height: 80px;
+        font-size: 18px;
+      }
+
+      @media screen and(min-width: 1024px) {
+        line-height: 110px;
+      }
+
     }
 
   }
@@ -178,6 +200,10 @@
     margin-top: -15%;
     position: absolute;
     right: 0.4%;
+
+    @media screen and(min-width: 750px) {
+      margin-top: -30%;
+    }
 
     .close_round {
       width: 25px;
