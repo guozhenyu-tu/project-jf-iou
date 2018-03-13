@@ -59,8 +59,11 @@
             <p class="title">后付款方式</p>
 
             <div class="date_tab">
-                <label>
-                    <input type="radio" class="choose_radio" name="dateData" checked>
+
+                <!--分期不可选中，只要在label标签添加class值 gray_nochecked ，分期变为不可选。点击时，会有小提示-->
+                <!--反之，分期可选中，删除添加的class值即可-->
+                <label class="gray_nochecked">
+                    <input type="radio" class="choose_radio" name="dateData">
                     <div>
                         <p><span>2000.00</span> x 1期</p>
                         <p>含服务费<span>90.00</span>/月</p>
@@ -90,6 +93,8 @@
 
 
             </div>
+
+            <div class="noclick_tips"><span>X期</span><span>最大转让金额为XXXX</span></div>
         </div>
 
     </div>
@@ -114,7 +119,9 @@
 
 <div class="bottom_btn borrow_fixed_btn">
     <div class="fix_bar"></div>
-    <div class="fix_btn"><a href="confirm_borrow.html">去转让获取现金</a></div>
+
+    <!--去除class值 gray_button_background ，按钮变为绿色-->
+    <div class="fix_btn gray_button_background"><a href="confirm_borrow.html">去转让获取现金</a></div>
 
 </div>
 
@@ -156,5 +163,24 @@
         //指定客服
         'b040d96757bf55ea302f9fbfb0ecd062'
     );
+
+    //点击选分期，分期无法选中，弹出小提示
+    var clickTips=document.getElementsByClassName('gray_nochecked');
+
+    for (var i=0;i<clickTips.length;i++) {
+
+        clickTips[i].addEventListener('click',function () {
+
+            document.getElementsByClassName('date_main')[0].className = 'date_main noclick_tips_block';
+
+            setTimeout(function () {
+
+                document.getElementsByClassName('date_main')[0].className = 'date_main';
+
+            },1500)
+
+        },false)
+
+    }
 
 </script>

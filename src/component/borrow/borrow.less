@@ -644,11 +644,66 @@
           display: block;
         }
 
+        /*****灰色选项*****/
+        .gray_nochecked {
+
+          input {
+
+            &:checked {
+              border: dotted 1px #ababab;
+              background: none;
+            }
+
+            &:checked + div {
+              color: #4a4a4a;
+            }
+
+            &:before {
+              display: none;
+            }
+
+            &:after {
+              display: none;
+            }
+
+          }
+
+        }
+
+      }
+
+      .noclick_tips {
+        background-color: #000000;
+        padding: 10px;
+        position: absolute;
+        margin-top: -105px;
+        left: 26%;
+        z-index: 666;
+        transition: all .5s linear;
+        opacity: .0;
+        border-radius: 6px;
+
+        @media screen and(max-width: 320px) {
+          left: 20%;
+        }
+
+        span {
+          color: #ffffff;
+          font-size: 12px;
+        }
 
       }
 
     }
 
+    .noclick_tips_block {
+
+      .noclick_tips {
+        transition: all .5s linear;
+        opacity: .60;
+      }
+
+    }
 
   }
 }
