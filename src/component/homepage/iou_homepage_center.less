@@ -175,11 +175,11 @@
 
       content: '';
       position: absolute;
-      width: 200%;
-      height: 200%;
-      top: -50%;
-      left: -50%;
-      transform:(scale(0.5));
+      width: 100%;
+      height: 1px;
+      top: 0;
+      left: 0;
+      transform: scaley(0.3);
       border-top: 1px #e5e5e5 solid;
 
     }
@@ -224,7 +224,7 @@
 
     width: 100%;
     margin-top: 10px;
-    box-shadow: 0 2px 3px 0 #e3e3e3;
+    box-shadow: 0 2px 5px 0 #ebebeb;
 
     .top_plate {
 
@@ -232,6 +232,19 @@
       width: 100%;
       padding: 6px 0;
       position: relative;
+
+      &:before {
+
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        transform: scaley(0.3);
+        border-bottom: 1px #e5e5e5 solid;
+
+      }
 
       @media screen and(min-width: 414px) {
 
@@ -291,6 +304,18 @@
         right: 0;
         z-index: 444;
 
+        &:before {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          transform: scaley(0.3);
+          border-bottom: 1px #e5e5e5 solid;
+
+        }
+
         @media screen and(max-width: 320px) {
           height: 52px;
         }
@@ -305,6 +330,22 @@
         flex-flow: row wrap;
         position: relative;
         background-color: #ffffff;
+
+        &:nth-last-child(1) {
+
+          &:before {
+            display: none;
+          }
+
+        }
+
+        &:nth-last-child(2) {
+
+          &:before {
+            display: none;
+          }
+
+        }
 
         &:active {
 
@@ -426,9 +467,7 @@
         &:nth-child(even) {
 
           &:after {
-
             display: none;
-
           }
 
           .left_img {
@@ -531,12 +570,12 @@
 
           position: absolute;
           content: '';
-          width: 200%;
-          height: 200%;
-          top: -50%;
-          left: -50%;
-          transform:(scale(0.5));
-          border-top: 1px #e5e5e5 solid;
+          width: 100%;
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          transform: scaley(0.3);
+          border-bottom: 1px #e5e5e5 solid;
 
         }
 
@@ -544,11 +583,11 @@
 
           position: absolute;
           content: '';
-          width: 200%;
-          height: 200%;
-          top: -50%;
-          right: -50%;
-          transform:(scale(0.5));
+          width: 1px;
+          height: 100%;
+          top: 0;
+          right: 0;
+          transform: scalex(0.3);
           border-right: 1px #e5e5e5 solid;
 
         }
