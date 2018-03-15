@@ -1,0 +1,27 @@
+<div class="check_progress_page">
+
+    <!--通用进度条-->
+
+    <!--有 class 值 orange_show ，是黄色字体 red_show，是红色字体，删除 class 值，则是绿色字体-->
+    <div class="progress_bar red_show">
+        <!--当前处于哪一步则添加class值show,如果接下来还有步骤则添加class值more-->
+        <div class="step show">
+            <p class="title">审核失败，稍后可重新申请</p>
+            <span class="time">2018-01-12 08:50</span>
+        </div>
+        <div class="step">
+            <p class="title">分期申请提交完成</p>
+            <p class="min_text">嘉福平台消费</p>
+            <p class="min_text">金额<span>￥3000.00</span>、<span class="step_green">退款</span><span class="step_green">￥0.00</span></p>
+            <p class="min_text">服务费<span>￥60.00</span></p>
+            <span class="time">2018-01-12 08:45</span>
+        </div>
+    </div>
+
+</div>
+
+
+<%- include('../basic/one_green_btn.ejs',{
+"hrefone":"../homepage/homepage.html",
+"btntext":"返回"
+})%>
