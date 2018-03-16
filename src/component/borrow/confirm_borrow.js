@@ -69,3 +69,31 @@ function myPlan() {
     document.getElementsByClassName('repayment_plan')[0].className = 'repayment_plan popup_use_block';
 
 }
+
+//同意服务协议
+function checkedService() {
+
+    //window.onload=function () {
+
+       // document.getElementsByClassName('bottom_btn')[0].className = 'bottom_btn gray_button_background';
+
+        var clickText=document.getElementsByClassName('agreement')[0].getElementsByTagName('label')[0];
+
+        clickText.addEventListener('click',function () {
+
+            var checkedBorrow=document.getElementsByClassName('tate_y')[0];
+
+            if (checkedBorrow.checked ==true) {
+
+                document.getElementsByClassName('blue_bottom_btn')[0].className = 'blue_bottom_btn';
+
+            }else {
+
+                document.getElementsByClassName('blue_bottom_btn')[0].className = 'blue_bottom_btn gray_button_background';
+
+            }
+        },false)
+
+   // }
+
+}
