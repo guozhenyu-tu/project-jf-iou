@@ -192,15 +192,17 @@
 
 </div>
 <div class="agreement">
-    <label><input type="checkbox" class="">我已经阅读并同意</label><a href="agreement_borrow.html">《现金分期服务协议》</a>
+    <label><input type="checkbox"  class="tate_y">我已经阅读并同意</label><a href="agreement_borrow.html">《现金分期服务协议》</a>
 </div>
 
 
 
-<%- include('../basic/one_green_btn.ejs',{
-"hrefone":"borrow_success.html",
-"btntext":"确认转让"
-})%>
+<div class="bottom_btn borrow_fixed_btn">
+
+    <!--去除class值 gray_button_background ，按钮变为绿色-->
+    <div class="blue_bottom_btn gray_button_background"><a href="borrow_success.html">确认转让</a></div>
+
+</div>
 
 
 <script>
@@ -208,7 +210,13 @@
    addEventListener('load',showChooseBox,false)
 
 
+   //同意服务协议按钮为绿色，可跳转链接
+   checkedService()
+
+
+
 </script>
+
 
 
 
