@@ -396,7 +396,7 @@
           height: 100%;
           width: 0;
           border-radius: 30px;
-          background: linear-gradient(to right,#baf3e3,#4fba9c);
+          background: linear-gradient(left,#baf3e3,#4fba9c);
           z-index: 90;
         }
         .move_coin{
@@ -632,6 +632,7 @@
               &:last-child{
                // color: #ababab;
                 font-size: 12px;
+
               }
             }
           }
@@ -737,3 +738,63 @@
   }
 
 }
+
+
+/****底部黄色按钮****/
+
+  .yellow_borrow_btn{
+
+    margin-left: 5%;
+
+    width: 90%;
+
+    position: fixed;
+
+    bottom: 20px;
+
+    a{
+      width: 100%;
+      display: block;
+      height: 50px;
+      background: linear-gradient(left,#ffb700,#ff7800);
+      color: #ffffff;
+      border-radius: 50px;
+      font-size: 18px;
+      text-align: center;
+      line-height: 50px;
+      margin: 0 auto;
+
+      &:active{
+        opacity: 0.6;
+      }
+    }
+
+  }
+
+  /*****底部按钮灰色（借款、借款确认页）*****/
+
+.borrow_bt_btn{
+
+  .gray_button_background {
+
+    a {
+      background: linear-gradient(left,#dddddd,#dddddd);
+    }
+
+  }
+
+}
+
+.agreement_bottom_btn{
+
+  .gray_button_background {
+
+    a {
+      background: linear-gradient(left,#dddddd,#dddddd);
+    }
+
+  }
+
+}
+
+
