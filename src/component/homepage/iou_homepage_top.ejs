@@ -1,5 +1,5 @@
 <!-------在下面 div 的 class 中加入 quota_state_checked ，即可改变“已激活”按钮的形态------>
-<div class="iou_homepage_top">
+<div class="iou_homepage_top quota_state_checked">
 
     <p>可用额度</p>
 
@@ -7,6 +7,16 @@
 
     <p><span>总额度：</span><span>10000.00</span></p>
 
-    <a href="../borrow/borrow.html"><button class="quota_state">未激活</button></a>
+
+
+    <a href="../borrow/borrow.html">
+
+
+
+        <!--审核中、审核未通过修改class值“examine_state” 已激活class值为“activated_state”-->
+
+        <button class="quota_state"><span class="activated_state"></span>已激活</button>
+
+    </a>
 
 </div>
