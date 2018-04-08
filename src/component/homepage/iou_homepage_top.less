@@ -39,14 +39,14 @@ button {
 
     &:nth-child(1) {
 
-      font-size: 16px;
-      padding-top: 10px;
-      line-height: 15px;
+      font-size: 18px;
+      padding-top: 20px;
+      line-height: 20px;
 
       @media screen and(max-width: 320px) {
 
         font-size: 12px;
-        line-height: 10px;
+        line-height: 25px;
 
       }
 
@@ -60,8 +60,8 @@ button {
 
     &:nth-child(2) {
 
-      font-size: 50px;
-      line-height: 66px;
+      font-size: 38px;
+      line-height: 60px;
 
       @media screen and(max-width: 320px) {
 
@@ -74,10 +74,14 @@ button {
 
     &:nth-child(3) {
 
+      display: none;
+
       font-size: 16px;
       line-height: 15px;
 
       @media screen and(max-width: 320px) {
+
+        display: none;
 
         font-size: 12px;
         line-height: 10px;
@@ -127,6 +131,64 @@ button {
 
 /*********已激活按钮变的样式*********/
 .quota_state_checked {
+
+  p {
+
+    color: #ffffff;
+
+    &:nth-child(1) {
+
+      font-size: 16px;
+      padding-top: 15px;
+      line-height: 15px;
+
+      @media screen and(max-width: 320px) {
+
+        font-size: 12px;
+        line-height: 15px;
+
+      }
+
+      @media screen and(min-width: 414px) {
+
+        padding-top: 15px;
+
+      }
+
+    }
+
+    &:nth-child(2) {
+
+      font-size: 40px;
+      line-height: 66px;
+
+      @media screen and(max-width: 320px) {
+
+        font-size: 33px;
+        line-height: 45px;
+
+      }
+
+    }
+
+    &:nth-child(3) {
+
+      display: block;
+
+      font-size: 16px;
+      line-height: 15px;
+
+      @media screen and(max-width: 320px) {
+
+        font-size: 12px;
+        line-height: 10px;
+
+      }
+
+    }
+
+  }
+
 
 
 

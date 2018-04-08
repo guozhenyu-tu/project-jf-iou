@@ -329,7 +329,9 @@
 
     .main_mid{
 
-      padding: 15px 0;
+      //padding: 15px 0;
+
+      padding-bottom: 15px;
 
       @media screen and(max-width: 360px){
         padding: 10px 0;
@@ -573,12 +575,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border: dotted 1px #ababab;
+            border: solid 1px #ababab;
             border-radius: 4px;
             //overflow: hidden;
 
             &:checked{
-              border:dotted 1px #4fba9c;
+              border:solid 1px #4fba9c;
               background: #f3fffb;
               z-index: 1;
             }
@@ -632,6 +634,7 @@
               &:last-child{
                // color: #ababab;
                 font-size: 12px;
+                line-height: 40px;
 
               }
             }
@@ -671,12 +674,67 @@
 
         }
 
+        /*****推荐选择*****/
+        .hot_checked {
+          position: relative;
+
+          &:after{
+            content: "推荐";
+            line-height: 25px;
+            font-size: 12px;
+            color: white;
+            white-space: nowrap;
+            position: absolute;
+            border-radius: 3px;
+            z-index: 10;
+            top: -10px;
+            right: -5px;
+            width: 40px;
+            height: 25px;
+
+
+           background-color: #ffa316;
+
+
+          }
+
+        }
+
       }
 
 
     }
 
   }
+}
+
+/*****推荐选择*****/
+.hot_select {
+  position: relative;
+
+  &:after{
+    content: "推荐";
+    line-height: 25px;
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    line-height: 18px;
+    z-index: 10;
+    top: -11px;
+    right: 5px;
+    width: 25px;
+    height: 40px;
+    text-align: center;
+    box-shadow: 0 2px 4px 0 rgba(255,163,22,.6);
+
+
+    background-color: #ffa316;
+
+
+  }
+
 }
 
 .salary_bottom{
