@@ -4,6 +4,9 @@
   margin-bottom: 40px;
   margin-bottom: 40px;
 
+
+
+
   >p{
     width: 65%;
     margin: 0 auto;
@@ -37,6 +40,10 @@
     padding:35px 0 30px 0;
     box-shadow: 2px 3px 4px rgba(193,193,193,0.4);
 
+    @media screen and(max-width: 360px) {
+      padding: 20px 0 10px 0;
+    }
+
     >a{
       display: inline-block;
       color: #4a4a4a;
@@ -44,6 +51,10 @@
       float: left;
       text-align: center;
       padding: 15px 0;
+
+      @media screen and(max-width: 360px) {
+        padding: 10px 0 5px 0;
+      }
 
       p:first-child{
         width: 45%;
@@ -57,6 +68,10 @@
       p:last-child{
         font-size: 16px;
         margin: 10px;
+
+        @media screen and(max-width: 360px) {
+          margin: 5px 10px 5px 10px;
+        }
       }
 
 
@@ -221,12 +236,18 @@
   text-align: center;
   display: block;
   padding-top: 5px;
+
+  @media screen and(max-width: 360px) {
+    font-size: 12px;
+  }
 }
 
 
 .agreement{
   text-align: center;
   margin-bottom: 20px;
+
+
   input{
     appearance:none;
     width: 14px;
