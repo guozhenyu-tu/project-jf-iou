@@ -1,11 +1,14 @@
 
 .move_box{
   width: 100%;
-  padding-top: 80px;
   display: flex;
   justify-content: center;
   position: relative;
-  &:after{
+  img{
+    width: 200px;
+    height: 115px;
+  }
+  /*&:after{
     content: "";
     position: absolute;
     top: 55%;
@@ -15,7 +18,7 @@
     border-bottom-left-radius: 4px;
     border-left: 6px solid #ffa316;
     border-bottom: 6px solid #ffa316;
-  }
+  }*/
   //轮廓
   .move{
     width: 88px;
@@ -96,14 +99,15 @@
   display: flex;
   justify-content: center;
   font-size: 18px;
-  color: #4a4a4a;
+  color: #45b48b;
 }
 
 //首期还款提醒
 
 .return_tips{
+  background-color: white;
   width: 92%;
-  padding: 20px 4%;
+  padding: 15px 4%;
   margin-top: 20px;
   position: relative;
   display: flex;
@@ -111,38 +115,63 @@
   &:after{
     content: "";
     position: absolute;
-    width: 90%;
-    height: 1px;
-    background-color: #ababab;
+    display: inline-block;
+    width: 92%;
+    border-top: 1px solid #dddddd;
     bottom:0;
-    left:5%;
-    transform: scaleY(0.4);
+    left:4%;
+    transform: scaleY(0.5);
   }
   .return_tips_img{
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
   }
   .return_tips_font{
     display: block;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 20px;
     color: #4a4a4a;
     margin-left: 6px;
   }
 }
 .return_frist_detail{
+  background-color: white;
   width: 92%;
-  padding: 20px 4%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 0px 4%;
   p{
+    color: #ababab;
     font-size: 14px;
-    color: #4a4a4a;
+    position: relative;
+    padding: 12px 0;
+    span{
+      float: right;
+      color: #4a4a4a;
+      &:before{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      &:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+  }
+  p+p:before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid #dddddd;
+    top:0;
+    left:0;
+    transform: scaleY(0.5);
   }
 }
 
 .doing_bottom {
-  margin-top: 30px;
+  margin-top: 45px;
 
   .bottom_orange_btn {
     width: 90%;
@@ -170,4 +199,10 @@
 
 .doing_btn{
   margin-top: 40px;
+}
+
+.success_page_center{
+  background-color: white;
+  padding: 80px 0 60px;
+  box-shadow: 0px 0px 1px 1px rgb(236,235,237);
 }

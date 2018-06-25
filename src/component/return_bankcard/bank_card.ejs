@@ -4,10 +4,9 @@
         <div class="borrow_show_tips">
             <div class="left">
                 <span class="tittle_how">借多少</span>
-                <span class="how_fonts">最多可借：<span>8000.00</span>元</span>
             </div>
             <div class="right">
-                <img src="../../images/bank_card/green_tips.png">
+                <img src="../../images/icon_what.png">
                 <span class="how_all">到账说明</span>
             </div>
         </div>
@@ -15,13 +14,17 @@
             <div class="left">
                 <label>
                     <span>￥</span>
-                    <input class="money_with" type="number" pattern="[0-9]*" placeholder="金额一次性还到信用卡">
+                    <input class="money_with" type="number" pattern="[0-9]*" placeholder="请输入金额">
                 </label>
             </div>
             <div class="right">
-                <span class="borrow_all">全部</span>
+                <span class="borrow_all input_box_button"><img src="../../images/icon_del.png" alt=""></span>
             </div>
         </div>
+    </div>
+    <div class="contact_info">
+        <img src="../../images/icon_exclamation_mark.png">
+        <span class="tips">最多可借<span id="borrow_money_max">8000.00</span>元且金额一次性还到信用卡</span>
     </div>
     <!--借多久-->
     <div class="borrow_how_part">
@@ -29,7 +32,7 @@
         <div class="choose_how">
             <!--灰色无法选中增加class值：“gray_nochecked”-->
             <label class="bankcard_nochecked">
-                <input type="radio" class="choose_radio" name="dateData">
+                <input type="radio" class="choose_radio" name="dateData" checked>
                 <div>
                     <p>1个月</p>
                 </div>
@@ -38,14 +41,28 @@
             <label class="bankcard_nochecked">
                 <input type="radio" class="choose_radio" name="dateData">
                 <div>
-                    <p>2个月</p>
+                    <p>3个月</p>
                 </div>
             </label>
 
             <label class="bankcard_nochecked gray_nochecked">
                 <input type="radio" class="choose_radio" name="dateData">
                 <div>
-                    <p>3个月</p>
+                    <p>5个月</p>
+                </div>
+            </label>
+
+            <label class="bankcard_nochecked">
+                <input type="radio" class="choose_radio" name="dateData">
+                <div>
+                    <p>6个月</p>
+                </div>
+            </label>
+
+            <label class="bankcard_nochecked gray_nochecked">
+                <input type="radio" class="choose_radio" name="dateData">
+                <div>
+                    <p>12个月</p>
                 </div>
             </label>
 
@@ -54,9 +71,9 @@
     <!--借款怎么还-->
     <div class="how_pay_part">
         <span class="tittle_how">借款怎么还</span>
-        <div class="pat_part_in">
+        <div class="pat_part_in" onclick="myPlan()">
             <span class="how_tit">分期还款计划</span>
-            <a class="how_pay" onclick="myPlan()">每月<span>10</span>号<span>500</span>x<span>1</span>个月</a>
+            <a class="how_pay">每月<span>15</span>号<span>800</span>*<span>5</span>个月</a>
         </div>
     </div>
 
@@ -146,6 +163,78 @@
             </div>
 
             <div class="plan_inline_list">
+                <span>3/3</span>
+
+                <span>2018-03-14</span>
+
+                <span>1030.00</span>
+            </div>
+
+            <div class="plan_inline_list">
+                <span>3/3</span>
+
+                <span>2018-03-14</span>
+
+                <span>1030.00</span>
+            </div>
+
+            <div class="plan_inline_list">
+                <span>3/3</span>
+
+                <span>2018-03-14</span>
+
+                <span>1030.00</span>
+            </div>
+
+            <div class="plan_inline_list">
+                <span>3/3</span>
+
+                <span>2018-03-14</span>
+
+                <span>1030.00</span>
+            </div>
+
+            <div class="plan_inline_list">
+                <span>3/3</span>
+
+                <span>2018-03-14</span>
+
+                <span>1030.00</span>
+            </div>
+
+            <div class="plan_inline_list">
+                <span>3/3</span>
+
+                <span>2018-03-14</span>
+
+                <span>1030.00</span>
+            </div>
+
+            <div class="plan_inline_list">
+                <span>3/3</span>
+
+                <span>2018-03-14</span>
+
+                <span>1030.00</span>
+            </div>
+
+            <div class="plan_inline_list">
+                <span>3/3</span>
+
+                <span>2018-03-14</span>
+
+                <span>1030.00</span>
+            </div>
+
+            <div class="plan_inline_list">
+                <span>3/3</span>
+
+                <span>2018-03-14</span>
+
+                <span>1030.00</span>
+            </div>
+
+            <div class="plan_inline_list">
                 <span>2/3</span>
 
                 <span>2018-02-14</span>
@@ -206,5 +295,48 @@
         });
 
     },false)
+
+    $(document).ready(function(){
+        var max_money = $('#borrow_money_max').text();
+        $('.money_with:eq(0)').attr('value',max_money);
+    })
+
+    $('.input_box_button').click(function(){
+        if($(this).text() == ''){
+            $('.money_with').val('');
+            $(this).html('全部');
+            $(this).removeClass('borrow_all');
+            $('.money_with').focus();
+        }
+        else if($(this).text() == '全部'){
+            $('.money_with').val('8000.00');
+            $(this).html('<img src="../../images/icon_del.png" alt="">');
+            $(this).addClass('borrow_all');
+        }
+    })
+
+    $('.money_with').bind('input propertychange',function(){
+        if($(this).val()){
+            if($('.input_box_button').text()){
+                $('.input_box_button').html('<img src="../../images/icon_del.png" alt="">');
+                $('.input_box_button').addClass('borrow_all');
+            }
+        }
+        else{
+            $('.input_box_button').text('全部');
+            $('.input_box_button').removeClass('borrow_all');
+        }
+        if($(this).val() > 8000){
+            $(this).val('8000');
+            $(this).focus();
+        }
+    })
+    $('.money_with').blur(function(){
+        if($(this).val()){
+            var val = $(this).val() - 0;
+            val = val.toFixed(2);
+            $(this).val(val+'');
+        }
+    })
 
 </script>

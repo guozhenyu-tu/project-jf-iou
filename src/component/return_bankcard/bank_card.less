@@ -1,10 +1,15 @@
 .return_bankcard_all{
   width: 100%;
   padding-top: 10px;
-
+  &>div{
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+  }
   //借多少
   .borrow_how_part{
-    padding: 15px 4% 0 4%;
+    padding: 15px 4% 0;
     width: 92%;
     background-color: #ffffff;
     box-shadow: 0 2px 5px 0 #ebebeb;
@@ -18,12 +23,12 @@
       &:after{
         content: "";
         position: absolute;
+        display: inline-block;
         width: 100%;
-        height: 1px;
-        background-color: #ababab;
+        border-bottom: 1px solid #dddddd;
         bottom: 0;
         left: 0;
-        transform: scaleY(0.3);
+        transform: scaleY(0.5);
       }
       .left{
         width: 70%;
@@ -34,7 +39,7 @@
         .tittle_how{
           font-size: 16px;
           color: #4a4a4a;
-          padding-left: 5%;
+          padding-left: 17px;
           position: relative;
           white-space: nowrap;
           &:after {
@@ -43,7 +48,7 @@
             width: 4px;
             height: 15px;
             background-color: #4fba9c;
-            left: 5%;
+            left: 2px;
             top: 20%;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
@@ -67,17 +72,19 @@
           width: 14px;
           height: 14px;
           margin-right: 4px;
+          vertical-align: middle;
         }
         .how_all{
-          margin-right: 5%;
+          vertical-align: middle;
           font-size: 14px;
           color: #4fba9c;
+          white-space: nowrap;
         }
       }
     }
     .borrow_input_box {
       width: 100%;
-      padding-top: 10px;
+      padding: 10px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -93,18 +100,26 @@
           justify-content: flex-start;
           align-items: center;
           span{
-            font-size: 24px;
-            margin-right: 3px;
+            font-size: 20px;
+            margin-right:5px;
+            vertical-align: middle;
+            color: #4a4a4a;
           }
           .money_with{
             border: none;
             background: none;
-            font-size: 16px;
-            color: #4fba9c;
+            font-size: 32px;
+            color: #4a4a4a;
+            width: 80%;
+            vertical-align: middle;
+            &::placeholder{
+              color: #ababab;
+              vertical-align: middle;
+            }
           }
           .money_with::placeholder{
-            font-size: 14px;
-            color: #ababab;
+            font-size: 24px;
+            color: rgb(222,222,222);
           }
         }
       }
@@ -113,26 +128,53 @@
         justify-content: flex-end;
         align-items: center;
         width: 30%;
+        font-size: 14px;
+        color: #4fba9c;
+        line-height: 20px;
+        .input_box_button{
+          width: 40px;
+          height: 40px;
+          line-height: 40px;
+          text-align: center;
+        }
         .borrow_all{
-          margin-right: 5%;
-          font-size: 14px;
-          color: #4fba9c;
+          display: inline-block;
+          position: relative;
+          img{
+            padding: 10px 0 10px 20px;
+            width: 20px;
+            height: 20px;
+          }
         }
       }
+    }
+  }
+  &>.contact_info{
+    margin: 2px auto 20px;
+    padding-top: 0;
+    img{
+      width: 12px;
+      height: 12px;
+      vertical-align: middle;
+      margin-left: 4%;
+      margin-right: 2px;
+    }
+    span{
+      vertical-align: middle;
+      font-size: 12px;
     }
   }
 
   //借多久
   .borrow_how_part{
-    margin-top: 10px;
-    padding: 15px 4%;
+    padding: 15px 4% 0;
     width: 92%;
     background-color: #ffffff;
     box-shadow: 0 2px 5px 0 #ebebeb;
     .tittle_how{
       font-size: 16px;
       color: #4a4a4a;
-      padding-left: 3.5%;
+      padding-left: 17px;
       position: relative;
       white-space: nowrap;
       &:after {
@@ -141,7 +183,7 @@
         width: 4px;
         height: 15px;
         background-color: #4fba9c;
-        left: 5%;
+        left: 2px;
         top: 5%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -150,7 +192,8 @@
       }
     }
     .choose_how{
-      margin-top: 15px;
+      margin-top: 30px;
+      position: relative;
       /*@media screen and(max-width: 360px) {
         margin-top: 5px;
       }*/
@@ -163,10 +206,6 @@
         //padding: 5px 0;
         position: relative;
         float: left;
-        @media screen and(max-width: 360px) {
-          padding: 8px 0;
-          margin-bottom: 10px;
-        }
         &:nth-child(3n){
           margin-right: 0;
         }
@@ -184,7 +223,6 @@
 
           &:checked{
             border:solid 1px #4fba9c;
-            background: #f3fffb;
             z-index: 1;
           }
 
@@ -196,22 +234,31 @@
           }
         }
         >div{
+          color: #808080;
+          padding: 8px 0;
           p{
             &:first-child{
               font-size: 14px;
             }
             &:last-child{
               // color: #ababab;
-              font-size: 12px;
+              font-size: 14px;
               line-height: 20px;
-              @media screen and(min-width: 360px) {
-                line-height: 40px;
-              }
             }
           }
 
 
         }
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        border-bottom: 1px solid #dddddd;
+        top: -20px;
+        left: 0;
+        transform: scaleY(0.5)
       }
       &:after{
         content: '';
@@ -220,7 +267,11 @@
       }
       /*****灰色选项*****/
       .gray_nochecked {
+        div{
+          color: #bbbbbb;
+        }
         input {
+          border: dotted 1px #bbbbbb;
           &:checked {
             border: dotted 1px #ababab;
             background: none;
@@ -240,15 +291,15 @@
   }
   //怎么还
   .how_pay_part{
-    margin-top: 10px;
-    padding: 15px 4%;
+    margin-top: 20px;
+    padding: 15px 4% 0;
     width: 92%;
     background-color: #ffffff;
     box-shadow: 0 2px 5px 0 #ebebeb;
     .tittle_how{
       font-size: 16px;
       color: #4a4a4a;
-      padding-left: 4%;
+      padding-left: 17px;
       position: relative;
       white-space: nowrap;
       &:after {
@@ -257,7 +308,7 @@
         width: 4px;
         height: 15px;
         background-color: #4fba9c;
-        left: 5%;
+        left: 2px;
         top: 5%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -266,17 +317,18 @@
       }
     }
     .pat_part_in{
-      padding: 15px 5px;
+      padding: 25px 5px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
       .how_tit{
-        color: #4a4a4a;
+        color: #ababab;
         font-size: 14px;
       }
       .how_pay{
         display: block;
-        color: #4fba9c;
+        color: #f39800;
         margin-right: 4%;
         font-size: 14px;
         height: 24px;
@@ -284,14 +336,24 @@
         &:after{
           content: "";
           position: absolute;
-          width: 8px;
-          height: 8px;
-          top: 26%;
+          width: 6px;
+          height: 6px;
+          top: 30%;
           right: -8%;
-          border-top: 2px solid #4fba9c;
-          border-right: 2px solid #4fba9c;
+          border-top: 1px solid #ababab;
+          border-right: 1px solid #ababab;
           transform: rotate(45deg);
         }
+      }
+      &:before{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        border-bottom: 1px solid #dddddd;
+        top: 10px;
+        left: 0;
+        transform: scaleY(0.5)
       }
     }
   }
@@ -328,8 +390,8 @@
   border: none;
   position: absolute;
   right: 0;
-  top: 20%;
-  padding: 2px 10px;
+  top: 0;
+  padding: 8px 10px;
   z-index: 700;
 
   img {
