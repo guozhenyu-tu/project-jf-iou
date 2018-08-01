@@ -15,10 +15,20 @@
             <p>联系信息</p>
         </a>
 
-        <a class="select">
+          <!--需要添加提示：加入class值：“phone”-->
+        <a class="select phone">
             <p><img src="../../images/icon_phone.png"></p>
-            <p class="red_tips_font">* 选填，可提高授信额度</p>
+            <!--<p class="red_tips_font">* 选填，可提高授信额度</p>-->
             <p>手机认证</p>
+            <div class="phone_tip">
+                <span class="tip_up">
+                    <span>提额5000元呦</span>
+                    <span>享受专属还信用卡特权</span>
+                </span>
+                            <span class="tip_down">
+                    <span>手机认证</span>
+                </span>
+            </div>
         </a>
 
         <!--<a class="cancle">-->
@@ -28,6 +38,7 @@
 
     </div>
 </div>
+
 
 
 <div class="agreement">
@@ -42,11 +53,11 @@
 
 
 
-<script>
-    document.getElementsByClassName('cancle')[0].addEventListener("click",function(){
+<!--<script>-->
+    <!--document.getElementsByClassName('cancle')[0].addEventListener("click",function(){-->
 
-        jfShowTips.toastShow({
-            "text":"暂时不需认证"
-        })
-    },false)
-</script>
+        <!--jfShowTips.toastShow({-->
+            <!--"text":"暂时不需认证"-->
+        <!--})-->
+    <!--},false)-->
+<!--</script>-->
