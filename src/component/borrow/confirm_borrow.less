@@ -283,7 +283,7 @@ input {
   padding: 5px 0;
   display: none;
 
-  @media screen and(max-width: 350px){
+  @media screen and(max-width: 370px){
     transform: translate3d(-50%,-55%,0);
   }
 
@@ -383,7 +383,7 @@ input {
 
     &:nth-child(4) {
      // height: 90px;
-      overflow: scroll;
+      overflow:auto;
       margin: 0 auto;
       border-top: none;
       border-bottom: 1px #dddddd solid;
@@ -393,6 +393,11 @@ input {
       border-bottom-right-radius: 3px;
       min-width: 150px;
       max-height: 300px;
+
+      @media screen and(max-width: 370px){
+        max-height: 265px;
+      }
+
 
       .plan_inline_list {
 

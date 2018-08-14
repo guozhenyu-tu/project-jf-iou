@@ -1,0 +1,216 @@
+
+.move_box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  img{
+    width: 200px;
+    height: 115px;
+  }
+  /*&:after{
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 49.2%;
+    width: 20px;
+    height: 30px;
+    border-bottom-left-radius: 4px;
+    border-left: 6px solid #ffa316;
+    border-bottom: 6px solid #ffa316;
+  }*/
+  //轮廓
+  .move{
+    width: 88px;
+    height: 88px;
+    border-radius: 100px;
+    border: 6px solid #ffa316;
+    position: relative;
+    &:after{
+      position: absolute;
+      content: "";
+      width: 14px;
+      height: 14px;
+      border-bottom: 6px solid #ffa316;
+      border-right: 6px solid #ffa316;
+      border-bottom-right-radius: 4px;
+      //transform: rotate(45deg);
+      right: -2px;
+      top: 4.5px;
+    }
+    &:before{
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-color: rgb(245,245,249);
+      right: -10px;
+      top: 25%;
+    }
+    //遮盖
+    .pom{
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: relative;
+      &:after{
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 10px;
+        //background-color: red;
+        background-color: rgb(245,245,249);
+        transform: rotate(35deg);
+        right: -5px;
+        bottom:17px;
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 10px;
+        //background-color: red;
+        background-color: rgb(245,245,249);
+        transform: rotate(60deg);
+        right: 15px;
+        bottom: 0;
+      }
+    }
+  }
+}
+//提交申请页动画
+.animate-card-rotate{
+  animation: animate-card-tip 2s;
+}
+
+@-webkit-keyframes animate-card-tip {
+  0%{
+    transform: rotate(-360deg);
+  }
+
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+.text_doing{
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  color: #45b48b;
+}
+
+//首期还款提醒
+
+.return_tips{
+  background-color: white;
+  width: 92%;
+  padding: 18px 4%;
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &:after{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 92%;
+    border-top: 1px solid #dddddd;
+    bottom:0;
+    left:4%;
+    transform: scaleY(0.5);
+  }
+  .return_tips_img{
+    width: 16px;
+    height: 16px;
+  }
+  .return_tips_font{
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    color: #4a4a4a;
+    margin-left: 6px;
+  }
+}
+.return_frist_detail{
+  background-color: white;
+  width: 92%;
+  padding: 0px 4%;
+  p{
+    color: #ababab;
+    font-size: 14px;
+    position: relative;
+    padding: 15px 0;
+    span{
+      float: right;
+      color: #4a4a4a;
+      font-size: 16px;
+
+      &:before{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      &:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+  }
+  p+p:before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    border-top: 1px solid #dddddd;
+    top:0;
+    left:0;
+    transform: scaleY(0.5);
+  }
+}
+
+.doing_bottom {
+  margin-top: 45px;
+
+  @media screen and(max-width: 370px){
+
+    margin-top:15px
+  ;
+  }
+
+  .bottom_orange_btn {
+    width: 90%;
+    margin: 5px auto;
+    padding-bottom: 10px;
+    a {
+      width: 100%;
+      display: block;
+      height: 50px;
+      background: linear-gradient(left, #ffb700, #ff7800);
+      color: #ffffff;
+      border-radius: 50px;
+      font-size: 18px;
+      text-align: center;
+      line-height: 50px;
+      margin: 0 auto;
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+
+  }
+}
+
+.doing_btn{
+  margin-top: 40px;
+}
+
+.success_page_center{
+  background-color: white;
+  padding: 30px 0 30px;
+  box-shadow: 0px 0px 1px 1px rgb(236,235,237);
+}
