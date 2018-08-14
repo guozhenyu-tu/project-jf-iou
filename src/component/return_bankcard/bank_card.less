@@ -176,6 +176,9 @@
   }
 
   //借多久
+  .roll{
+    border-radius: 10px;
+  }
   .borrow_how_part{
     padding: 15px 4% 0;
     width: 92%;
@@ -351,6 +354,76 @@
           height: 6px;
           top: 30%;
           right: -8%;
+          border-top: 1px solid #ababab;
+          border-right: 1px solid #ababab;
+          transform: rotate(45deg);
+        }
+      }
+      &:before{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        border-bottom: 1px solid #dddddd;
+        top: 10px;
+        left: 0;
+        transform: scaleY(0.5)
+      }
+    }
+  }
+  //收款银行卡
+  .bank_pay_part{
+    margin-top: 20px;
+    padding: 15px 4% 0;
+    width: 92%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px 0 #ebebeb;
+    .tittle_how{
+      font-size: 16px;
+      color: #4a4a4a;
+      padding-left: 17px;
+      position: relative;
+      white-space: nowrap;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 15px;
+        background-color: #4fba9c;
+        left: 2px;
+        top: 5%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+    .pat_part_in{
+      padding: 25px 5px 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      color: #4a4a4a;
+      .left{
+        width: 38px;
+        height: 38px;
+        margin-right: 10px;
+      }
+      .right{
+        display: block;
+        width: calc(~"100% - 48px");
+        span{
+          display: block;
+        }
+        position: relative;
+        &:after{
+          content: "";
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          top: 50%;
+          right: 0;
           border-top: 1px solid #ababab;
           border-right: 1px solid #ababab;
           transform: rotate(45deg);

@@ -4,46 +4,121 @@
     <!--身份认证-->
     <div>
         <label class="input_list">
-            <div class="title">姓名</div>
-            <div class="input_form">葫芦娃</div>
+            <div class="title_n title_code">姓名</div>
+            <div class="input_form_n">葫芦娃</div>
         </label>
 
-        <label class="input_list no_line">
-            <div class="title">身份证号码</div>
-            <div  class="input_form">
+        <label class="input_list ">
+            <div class="title_n title_code">身份证号码</div>
+            <div  class="input_form_n">
                 <input placeholder="请输入身份证号码" type="text"/>
             </div>
         </label>
+
+        <label class="input_list no_line phone_code">
+            <div class="title_n title_code">验证码</div>
+            <div  class="input_form_n ">
+                <input type="number" pattern="[0-9]*" oninput="if(value.length>6)value=value.slice(0,6)" placeholder="请输入验证码" class="identifying_code"/>
+            </div>
+            <span class="code_send">获取验证码</span>
+        </label>
     </div>
 
+    <label class="ti_box">
+        <!--如需不显示，在style中增加样式：display:none;-->
+        <span class="ti_span" style="">*<span>验证码已发送到123****8900</span></span>
+    </label>
 </div>
 
 
 
-<%- include('../basic/one_green_btn.ejs',{
-"hrefone":"#",
-"btntext":"提交"
-})%>
+<div class="in_btn_gray">
+    <a>提交</a>
+</div>
 
 
 <script>
 
-    document.getElementsByClassName('bottom_btn')[0].addEventListener("click",function(){
+    //loading动画 & toast提示
+    document.getElementsByClassName('in_btn_gray')[0].children[0].addEventListener("click",function(){
 
-        //loading动画,10s后会自动移除
-        jfShowTips.loadingShow({
-            "text":"加载中"
-        })
+        if(document.getElementsByClassName('identifying_code_title')[0]){
+            return ;
+        }
 
-        setTimeout(function(){
+        var identifying_code = document.getElementsByClassName('identifying_code')[0].value;
+        if(identifying_code.length < 6){
 
-            //jfShowTips.loadingRemove(); //loading动画
+            var div_title = document.createElement('div');
+            div_title.setAttribute('class','identifying_code_title');
+            var span = document.createElement('span');
+            span.innerText = '请输入正确的验证码';
+            div_title.appendChild(span);
+            document.body.appendChild(div_title);
+            setTimeout(function(){
+                document.body.removeChild(div_title);
+            },2000);
+
+        }else{
+            //loading动画,10s后会自动移除
+            jfShowTips.loadingShow({
+                "text":"加载中"
+            })
+
+            setTimeout(function(){
+
+                //jfShowTips.loadingRemove(); //loading动画
 
 
-          //  window.location.href="fail.html"
+                //  window.location.href="fail.html"
 
-        },3000)
+            },3000)
+        }
+
+
 
     },false)
+
+    var div_code_send = document.getElementsByClassName('code_send')[0];
+    div_code_send.addEventListener('click',function(){
+        var _this = this;
+        this.classList.add('gray_span');
+        var time = 60;
+        this.innerText = time + '秒';
+        var innerText_change=setInterval(function(){
+            time--;
+            _this.innerText = time + '秒';
+            if(!time){
+                clearInterval(innerText_change);
+                _this.innerText = '重新获取';
+                _this.classList.remove('gray_span');
+            }
+        },1000)
+    });
+
+
+
+    var input = document.getElementsByTagName('input');
+    var length = input.length;
+    while(length--){
+        input[length].addEventListener('input',function () {
+            var input = document.getElementsByTagName('input');
+            var input_value = true;
+            var length = input.length;
+            while(length--){
+                if(!input[length].value){
+                    input_value = false;
+                }
+            }
+            if(input_value){
+                var button = document.getElementsByClassName('in_btn_gray')[0];
+                button.classList.add('in_green');
+            }else{
+                var button = document.getElementsByClassName('in_btn_gray')[0];
+                button.classList.remove('in_green');
+            }
+        })
+    }
+
 
 </script>
