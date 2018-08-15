@@ -1,0 +1,67 @@
+.bank_icon_plate {
+  width: 35px;
+  height: 35px;
+  margin-right: 15px;
+  background-image: url("../../images/bank_icon/icon_bank_one.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.card_part {
+  display: flex;
+  position: relative;
+}
+
+.flex_plate {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.bank_font {
+  font-size: 18px;
+  color: #4a4a4a;
+}
+
+.bank_name_plate {
+  padding: 15px 0;
+}
+
+.delete_icon_plate {
+  width: 20px;
+  height: 20px;
+  background-image: url("../../images/icon_green_close.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-top: 20px;
+  position: absolute;
+  right: 15px;
+}
+
+.border_plate {
+  padding: 0 5px;
+  border: 1px #45b48a solid;
+  font-size: 14px;
+  color: #45b48a;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+/***无效的银行卡***/
+.invalid_card {
+
+  .bank_font {
+    color: #dddddd;
+  }
+
+  .border_plate {
+    border: 1px #dddddd solid;
+    color: #dddddd;
+  }
+
+  .delete_icon_plate {
+    background-image: url("../../images/icon_del.png");
+  }
+
+}
+
