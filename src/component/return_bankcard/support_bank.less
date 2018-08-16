@@ -1,0 +1,391 @@
+page{
+
+  background-color: #f7f7f7;
+  width: 100%;
+  font-size: 14px;
+  color: #4a4a4a;
+
+}
+
+.service_title {
+  display: block;
+  width: 100%;
+  color: #4a4a4a;
+  padding-top: 15px;
+
+}
+
+
+.jx_cash{
+  width: 36px;
+  height: 32px;
+  padding-top: 5px;
+  padding-right: 10px;
+
+}
+
+
+.weui-help{
+  display: flex;
+  padding: 5px 15px;
+  width: 92%;
+  line-height: 10px;
+  margin: 0 auto;
+}
+
+hr {
+  display: block;
+  transform: scaleY(0.1);
+  width: 100%;
+  border:.1px solid #dddddd;
+}
+
+.help_service{
+  padding-bottom: 80px;
+}
+
+.bank_classify{
+  color: #8a8a8a;
+  font-size: 16px;
+  padding: 0 15px;
+
+  &:first-child {
+    padding-top: 10px;
+  }
+
+}
+
+.weui-cells{
+  margin: 0 auto;
+}
+
+
+
+page{
+
+  width: 100%;
+  height: 100%;
+}
+
+.jx_asset{
+  position: relative;
+  padding: 30rpx 2%;
+  background-color: #ea5e26;
+  /*width: 88%;*/
+  /* height: 200rpx;*/
+  text-align: center;
+
+}
+
+.asset_money {
+
+  padding: 10rpx 0;
+  color: #ffc7b0;
+  display: flex;
+  justify-content: center;
+
+}
+.asset_right{
+
+  display:flex ;
+  justify-content: space-between;
+  padding:20rpx 6%
+}
+.asset_left{
+
+  display:flex ;
+  justify-content: flex-start;
+  padding: 30rpx 6%;
+
+}
+.flex_center{
+  justify-content: space-between;
+
+}
+.asset_money >.money_icon{
+
+  justify-content: flex-start;
+
+}
+
+
+.money_number{
+
+  color: #fff;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+
+}
+.see_number{
+
+  /* width: 100%;*/
+  height: 50rpx;
+  margin-left:10px;
+
+}
+.payment_seller{
+  width: 100%;
+  height: 100%;
+}
+.jx_wave{
+  width:100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.money_icon{
+  display: flex;
+  justify-content: center;
+}
+
+/*下拉选择*/
+
+.selected_box{
+
+  border: 1px solid #fe9728;
+  border-radius: 5px;
+  padding: 10rpx 20rpx;
+}
+
+.phone_personal{
+  width: 100%;
+  color: #8a8a8a;
+  line-height:100rpx;
+  padding: 0 20px;
+}
+.phone_personal >span{
+
+  color: #fe9728;
+
+}
+.phone_one{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  width:100%;
+
+
+}
+.person_box{
+  position: relative;
+}
+.phone_select{
+  margin-top:0;
+  z-index:100;
+  position:absolute;
+  box-shadow:2px 2px 2px #ddd;
+  top:-10rpx;
+  left:30rpx;
+  border-radius:5px;
+  overflow:hidden;
+
+
+}
+
+
+.select_one:active{
+  color: #E87B17;
+}
+.select_one image{
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.select_one{
+  text-align: left;
+  background-color: #fff;
+  max-width:500rpx;
+  padding: 10rpx 20rpx;
+  line-height:80rpx;
+  color: #4a4a4a;
+  border-bottom:1rpx solid #f5f5f5;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+
+}
+.select_one.is_checked{
+
+  background-color: rgb(254,246,243);
+  color: #E87B17;
+  border-left: 4px solid #E87B17;
+
+
+}
+
+
+.select_one:last-child{
+  border-bottom: none;
+}
+
+
+
+.personal_image,.jx_open{
+  z-index: 100;
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  transition: All 0.4s ease;
+  -webkit-transition: All 0.4s ease;
+}
+
+
+.jx_open{
+  margin:20rpx auto;
+  text-align: center;
+  display: block;
+}
+
+.rotateRight{
+  transform: rotate(180deg);
+}
+
+/*工资列表*/
+.jx_money{
+  width:20px;
+  margin-right:5px;
+  vertical-align:top;
+  margin-top:2px;
+
+}
+.weui_title{
+
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wages_title{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+  margin-bottom: 30rpx;
+}
+
+.wages_title:after{
+
+  content: '';
+  position: absolute;
+  bottom:-8px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px solid #ddd;
+  transform: scaleY(.6);
+}
+
+view.weui-media-box__title{
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.weui_confirm{
+  color:#fe9728 ;
+}
+.already_confirm .weui_confirm{
+  color: #ababab;
+}
+.orange{
+  color: #fe9728;
+}
+
+.weui-media-box__info{
+  color: #999;
+  font-size: 16px;
+}
+.weui-media-box__info__meta{
+  padding: 0;
+}
+text.weui-media-box__info__meta{
+  color:#fe9728 ;
+}
+.navigator-hover{
+  opacity: 1;
+}
+.weui-panel{
+  margin:30rpx auto;
+  width:90%;
+  border-radius: 5px;
+  border-left: 5px #fe9728 solid;
+  box-shadow: 2px 2px 2px #f4f4f4;
+}
+
+.already_confirm{
+  border-left: 5px #ababab solid;
+}
+
+
+.weui-media-box__desc {
+  font-size: 16px;
+  color:#999;
+  overflow: auto;
+
+}
+
+.other_momey{
+
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  color: #ffffff;
+  padding: 20rpx 0;
+}
+
+.money_detail{
+
+  width: 50%;
+
+}
+
+.money_detail >view:first-child{
+  color:#ffc7b0;
+  font-size: 14px;
+
+}
+.money_detail image.question_main{
+  width: 38rpx;
+  height: 38rpx;
+  vertical-align:middle;
+
+
+}
+
+.money_detail >view +view{
+
+  font-size: 18px;
+
+
+}
+
+
+
+
+.setting_list{
+
+  font-size: 16px;
+}
+
+.weui-cells{
+
+  background-color: #fff;
+  border-radius: 5px;
+  width: 94%;
+  margin: 15px auto;
+}
+
+hr {
+
+  display: block;
+  background-color: #f3f3f3;
+  transform: scaleY(0.7);
+  height: .5px;
+  width: 92%;
+  text-align: center;
+  margin: 0 auto;
+}

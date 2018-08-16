@@ -1,42 +1,338 @@
-<div class="tips_title">
-    <img src="../../images/icon_exclamation_mark.png">
-    <span class="tips">为了您的资金安全，需要验证您的身份</span>
-</div>
+<!--添加银行卡页面-->
+<div>
 
-
-<div class="return_bankcard_all">
-    <!--添加银行卡-->
-    <div class="bank_card">
-        <label class="input_list">
-            <div class="title_n title_code"><span class="red_tips">*</span>持卡人</div>
-            <div class="input_form_n">京晶婧</div>
-        </label>
-
-        <label class="input_list ">
-            <div class="title_n title_code"><span class="red_tips">*</span>卡号</div>
-            <div  class="input_form_n">
-                <input placeholder="请输入银行卡号" type="number"/>
-            </div>
-        </label>
-
-        <label class="input_list no_line">
-            <div class="title_n title_code"><span class="red_tips">*</span>开户城市</div>
-            <div  class="input_form_n">
-
-            </div>
-        </label>
+    <div class="tips_title">
+        <img src="../../images/icon_exclamation_mark.png">
+        <span class="tips">为了您的资金安全，需要验证您的身份</span>
     </div>
-    <span class="green_info">
+
+
+    <div class="return_bankcard_all">
+        <!--添加银行卡-->
+        <div class="bank_card">
+            <label class="input_list">
+                <div class="title_n title_code"><span class="red_tips">*</span>持卡人</div>
+                <div class="input_form_n">京晶婧</div>
+            </label>
+
+            <label class="input_list ">
+                <div class="title_n title_code"><span class="red_tips">*</span>卡号</div>
+                <div  class="input_form_n">
+                    <input placeholder="请输入银行卡号" type="number"/>
+                </div>
+            </label>
+
+            <label class="input_list no_line">
+                <div class="title_n title_code"><span class="red_tips">*</span>开户城市</div>
+                <div  class="input_form_n">
+                    <select>
+                        <option>一级城市</option>
+                    </select>
+
+                    <select>
+                        <option>二级区</option>
+                    </select>
+                </div>
+            </label>
+        </div>
+        <span class="green_info">
         <span class="tips">嘉白条智能加密，保障您的用卡安全</span>
     </span>
+    </div>
+
+    <a href="support_bank.html" class="more_bank">
+        <img src="../../images/bank_card/add_bankcard.png">
+
+        <span>查看支持的银行</span>
+    </a>
+
+    <div class="bottom_btn">
+        <a id="companyname_input" >下一步</a>
+    </div>
+
 </div>
 
-<a href="" class="more_bank">
-    <img src="../../images/bank_card/add_bankcard.png">
 
-    <span>查看支持的银行</span>
-</a>
+<!--验证码页面-->
+<div id="top_search" class="top_search search_company_name">
+    <div class="tips_title">
+        <img src="../../images/icon_exclamation_mark.png">
+        <span class="tips">为了您的资金安全，需要验证您的身份</span>
+    </div>
 
-<div class="bottom_btn">
-    <a href="../return_bankcard/add_card_success.html">下一步</a>
+    <div class="contact_info">
+        <!--身份认证-->
+        <div>
+            <label class="input_list">
+                <p class="tel_font">请输入手机号123****8910收到的短信验证码</p>
+            </label>
+
+            <label class="input_list no_line phone_code unfind_flex">
+                <input type="number" pattern="[0-9]*" oninput="if(value.length>6)value=value.slice(0,6)" placeholder="请输入验证码" class="identifying_code message_input">
+
+                <span class="code_send">获取验证码</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="doing_bottom">
+        <div class="bottom_btn">
+            <a href="add_card_success.html">下一步</a>
+        </div>
+    </div>
 </div>
+
+
+
+
+
+<script>
+
+    /*侧拉页面*/
+    var jfFrameFlyShow = {
+
+        mainFrameShow: function (details) {/*侧拉出现*/
+            var _this = this;
+
+            _this.hideButton = details.hideButton || 0;//关闭的按钮
+
+            _this.flyTime = details.flyTime || '0.3s';//侧拉飞入平滑过度时间
+
+            _this.flyEleArea = details.flyEleArea || 0;//侧拉飞入的元素CLASS选择器
+
+            _this.hideFn = details.hideFn || 0;//关闭时发生的事件
+
+            _this.otherHideButton = details.otherHideButton || 0;//其他关闭的按钮
+
+
+            /*设置飞入元素的显示样式*/
+
+            var  thisFlyArea = document.getElementsByClassName(_this.flyEleArea)[0];//当前飞入的模块
+
+            var  hideButton = thisFlyArea.getElementsByClassName(_this.hideButton)[0];//关闭的元素
+
+            var thisFlyWidth = window.innerWidth;//当前浏览区的宽度
+
+            var thisFlyHeight = window.innerHeight;//当前浏览器的高度
+
+
+            thisFlyArea.style.display = "block";
+
+            setTimeout(function () {
+
+                thisFlyArea.style.position = "absolute";
+                thisFlyArea.style.left = "0";
+                thisFlyArea.style.top = "0";
+                thisFlyArea.style.width = thisFlyWidth + "px";
+                thisFlyArea.style.height = thisFlyHeight + "px";
+
+                thisFlyArea.style.transform = "translate3d(0,0,0)";
+                thisFlyArea.style.webkitTransform = "translate3d(0,0,0)";
+                thisFlyArea.style.transition = "" + _this.flyTime + " transform";
+                thisFlyArea.style.webkitTransition = "" + _this.flyTime + " transform";
+
+            }, 5);
+
+            document.getElementsByTagName("body")[0].className = "ovfHiden";//页面禁止滚动
+            document.getElementsByTagName("html")[0].className = "ovfHiden";//页面禁止滚动
+
+            //关闭页面
+            $(hideButton).bind("click",function(){
+
+                mainFrameHide()
+            })
+
+
+            //其他关闭按钮
+            if(_this.otherHideButton){
+                var otherHideButton = document.getElementsByClassName(_this.otherHideButton)[0];//关闭的元素
+                //关闭页面
+
+                otherHideButton.onclick = function () {
+
+                    mainFrameHide()
+                }
+            }
+
+            //关闭方法（用于侧拉页面里面，还有多个侧拉页面）
+            function mainFrameHide(){
+
+
+
+                if (_this.hideFn) {
+                    _this.hideFn(); //执行 关闭时加入的函数参数
+                }
+
+
+                thisFlyArea.addEventListener('webkitTransitionEnd', pageHide, false);
+                thisFlyArea.addEventListener('transitionend', pageHide, false); //绑定过渡事件
+
+                thisFlyArea.style.transform = "translate3d(100%,0,0)";
+                thisFlyArea.style.webkitTransform = "translate3d(100%,0,0)";
+
+
+                //页面隐藏（用于侧拉页面里面，还有多个侧拉页面）
+                function pageHide() {
+
+                    thisFlyArea.style.display = "none";
+
+                    thisFlyArea.removeEventListener('webkitTransitionEnd', pageHide, false);
+                    thisFlyArea.removeEventListener('transitionend', pageHide, false); //解除过渡事件
+                }
+
+                setTimeout(function(){
+
+
+                    //针对侧拉页面里面包含侧拉页面，添加收款页面
+                    var allFirstFlypage=document.getElementsByClassName('getmoney_details_page');
+
+                    if(allFirstFlypage){
+
+                        var allstyle="";
+
+                        for(var i=0;i<allFirstFlypage.length;i++){
+
+                            allstyle+=allFirstFlypage[i].style.display;
+                        }
+
+                        if(allstyle.indexOf('block')>-1){
+
+                            document.getElementsByTagName("body")[0].className = "ovfHiden";//页面禁止滚动
+                            document.getElementsByTagName("html")[0].className = "ovfHiden";//页面禁止滚动
+
+                        }else {
+
+                            document.getElementsByTagName("body")[0].className = "";//页面滚动
+                            document.getElementsByTagName("html")[0].className = "";//页面滚动
+
+                        }
+
+                    }
+
+                },500)
+
+                $(hideButton).unbind("click");//关闭的时候，事件解除绑定
+
+
+
+                if (_this.hideFn) {
+                    _this.hideFn(); //执行 关闭时加入的函数参数
+                }
+
+            }
+
+        },
+        //用于外面元素点击时，关闭
+        mainFrameHide: function () {
+
+            var _this = this;
+
+            var hideButton = document.getElementsByClassName(_this.hideButton)[0];//关闭的元素
+
+            // $(hideButton).unbind("click");//关闭的时候，事件解除绑定
+
+            if (_this.hideFn) {
+                _this.hideFn(); //执行 关闭时加入的函数参数
+            }
+
+            var thisFlyArea = document.getElementsByClassName(_this.flyEleArea)[0];//当前飞入的模块
+
+            thisFlyArea.addEventListener('webkitTransitionEnd', pageHide, false);
+            thisFlyArea.addEventListener('transitionend', pageHide, false); //绑定过渡事件
+
+            thisFlyArea.style.transform = "translate3d(100%,0,0)";
+            thisFlyArea.style.webkitTransform = "translate3d(100%,0,0)";
+
+
+
+
+
+            //页面隐藏
+            function pageHide() {
+
+                thisFlyArea.style.display = "none";
+
+                thisFlyArea.removeEventListener('webkitTransitionEnd', pageHide, false);
+                thisFlyArea.removeEventListener('transitionend', pageHide, false); //解除过渡事件
+            }
+
+            setTimeout(function(){
+
+
+                //针对侧拉页面里面包含侧拉页面，添加收款页面
+                var allFirstFlypage=document.getElementsByClassName('getmoney_details_page');
+
+                if(allFirstFlypage){
+
+                    var allstyle="";
+
+                    for(var i=0;i<allFirstFlypage.length;i++){
+
+                        allstyle+=allFirstFlypage[i].style.display;
+                    }
+
+                    if(allstyle.indexOf('block')>-1){
+
+                        document.getElementsByTagName("body")[0].className = "ovfHiden";//页面禁止滚动
+                        document.getElementsByTagName("html")[0].className = "ovfHiden";//页面禁止滚动
+
+                    }else {
+
+                        document.getElementsByTagName("body")[0].className = "";//页面滚动
+                        document.getElementsByTagName("html")[0].className = "";//页面滚动
+
+                    }
+
+                }
+
+            },500)
+
+            $(hideButton).unbind("click");//关闭的时候，事件解除绑定
+
+        }
+    }
+
+    //点击侧滑选择企业名称
+    $('#companyname_input').on('click', function () {
+
+        document.activeElement.blur();
+
+        setTimeout(function(){
+
+            jfFrameFlyShow.mainFrameShow({
+                "flyTime": "0.3s",//侧拉飞入平滑时间
+
+                "flyEleArea": "search_company_name",//侧拉飞入的元素class选择器
+
+                "hideButton": "goback",//侧拉返回关闭按钮的class选择器
+
+                hideFn: function () {
+
+                    window.history.back();
+                }
+            })
+
+        },300)
+
+    });
+
+
+    //获取验证码倒计时
+    var div_code_send = document.getElementsByClassName('code_send')[0];
+    div_code_send.addEventListener('click',function(){
+        var _this = this;
+        this.classList.add('gray_span');
+        var time = 60;
+        this.innerText = time + '秒';
+        var innerText_change=setInterval(function(){
+            time--;
+            _this.innerText = time + '秒';
+            if(!time){
+                clearInterval(innerText_change);
+                _this.innerText = '重新获取';
+                _this.classList.remove('gray_span');
+            }
+        },1000)
+    });
+
+</script>
