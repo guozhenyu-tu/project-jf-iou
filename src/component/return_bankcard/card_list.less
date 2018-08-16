@@ -2,9 +2,12 @@
   width: 35px;
   height: 35px;
   margin-right: 15px;
-  background-image: url("../../images/bank_icon/icon_bank_one.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
 }
 
 .card_part {
@@ -30,7 +33,7 @@
 .delete_icon_plate {
   width: 20px;
   height: 20px;
-  background-image: url("../../images/icon_green_close.png");
+  background-image: url("../images/icon_green_close.png");
   background-size: 100%;
   background-repeat: no-repeat;
   margin-top: 20px;
@@ -50,6 +53,17 @@
 /***无效的银行卡***/
 .invalid_card {
 
+  .bank_icon_plate {
+
+    img {
+      opacity: 0.2;
+      -webkit-filter: grayscale(1);
+      filter: gray;
+      filter: grayscale(1);
+    }
+
+  }
+
   .bank_font {
     color: #dddddd;
   }
@@ -60,7 +74,7 @@
   }
 
   .delete_icon_plate {
-    background-image: url("../../images/icon_del.png");
+    background-image: url("../images/icon_del.png");
   }
 
 }
