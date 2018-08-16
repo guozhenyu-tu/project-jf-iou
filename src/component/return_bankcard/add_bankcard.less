@@ -1,0 +1,149 @@
+.return_bankcard_all {
+  width: 100%;
+  padding-top: 10px;
+  & > div {
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  //借多少
+  .bank_card{
+    padding: 0 4% 0;
+    border-radius: 10px 10px 0 0;
+    width: 92%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px 0 #ebebeb;
+    label.input_list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 18px 0;
+      position: relative;
+
+      &.showmore {
+
+        &:before {
+          content: "";
+          position: absolute;
+          right: 2px;
+          top: 24px;
+          display: block;
+          width: 6px;
+          height: 6px;
+          border-top: solid 1px #ababab;
+          border-right: solid 1px #ababab;
+          transform: rotate(45deg);
+        }
+
+      }
+      .title_n{
+        width: 80px;
+        color: #ababab;
+        .red_tips{
+          color: #ff0000;
+          margin-right: 5px;
+        }
+      }
+
+      .input_form_n{
+        width: calc(~"100% - 180px");
+        color: #4a4a4a;
+        input{
+          border: none;
+          font-size: 14px;
+
+        }
+        @media screen and (max-width: 320px){
+          width: calc(~"100% - 160px");
+          color: #4a4a4a;
+        }
+
+        >textarea{
+          resize : none;
+          width: 100%;
+          // height: 60px;
+          color: inherit;
+          font-size: 14px;
+          line-height: inherit;
+          outline: 0;
+          -webkit-tap-highlight-color: transparent;
+        }
+        >select{
+          appearance:none;
+          color: #a9a9a9;
+          position: relative;
+          background: transparent;
+        }
+
+      }
+
+      .input_form>input, .input_form>textarea, .input_form>select{
+        border: none;
+        width: 100%;
+        outline: none;
+        font-size: 14px;
+      }
+      &:after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: solid 1px #ddd;
+        transform: scaleY(0.7);
+      }
+    }
+    label.input_list.no_line{
+      &:after{
+        content: "";
+        border-bottom: none;
+      }
+    }
+
+  }
+}
+.green_info{
+  display: block;
+  margin: 0 auto 20px;
+  text-align: center;
+  width: 92%;
+  background-color: #e4fff5;
+  padding: 5px 0;
+  color: #4fba9c;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 5px 0 #ebebeb;
+  img{
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    margin-left: 6%;
+    margin-right: 2px;
+    display: inline-block;
+  }
+  span{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+  }
+  .tips{
+    width: 87%;
+  }
+}
+.more_bank{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 10px 0;
+  span{
+    display: inline-block;
+    font-size: 14px;
+    color: #808080;
+  }
+  img{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+}
