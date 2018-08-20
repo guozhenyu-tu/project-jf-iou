@@ -18,13 +18,13 @@
             <label class="input_list ">
                 <div class="title_n title_code"><span class="red_tips">*</span>卡号</div>
                 <div  class="input_form_n">
-                    <input placeholder="请输入银行卡号" type="number"/>
+                    <input placeholder="请输入银行卡号" type="number" maxlength="18"/>
                 </div>
             </label>
 
             <label class="input_list no_line">
                 <div class="title_n title_code"><span class="red_tips">*</span>开户城市</div>
-                <div  class="input_form_n">
+                <div  class="select_address">
                     <select>
                         <option disabled="" selected="" class="showoptionstips">请选择市</option>
                     </select>
@@ -46,10 +46,11 @@
         <span>查看支持的银行</span>
     </a>
 
-    <div class="bottom_btn">
-        <a id="companyname_input" >下一步</a>
+    <div class="doing_bottom">
+        <div class="bottom_orange_btn">
+            <a id="companyname_input">下一步</a>
+        </div>
     </div>
-
 </div>
 
 
@@ -76,7 +77,7 @@
     </div>
 
     <div class="doing_bottom">
-        <div class="bottom_btn">
+        <div class="bottom_orange_btn">
             <a href="add_card_success.html">下一步</a>
         </div>
     </div>

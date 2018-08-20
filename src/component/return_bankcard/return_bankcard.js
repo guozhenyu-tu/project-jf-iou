@@ -6,11 +6,18 @@ function myPlan() {
 
 }
 
+//选择月份
+function monthTime() {
+
+    document.getElementsByClassName('borrow_time')[0].className = 'borrow_time popup_use_block';
+
+}
+
 function showChooseBox() {
 
     var takeNow = document.getElementsByClassName('repayment_plan')[0]; //还款计划
 
-    //var repaymentPlan = document.getElementsByClassName('repayment_plan')[0]; //还款计划
+    var monthTime = document.getElementsByClassName('borrow_time')[0]; //借多久
 
     var popupClick = document.getElementsByClassName('selective_use_popup'); //弹出层
 
@@ -25,7 +32,7 @@ function showChooseBox() {
 
             takeNow.className = 'repayment_plan';
 
-            //repaymentPlan.className = 'repayment_plan';
+            monthTime.className = 'borrow_time';
 
         },false)
 
@@ -59,6 +66,19 @@ function showChooseBox() {
             takeNow.className = 'repayment_plan';
 
         },false)
+
+    }
+
+    //选择月份，关闭弹窗
+    var selectMonth = document.getElementsByClassName('month_time');
+
+    for (var i=0;i<selectMonth.length;i++) {
+
+        selectMonth[i].addEventListener('click',function () {
+
+            monthTime.className = 'borrow_time';
+
+        })
 
     }
 
