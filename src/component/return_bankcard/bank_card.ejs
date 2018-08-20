@@ -2,8 +2,8 @@
 
     <!--借钱页面-->
     <div>
+        <!--借多少-->
         <div class="return_bankcard_all">
-            <!--借多少-->
             <div class="borrow_how_part">
                 <div class="borrow_show_tips">
                     <div class="left">
@@ -30,68 +30,53 @@
                 <img src="../../images/icon_exclamation_mark.png">
                 <span class="tips">最多可借<span id="borrow_money_max">8000.00</span>元、金额一次性还到信用卡</span>
             </div>
-            <!--借多久-->
-            <div class="borrow_how_part roll">
-                <span class="tittle_how">借多久</span>
-                <div class="choose_how">
-                    <!--灰色无法选中增加class值：“gray_nochecked”-->
-                    <label class="bankcard_nochecked">
-                        <input type="radio" class="choose_radio" name="dateData" checked>
-                        <div>
-                            <p>1个月</p>
-                        </div>
-                    </label>
+        </div>
 
-                    <label class="bankcard_nochecked">
-                        <input type="radio" class="choose_radio" name="dateData">
-                        <div>
-                            <p>3个月</p>
-                        </div>
-                    </label>
-
-                    <label class="bankcard_nochecked gray_nochecked">
-                        <input type="radio" class="choose_radio" name="dateData">
-                        <div>
-                            <p>5个月</p>
-                        </div>
-                    </label>
-
-                    <label class="bankcard_nochecked">
-                        <input type="radio" class="choose_radio" name="dateData">
-                        <div>
-                            <p>6个月</p>
-                        </div>
-                    </label>
-
-                    <label class="bankcard_nochecked gray_nochecked">
-                        <input type="radio" class="choose_radio" name="dateData">
-                        <div>
-                            <p>12个月</p>
-                        </div>
-                    </label>
-
+        <!--怎么借-->
+        <div class="contact_info">
+            <div>
+                <div class="borrow_show_tips">
+                    <div class="left">
+                        <span class="tittle_how">怎么借</span>
+                    </div>
                 </div>
-            </div>
-            <!--借款怎么还-->
-            <div class="how_pay_part">
-                <span class="tittle_how">借款怎么还</span>
-                <div class="pat_part_in" onclick="myPlan()">
-                    <span class="how_tit">分期还款计划</span>
-                    <a class="how_pay">每月<span>15</span>号<span>800</span>*<span>5</span>个月</a>
-                </div>
-            </div>
-            <!--收款银行卡-->
-            <div class="bank_pay_part">
-                <span class="tittle_how">收款银行卡</span>
-                <a href="../return_bankcard/card_list.html" class="pat_part_in">
-                    <img src="../../images/bank_icon/icon-bank-1.png"  class="left">
-                    <span class="right">
-                <span class="bank_name">中国建设银行</span>
-                <span class="bank_num">6222 30001 1111 1111</span>
-            </span>
-                </a>
-            </div>
 
+                <label class="input_list borrow_list showmore" onclick="monthTime()">
+                    <div class="title">借多久</div>
+                    <div class="input_form">
+                        <span class="borrow_list_font">1个月</span>
+                    </div>
+                </label>
+
+                <label class="input_list borrow_list showmore" onclick="myPlan()">
+                    <div class="title">怎么还</div>
+                    <div class="input_form">
+                        <span class="borrow_list_font">每月15号800元*5个月</span>
+                    </div>
+                </label>
+
+                <label class="input_list borrow_list">
+                    <!--显示银行卡信息时，将下面的 a 标签隐藏即可-->
+                    <a href="card_list.html" class="card_select">点击选择信用卡</a>
+
+                    <!--银行卡logo，及信息-->
+                    <!--需要显示银行卡信息，在 a 标签里添加 class 值 show_card-->
+                    <a class="" href="card_list.html">
+                        <span class="flex_plate bank_select">
+                        <span class="bank_icon_plate">
+                            <img src="../../images/bank_icon/icon_bank_one.png">
+                        </span>
+                        <span class="bank_name_plate">
+                            <span class="bank_font">收款信用卡</span>
+
+                            <span class="bank_font">建设银行[*3690]</span>
+                        </span>
+                    </span>
+                    </a>
+
+                    <div class="icon_right"></div>
+                </label>
+            </div>
         </div>
 
         <!---------------弹出框“还款计划”---------------->
@@ -269,6 +254,28 @@
 
         </div>
 
+        <!---------------弹出框“借多久”---------------->
+        <div class="borrow_time">
+
+            <div class="selective_use_popup"></div>
+
+            <div class="selective_use_plate">
+                <p class="month_time">1个月</p>
+
+                <p class="month_time">3个月</p>
+
+                <p class="month_time">6个月</p>
+
+                <p class="month_time">12个月</p>
+
+                <div class="tips_title">
+                    <img src="../../images/icon_notice_orange.png">
+                    <span class="tips">支持提前还款，手续费不变</span>
+                </div>
+            </div>
+
+        </div>
+
         <div class="doing_bottom">
             <div class="bottom_orange_btn">
                 <a id="companyname_input">去还信用卡</a>
@@ -300,8 +307,8 @@
         </div>
 
         <div class="doing_bottom">
-            <div class="bottom_btn">
-                <a href="success_doing.html">下一步</a>
+            <div class="bottom_orange_btn">
+                <a href="apply_success_doing.html">下一步</a>
             </div>
         </div>
     </div>

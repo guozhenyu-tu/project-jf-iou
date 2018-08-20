@@ -147,3 +147,31 @@
     margin-right: 8px;
   }
 }
+
+.select_address {
+  width: 75%;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    right: 3px;
+    top: 8px;
+    display: block;
+    width: 6px;
+    height:6px;
+    border-top: solid 1px #ababab;
+    border-right: solid 1px #ababab;
+    transform: rotate(45deg);
+  }
+
+  select {
+    border: none;
+    color: #4a4a4a;
+    font-size: 14px;
+    width: 45%;
+    outline: none;
+    appearance:none;
+  }
+
+}
