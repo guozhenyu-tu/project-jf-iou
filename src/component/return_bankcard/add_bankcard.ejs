@@ -22,16 +22,27 @@
                 </div>
             </label>
 
-            <label class="input_list no_line">
-                <div class="title_n title_code"><span class="red_tips">*</span>开户城市</div>
-                <div  class="select_address">
-                    <select>
-                        <option disabled="" selected="" class="showoptionstips">请选择市</option>
-                    </select>
+            <label class="input_list no_line" onclick="contactAddress.show({fn:
 
-                    <select>
-                        <option disabled="" selected="" class="showoptionstips">请选择区</option>
-                    </select>
+function(){
+
+     shoppingCart.run({
+     api: '../../api/two_address.json',
+     type: 'get',
+     targetDom:document.getElementById('life_address_show'),
+     fn:function() {
+      contactAddress.hide();
+
+        //console.log(chooseAdressId);//当前选择地址ID
+     }
+
+     })
+}
+
+})">
+                <div class="title_n title_code"><span class="red_tips">*</span>开户城市</div>
+                <div class="input_form">
+                    <input type="text" placeholder="请选择所在地区" readonly UNSELECTABLE="on" id="life_address_show" onfocus="this.blur()">
                 </div>
             </label>
         </div>
@@ -84,10 +95,19 @@
 </div>
 
 
+<!--地址弹出框-->
+<%- include('address.ejs')%>
+
 
 
 
 <script>
+
+    //地址弹出框
+    var contactAddress = new jfShowPop({
+
+        'ele': 'product_address'
+    })
 
     /*侧拉页面*/
     var jfFrameFlyShow = {
