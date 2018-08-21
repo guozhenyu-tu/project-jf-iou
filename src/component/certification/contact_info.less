@@ -12,7 +12,7 @@
 
     label.input_list{
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: flex-start;
       padding: 18px 0;
       position: relative;
@@ -33,17 +33,22 @@
         }
 
       }
-      /*
 
-      .title{
-        min-width: 80px;
+      .title_n{
+        width: 80px;
         color: #ababab;
       }
-      */
 
-      .input_form{
-        width: calc(~"100% - 80px");
+      .input_form_n{
+        width: calc(~"100% - 180px");
         color: #4a4a4a;
+        input{
+          border: none;
+        }
+        @media screen and (max-width: 320px){
+          width: calc(~"100% - 160px");
+          color: #4a4a4a;
+        }
 
         >textarea{
           resize : none;
@@ -90,6 +95,7 @@
 
   }
 
+
   >p{
     padding: 0 25px;
     position: relative;
@@ -109,6 +115,21 @@
   >span.tips{
     color: rgb(243,152,0);
   }
+
+  //底部tips.
+  .ti_box{
+    height: 20px;
+    width: 100%;
+    background: none;
+    box-shadow: none;
+    display: block;
+    .ti_span{
+      font-size: 14px;
+      line-height: 16px;
+      color: rgb(243,152,0);
+    }
+  }
+
 }
 
 
@@ -143,3 +164,104 @@
     margin: 30px auto;
   }
 }
+
+
+.contact_info > div label.input_list .title_code{
+    width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/***手机验证码***/
+.contact_info > div label.phone_code{
+  .input_form{
+ /*   @media screen and (max-width: 320px) {
+      width: calc(~"100% - 160px");
+      color: #4a4a4a;
+    }
+    @media screen and (min-width: 375px){
+      width: calc(~"100% - 220px");
+      color: #4a4a4a;
+    }*/
+  }
+  span{
+    display: inline-block;
+    border: 1px solid #4fba9c;
+    font-size: 12px;
+    text-align: center;
+    width: 60px;
+    padding: 2px 5px;
+    color: #4fba9c;
+    margin-left: 5px;
+    border-radius: 4px;
+    @media screen and (max-width: 375px){
+      margin-left: 20px;
+    }
+    @media screen and (max-width: 320px) {
+      margin-left: 5px;
+    }
+  }
+  .gray_span{
+    color: #ababab;
+    border-color: #ababab;
+    pointer-events: none;
+  }
+}
+
+.in_btn_gray{
+  width: 90%;
+  margin: 10px auto;
+  padding-bottom: 20px;
+  a{
+    width: 100%;
+    display: block;
+    height: 50px;
+    background: #dddddd;
+    color: #ffffff;
+    border-radius: 50px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    pointer-events: none;
+
+    &:active{
+      opacity: 0.5;
+
+    }
+  }
+}
+.in_green>a{
+  background: #4fba9c;
+  pointer-events: auto;
+  &:active{
+    opacity: 0.5;
+
+  }
+}
+
+.identifying_code_title{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: calc(8vh);
+  z-index: 1000;
+  animation: opacity_change 2s linear both;
+  span{
+    font-size: 16px;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    max-width: calc(65vw);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  }
+
+}
+

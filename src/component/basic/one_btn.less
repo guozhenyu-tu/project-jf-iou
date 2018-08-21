@@ -6,7 +6,30 @@
     width: 100%;
     display: block;
     height: 50px;
-    background:#4fba9c ;
+    background: #4fba9c;
+    color: #ffffff;
+    border-radius: 50px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 auto;
+
+    &:active{
+      opacity: 0.6;
+    }
+  }
+
+}
+
+.red_bottom_btn{
+  width: 90%;
+  margin: 10px auto;
+  padding-bottom: 20px;
+  a{
+    width: 100%;
+    display: block;
+    height: 50px;
+    background: linear-gradient(left,#ef7055,#ff5555);
     color: #ffffff;
     border-radius: 50px;
     font-size: 18px;
@@ -19,6 +42,36 @@
     }
   }
 }
+
+.yellow_bottom_btn{
+  width: 90%;
+  margin: 10px auto;
+  padding-bottom: 20px;
+  a{
+    width: 100%;
+    display: block;
+    height: 50px;
+    background: linear-gradient(left,#ffb700,#ff7800);
+    color: #ffffff;
+    border-radius: 50px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 auto;
+
+    &:active{
+      opacity: 0.6;
+    }
+  }
+}
+
+//linear-gradient(left,#ef7055,#ff5555)
+
+//#4fba9c
+//
+//
+//#ef7055
+
 
 .green_border_btn{
   width: 90%;
@@ -45,6 +98,57 @@
   }
 }
 
+.red_border_btn{
+  width: 90%;
+  margin: 10px auto;
+  padding-bottom: 20px;
+  a{
+    width: 100%;
+    display: block;
+    height: 50px;
+    background:none;
+    color: #ef7055;
+    border-radius: 50px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 auto;
+    border: solid 1px #ef7055;
+    box-sizing: border-box;
+
+    &:active{
+      opacity: 0.5;
+
+    }
+  }
+}
+
+.yellow_border_btn{
+  width: 90%;
+  margin: 10px auto;
+  padding-bottom: 20px;
+  a{
+    width: 100%;
+    display: block;
+    height: 50px;
+    background:none;
+    color: #ffb700;
+    border-radius: 50px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 auto;
+    border: solid 1px #ffb700;
+    box-sizing: border-box;
+
+    &:active{
+      opacity: 0.5;
+
+    }
+  }
+}
+
+
 .bottom_btn.noclick{
   a{
     background: #dddddd;
@@ -55,6 +159,8 @@
   }
 }
 
+//#f27474
+
 .bottom_btn_fail{
   width: 90%;
   margin: 10px auto;
@@ -63,7 +169,7 @@
     width: 100%;
     display: block;
     height: 50px;
-    background:#f27474 ;
+    background: #f27474;
     color: #fff;
     border-radius: 50px;
     font-size: 18px;
@@ -76,6 +182,8 @@
     }
   }
 }
+
+
 .borrow_fixed_btn.bottom_btn{
   padding-bottom:0;
   margin:0 auto;
@@ -89,10 +197,9 @@
     background: -webkit-linear-gradient(top,rgba(251,251,251,.09),rgba(251,251,251,.59),#fff);
     a{
       width: 90%;
+     }
+
     }
-  }
-
-
 
 
   .fix_bar{
@@ -103,4 +210,13 @@
 
 .check_progress_page .green_border_btn{
   margin-top: 50px;
+}
+
+/*****灰色按钮class值****/
+.gray_button_background{
+
+  a {
+    background-color: #dddddd;
+  }
+
 }

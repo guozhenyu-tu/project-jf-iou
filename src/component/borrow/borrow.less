@@ -16,7 +16,7 @@
     position: relative;
     box-shadow: 1px 1px 7px 1px #e9e9e9;
 
-    @media screen and(max-width: 350px) {
+    @media screen and(max-width: 360px) {
       padding:10px 10px 0 10px;
 
     }
@@ -30,7 +30,7 @@
       position: relative;
       padding: 5px 0 20px 0;
 
-      @media screen and(max-width: 350px) {
+      @media screen and(max-width: 360px) {
         padding: 5px 0 15px 0;
 
       }
@@ -233,7 +233,7 @@
           }
         }
 
-        @media screen and(max-width: 350px){
+        @media screen and(max-width: 360px){
           .pro_title{
             font-size: 12px;
 
@@ -269,7 +269,7 @@
           width: 44px;
           height: 44px;
 
-          @media screen and(max-width: 350px){
+          @media screen and(max-width: 360px){
             width: 40px;
             height: 40px;
           }
@@ -329,9 +329,11 @@
 
     .main_mid{
 
-      padding: 15px 0;
+      //padding: 15px 0;
 
-      @media screen and(max-width: 350px){
+      padding-bottom: 15px;
+
+      @media screen and(max-width: 360px){
         padding: 10px 0;
       }
       .num{
@@ -345,7 +347,7 @@
 
         }
 
-        @media screen and(max-width: 350px){
+        @media screen and(max-width: 360px){
           margin-bottom: 10px;
         }
         .money_num{
@@ -374,7 +376,7 @@
         align-items: center;
         justify-content: flex-start;
 
-        @media screen and(max-width: 350px){
+        @media screen and(max-width: 360px){
           //width: 95%;
         }
 
@@ -396,7 +398,7 @@
           height: 100%;
           width: 0;
           border-radius: 30px;
-          background: linear-gradient(to right,#baf3e3,#4fba9c);
+          background: linear-gradient(left,#baf3e3,#4fba9c);
           z-index: 90;
         }
         .move_coin{
@@ -442,7 +444,7 @@
           margin-top: 15px;
         }
 
-        @media screen and(max-width: 350px){
+        @media screen and(max-width: 360px){
           width: 100%;
         }
 
@@ -466,7 +468,7 @@
         color: #ababab;
         margin: 10px 0 5px 0;
 
-        @media screen and(max-width: 350px){
+        @media screen and(max-width: 360px){
           margin: 5px 0 0 0;
         }
 
@@ -505,7 +507,7 @@
       @media screen and(max-width: 380px) {
         padding: 10px 0;
       }
-      @media screen and(max-width: 350px) {
+      @media screen and(max-width: 360px) {
         padding: 5px 0;
       }
 
@@ -540,7 +542,7 @@
        // flex-wrap: wrap;
         margin-top: 15px;
 
-        @media screen and(max-width: 350px) {
+        @media screen and(max-width: 360px) {
           margin-top: 5px;
         }
 
@@ -555,7 +557,7 @@
           float: left;
 
 
-          @media screen and(max-width: 350px) {
+          @media screen and(max-width: 360px) {
             padding: 8px 0;
             margin-bottom: 10px;
           }
@@ -573,12 +575,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border: dotted 1px #ababab;
+            border: solid 1px #ababab;
             border-radius: 4px;
             //overflow: hidden;
 
             &:checked{
-              border:dotted 1px #4fba9c;
+              border:solid 1px #4fba9c;
               background: #f3fffb;
               z-index: 1;
             }
@@ -619,6 +621,7 @@
               position: relative;
               z-index: 100;
               background: none;
+              color: #4fba9c;
             }
 
           }
@@ -631,6 +634,8 @@
               &:last-child{
                // color: #ababab;
                 font-size: 12px;
+                line-height: 40px;
+
               }
             }
           }
@@ -643,21 +648,138 @@
           display: block;
         }
 
+        /*****灰色选项*****/
+        .gray_nochecked {
+
+          input {
+
+            &:checked {
+              border: dotted 1px #ababab;
+              background: none;
+            }
+
+            &:checked + div {
+              color: #4a4a4a;
+            }
+
+            &:before {
+              display: none;
+            }
+
+            &:after {
+              display: none;
+            }
+
+          }
+
+        }
+
+        /*****推荐选择*****/
+        .hot_checked {
+          position: relative;
+
+          &:after{
+            content: "推荐";
+            line-height: 25px;
+            font-size: 12px;
+            color: white;
+            white-space: nowrap;
+            position: absolute;
+            border-radius: 3px;
+            z-index: 10;
+            top: -10px;
+            right: -5px;
+            width: 40px;
+            height: 25px;
+
+
+           background-color: #ffa316;
+
+
+          }
+
+        }
 
       }
 
+
+    }
+
+  }
+}
+
+/*****推荐选择*****/
+.hot_select {
+  position: relative;
+
+  &:after{
+    content: "推荐";
+    line-height: 25px;
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    line-height: 18px;
+    z-index: 10;
+    top: -11px;
+    right: 5px;
+    width: 25px;
+    height: 40px;
+    text-align: center;
+    box-shadow: 0 2px 4px 0 rgba(255,163,22,.6);
+    background-color: #ffa316;
+    @media screen and (max-width: 320px){
+      top: -16px;
+    }
+
+  }
+
+}
+
+/*****手机认证专享*****/
+
+.vip_choose {
+  position: relative;
+
+  &:after{
+    content: "手机认证用户专享";
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    /* border-bottom-left-radius: 5px; */
+    /* border-bottom-right-radius: 5px; */
+    line-height: 16px;
+    z-index: 10;
+    top: -11px;
+    right: 0px;
+    width: 108px;
+    /* opacity: 0.8; */
+    height: 16px;
+    text-align: center;
+    /* box-shadow: 0 2px 4px 0 rgba(255, 163, 22, 0.6); */
+    background-color: #ffa316;
+    @media screen and (max-width: 320px){
+      font-size: 10px;
+      line-height: 14px;
+      height: 14px;
+      width: 90px;
+      top: -16px;
+      right: 0;
     }
 
 
   }
+
 }
+
 
 .salary_bottom{
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 60%;
-  margin: 0 auto 10px;
+  margin: 10px auto 10px;
   position: relative;
 
   &:after{
@@ -711,3 +833,79 @@
   }
 
 }
+
+
+/****底部黄色按钮****/
+
+
+
+.yellow_borrow_bt_btn{
+
+    width: 100%;
+
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+
+    z-index: 550;
+
+    padding-bottom: 10px;
+
+    background: -webkit-linear-gradient(top,rgba(251,251,251,.09),rgba(251,251,251,.59),#fff);
+
+
+    a{
+      width: 90%;
+      display: block;
+      height: 50px;
+      background: linear-gradient(left,#ffb700,#ff7800);
+      color: #ffffff;
+      border-radius: 50px;
+      font-size: 18px;
+      text-align: center;
+      line-height: 50px;
+      margin: 0 auto;
+
+      &:active{
+        opacity: 0.6;
+      }
+    }
+
+
+
+}
+.none_box{
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+
+}
+
+  /*****底部按钮灰色（借款、借款确认页）*****/
+
+
+  .gray_button_background {
+
+    a {
+      background: linear-gradient(left,#dddddd,#dddddd);
+    }
+
+  }
+
+
+
+.agreement_bottom_btn{
+
+  .gray_button_background {
+
+    a {
+      background: linear-gradient(left,#dddddd,#dddddd);
+    }
+
+  }
+
+}
+
+

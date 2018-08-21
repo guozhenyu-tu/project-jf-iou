@@ -11,6 +11,8 @@ function checkBoxFn() {
 
     var waitMoney=0;//选择的待换金额
 
+    moneyInit()//金额初始化
+
     allChecked.onclick=function () {
 
         waitMoney=0;//先清空一次
@@ -33,7 +35,7 @@ function checkBoxFn() {
 
             nextBtn.getElementsByTagName('a')[0].innerHTML='立即还款￥'+waitMoney;
 
-            nextBtn.getElementsByTagName('a')[0].setAttribute('href','../return/return_fail.html')
+            //nextBtn.getElementsByTagName('a')[0].setAttribute('href','../return/return_fail.html')
 
         }else {
 
@@ -43,7 +45,7 @@ function checkBoxFn() {
 
             nextBtn.getElementsByTagName('a')[0].innerHTML='立即还款'
 
-            nextBtn.getElementsByTagName('a')[0].removeAttribute('href');
+           // nextBtn.getElementsByTagName('a')[0].removeAttribute('href');
         }
     }
 
@@ -84,11 +86,14 @@ function checkBoxFn() {
             }
 
 
-            for(var j=0;j<partChecked.length;j++){
+            moneyInit();
+
+
+           /* for(var j=0;j<partChecked.length;j++){
 
                 if(partChecked[j].checked){
 
-                    waitMoney+=parseFloat(this.getAttribute('data-num'))
+                    waitMoney+=parseFloat(partChecked[j].getAttribute('data-num'))
 
                 }
 
@@ -113,10 +118,48 @@ function checkBoxFn() {
                 nextBtn.getElementsByTagName('a')[0].innerHTML='立即还款￥'+waitMoney;
 
                 nextBtn.getElementsByTagName('a')[0].setAttribute('href','../return/return_fail.html')
-            }
+            }*/
 
 
         }
+
+    }
+
+
+    function moneyInit() {
+
+
+        for(var j=0;j<partChecked.length;j++){
+
+            if(partChecked[j].checked){
+
+                waitMoney+=parseFloat(partChecked[j].getAttribute('data-num'))
+
+            }
+
+        }
+
+
+        if(waitMoney==0){
+
+            waitMoney=0;
+
+            nextBtn.className=nextBtn.className+' noclick';
+
+            nextBtn.getElementsByTagName('a')[0].innerHTML='立即还款';
+
+            //nextBtn.getElementsByTagName('a')[0].removeAttribute('href')
+        }else {
+
+            waitMoney=parseFloat(waitMoney).toFixed(2);
+
+            nextBtn.className='bottom_btn';
+
+            nextBtn.getElementsByTagName('a')[0].innerHTML='立即还款￥'+waitMoney;
+
+            //nextBtn.getElementsByTagName('a')[0].setAttribute('href','../return/return_fail.html')
+        }
+
 
     }
 

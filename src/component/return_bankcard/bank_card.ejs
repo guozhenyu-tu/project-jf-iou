@@ -1,0 +1,651 @@
+<div>
+
+    <!--借钱页面-->
+    <div>
+        <!--借多少-->
+        <div class="return_bankcard_all">
+            <div class="borrow_how_part">
+                <div class="borrow_show_tips">
+                    <div class="left">
+                        <span class="tittle_how">借多少</span>
+                    </div>
+                    <div class="right">
+                        <img src="../../images/icon_what.png">
+                        <span class="how_all">规则说明</span>
+                    </div>
+                </div>
+                <div class="borrow_input_box">
+                    <div class="left">
+                        <label>
+                            <span>￥</span>
+                            <input class="money_with" type="number" pattern="[0-9]*" placeholder="请输入金额">
+                        </label>
+                    </div>
+                    <div class="right">
+                        <span class="borrow_all input_box_button"><img src="../../images/icon_del.png" alt=""></span>
+                    </div>
+                </div>
+            </div>
+            <div class="contact_info">
+                <img src="../../images/icon_exclamation_mark.png">
+                <span class="tips">最多可借<span id="borrow_money_max">8000.00</span>元、金额一次性还到信用卡</span>
+            </div>
+        </div>
+
+        <!--怎么借-->
+        <div class="contact_info">
+            <div>
+                <div class="borrow_show_tips">
+                    <div class="left">
+                        <span class="tittle_how">怎么借</span>
+                    </div>
+                </div>
+
+                <label class="input_list borrow_list showmore" onclick="monthTime()">
+                    <div class="title">借多久</div>
+                    <div class="input_form">
+                        <span class="borrow_list_font">1个月</span>
+                    </div>
+                </label>
+
+                <label class="input_list borrow_list showmore" onclick="myPlan()">
+                    <div class="title">怎么还</div>
+                    <div class="input_form">
+                        <span class="borrow_list_font">每月15号800元*5个月</span>
+                    </div>
+                </label>
+
+                <label class="input_list borrow_list">
+                    <!--显示银行卡信息时，将下面的 a 标签隐藏即可-->
+                    <a href="card_list.html" class="card_select">点击选择信用卡</a>
+
+                    <!--银行卡logo，及信息-->
+                    <!--需要显示银行卡信息，在 a 标签里添加 class 值 show_card-->
+                    <a class="" href="card_list.html">
+                        <span class="flex_plate bank_select">
+                        <span class="bank_icon_plate">
+                            <img src="../../images/bank_icon/icon_bank_one.png">
+                        </span>
+                        <span class="bank_name_plate">
+                            <span class="bank_font">收款信用卡</span>
+
+                            <span class="bank_font">建设银行[*3690]</span>
+                        </span>
+                    </span>
+                    </a>
+
+                    <div class="icon_right"></div>
+                </label>
+            </div>
+        </div>
+
+        <!---------------弹出框“还款计划”---------------->
+        <div class="repayment_plan">
+
+            <div class="selective_use_popup"></div>
+
+            <div class="selective_use_plate">
+                <div class="selective_use_heard">
+                    <p>还款计划</p>
+
+                    <button class="close_plate">
+                        <img src="../../images/icon_close.png">
+                    </button>
+                </div>
+
+                <div class="repayment_plan_list">
+                    <div class="plan_inline_list">
+                        <span>借款总额</span>
+
+                        <span>借款期限</span>
+
+                        <span>总服务费</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>3000.00</span>
+
+                        <span>3个月</span>
+
+                        <span>180.00</span>
+                    </div>
+                </div>
+
+                <div class="plan_details_list">
+                    <div class="plan_inline_list">
+                        <span>期数</span>
+
+                        <span>还款时间</span>
+
+                        <span>还款金额</span>
+                    </div>
+                </div>
+
+                <div class="plan_details_list">
+                    <div class="plan_inline_list">
+                        <span>1/3</span>
+
+                        <span>2018-01-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>2/3</span>
+
+                        <span>2018-02-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>3/3</span>
+
+                        <span>2018-03-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>2/3</span>
+
+                        <span>2018-02-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>3/3</span>
+
+                        <span>2018-03-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>3/3</span>
+
+                        <span>2018-03-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>3/3</span>
+
+                        <span>2018-03-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>3/3</span>
+
+                        <span>2018-03-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>3/3</span>
+
+                        <span>2018-03-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>3/3</span>
+
+                        <span>2018-03-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>3/3</span>
+
+                        <span>2018-03-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>3/3</span>
+
+                        <span>2018-03-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>3/3</span>
+
+                        <span>2018-03-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>3/3</span>
+
+                        <span>2018-03-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>2/3</span>
+
+                        <span>2018-02-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+
+                    <div class="plan_inline_list">
+                        <span>3/3</span>
+
+                        <span>2018-03-14</span>
+
+                        <span>1030.00</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!---------------弹出框“借多久”---------------->
+        <div class="borrow_time">
+
+            <div class="selective_use_popup"></div>
+
+            <div class="selective_use_plate">
+                <p class="month_time">1个月</p>
+
+                <p class="month_time">3个月</p>
+
+                <p class="month_time">6个月</p>
+
+                <p class="month_time">12个月</p>
+
+                <div class="tips_title">
+                    <img src="../../images/icon_notice_orange.png">
+                    <span class="tips">支持提前还款，手续费不变</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="doing_bottom">
+            <div class="bottom_orange_btn">
+                <a id="companyname_input">去还信用卡</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--验证码页面-->
+    <div id="top_search" class="top_search search_company_name">
+        <div class="tips_title">
+            <img src="../../images/icon_exclamation_mark.png">
+            <span class="tips">为了您的资金安全，需要验证您的身份</span>
+        </div>
+
+        <div class="contact_info">
+            <!--身份认证-->
+            <div>
+                <label class="input_list">
+                    <p class="tel_font">请输入手机号123****8910收到的短信验证码</p>
+                </label>
+
+                <label class="input_list no_line phone_code unfind_flex">
+                    <input type="number" pattern="[0-9]*" oninput="if(value.length>6)value=value.slice(0,6)" placeholder="请输入验证码" class="identifying_code message_input">
+
+                    <span class="code_send">获取验证码</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="doing_bottom">
+            <div class="bottom_orange_btn">
+                <a href="apply_success_doing.html">下一步</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+<script>
+
+    addEventListener('load',showChooseBox,false)
+
+    //点击选分期，分期无法选中，弹出小提示
+    var clickTips=document.getElementsByClassName('gray_nochecked');
+
+    for (var i=0;i<clickTips.length;i++) {
+
+        clickTips[i].addEventListener('click',function () {
+
+            jfShowTips.toastShow({'text':'x期最大转让金额为XXXX'})//totast提示
+
+        },false)
+
+    }
+
+
+    /*弹框*/
+    document.getElementsByClassName('how_all')[0].addEventListener('click',function(){
+
+        jfShowTips.dialogShow({
+            "mainText": "规则说明",
+            "minText": "1、借款一次性打到指定信用卡</br>2、分期偿还借款给白条</br>3、一般半小时到账，非工作时间或异常情况会有延时，具体以银行到账为准，订单状态会根据银行的处理结果自动更新</br>4、借款还清后方可续借",
+            "noCheck": false,
+            "noCancel": true,
+            "checkBtnText":"返回",
+            "checkFn": function () {
+                jfShowTips.dialogRemove()
+            }
+        });
+
+    },false)
+
+    $(document).ready(function(){
+        var max_money = $('#borrow_money_max').text();
+        $('.money_with:eq(0)').attr('value',max_money);
+    })
+
+    $('.input_box_button').click(function(){
+        if($(this).text() == ''){
+            $('.money_with').val('');
+            $(this).html('全部');
+            $(this).removeClass('borrow_all');
+            $('.money_with').focus();
+        }
+        else if($(this).text() == '全部'){
+            $('.money_with').val('8000.00');
+            $(this).html('<img src="../../images/icon_del.png" alt="">');
+            $(this).addClass('borrow_all');
+        }
+    })
+
+    $('.money_with').bind('input propertychange',function(){
+        if($(this).val()){
+            if($('.input_box_button').text()){
+                $('.input_box_button').html('<img src="../../images/icon_del.png" alt="">');
+                $('.input_box_button').addClass('borrow_all');
+            }
+        }
+        else{
+            $('.input_box_button').text('全部');
+            $('.input_box_button').removeClass('borrow_all');
+        }
+        if($(this).val() > 8000){
+            $(this).val('8000');
+            $(this).focus();
+        }
+    })
+    $('.money_with').blur(function(){
+        if($(this).val()){
+            var val = $(this).val() - 0;
+            val = val.toFixed(2);
+            $(this).val(val+'');
+        }
+    })
+
+
+
+
+
+    /*侧拉页面*/
+    var jfFrameFlyShow = {
+
+        mainFrameShow: function (details) {/*侧拉出现*/
+            var _this = this;
+
+            _this.hideButton = details.hideButton || 0;//关闭的按钮
+
+            _this.flyTime = details.flyTime || '0.3s';//侧拉飞入平滑过度时间
+
+            _this.flyEleArea = details.flyEleArea || 0;//侧拉飞入的元素CLASS选择器
+
+            _this.hideFn = details.hideFn || 0;//关闭时发生的事件
+
+            _this.otherHideButton = details.otherHideButton || 0;//其他关闭的按钮
+
+
+            /*设置飞入元素的显示样式*/
+
+            var  thisFlyArea = document.getElementsByClassName(_this.flyEleArea)[0];//当前飞入的模块
+
+            var  hideButton = thisFlyArea.getElementsByClassName(_this.hideButton)[0];//关闭的元素
+
+            var thisFlyWidth = window.innerWidth;//当前浏览区的宽度
+
+            var thisFlyHeight = window.innerHeight;//当前浏览器的高度
+
+
+            thisFlyArea.style.display = "block";
+
+            setTimeout(function () {
+
+                thisFlyArea.style.position = "absolute";
+                thisFlyArea.style.left = "0";
+                thisFlyArea.style.top = "0";
+                thisFlyArea.style.width = thisFlyWidth + "px";
+                thisFlyArea.style.height = thisFlyHeight + "px";
+
+                thisFlyArea.style.transform = "translate3d(0,0,0)";
+                thisFlyArea.style.webkitTransform = "translate3d(0,0,0)";
+                thisFlyArea.style.transition = "" + _this.flyTime + " transform";
+                thisFlyArea.style.webkitTransition = "" + _this.flyTime + " transform";
+
+            }, 5);
+
+            document.getElementsByTagName("body")[0].className = "ovfHiden";//页面禁止滚动
+            document.getElementsByTagName("html")[0].className = "ovfHiden";//页面禁止滚动
+
+            //关闭页面
+            $(hideButton).bind("click",function(){
+
+                mainFrameHide()
+            })
+
+
+            //其他关闭按钮
+            if(_this.otherHideButton){
+                var otherHideButton = document.getElementsByClassName(_this.otherHideButton)[0];//关闭的元素
+                //关闭页面
+
+                otherHideButton.onclick = function () {
+
+                    mainFrameHide()
+                }
+            }
+
+            //关闭方法（用于侧拉页面里面，还有多个侧拉页面）
+            function mainFrameHide(){
+
+
+
+                if (_this.hideFn) {
+                    _this.hideFn(); //执行 关闭时加入的函数参数
+                }
+
+
+                thisFlyArea.addEventListener('webkitTransitionEnd', pageHide, false);
+                thisFlyArea.addEventListener('transitionend', pageHide, false); //绑定过渡事件
+
+                thisFlyArea.style.transform = "translate3d(100%,0,0)";
+                thisFlyArea.style.webkitTransform = "translate3d(100%,0,0)";
+
+
+                //页面隐藏（用于侧拉页面里面，还有多个侧拉页面）
+                function pageHide() {
+
+                    thisFlyArea.style.display = "none";
+
+                    thisFlyArea.removeEventListener('webkitTransitionEnd', pageHide, false);
+                    thisFlyArea.removeEventListener('transitionend', pageHide, false); //解除过渡事件
+                }
+
+                setTimeout(function(){
+
+
+                    //针对侧拉页面里面包含侧拉页面，添加收款页面
+                    var allFirstFlypage=document.getElementsByClassName('getmoney_details_page');
+
+                    if(allFirstFlypage){
+
+                        var allstyle="";
+
+                        for(var i=0;i<allFirstFlypage.length;i++){
+
+                            allstyle+=allFirstFlypage[i].style.display;
+                        }
+
+                        if(allstyle.indexOf('block')>-1){
+
+                            document.getElementsByTagName("body")[0].className = "ovfHiden";//页面禁止滚动
+                            document.getElementsByTagName("html")[0].className = "ovfHiden";//页面禁止滚动
+
+                        }else {
+
+                            document.getElementsByTagName("body")[0].className = "";//页面滚动
+                            document.getElementsByTagName("html")[0].className = "";//页面滚动
+
+                        }
+
+                    }
+
+                },500)
+
+                $(hideButton).unbind("click");//关闭的时候，事件解除绑定
+
+
+
+                if (_this.hideFn) {
+                    _this.hideFn(); //执行 关闭时加入的函数参数
+                }
+
+            }
+
+        },
+        //用于外面元素点击时，关闭
+        mainFrameHide: function () {
+
+            var _this = this;
+
+            var hideButton = document.getElementsByClassName(_this.hideButton)[0];//关闭的元素
+
+            // $(hideButton).unbind("click");//关闭的时候，事件解除绑定
+
+            if (_this.hideFn) {
+                _this.hideFn(); //执行 关闭时加入的函数参数
+            }
+
+            var thisFlyArea = document.getElementsByClassName(_this.flyEleArea)[0];//当前飞入的模块
+
+            thisFlyArea.addEventListener('webkitTransitionEnd', pageHide, false);
+            thisFlyArea.addEventListener('transitionend', pageHide, false); //绑定过渡事件
+
+            thisFlyArea.style.transform = "translate3d(100%,0,0)";
+            thisFlyArea.style.webkitTransform = "translate3d(100%,0,0)";
+
+
+
+
+
+            //页面隐藏
+            function pageHide() {
+
+                thisFlyArea.style.display = "none";
+
+                thisFlyArea.removeEventListener('webkitTransitionEnd', pageHide, false);
+                thisFlyArea.removeEventListener('transitionend', pageHide, false); //解除过渡事件
+            }
+
+            setTimeout(function(){
+
+
+                //针对侧拉页面里面包含侧拉页面，添加收款页面
+                var allFirstFlypage=document.getElementsByClassName('getmoney_details_page');
+
+                if(allFirstFlypage){
+
+                    var allstyle="";
+
+                    for(var i=0;i<allFirstFlypage.length;i++){
+
+                        allstyle+=allFirstFlypage[i].style.display;
+                    }
+
+                    if(allstyle.indexOf('block')>-1){
+
+                        document.getElementsByTagName("body")[0].className = "ovfHiden";//页面禁止滚动
+                        document.getElementsByTagName("html")[0].className = "ovfHiden";//页面禁止滚动
+
+                    }else {
+
+                        document.getElementsByTagName("body")[0].className = "";//页面滚动
+                        document.getElementsByTagName("html")[0].className = "";//页面滚动
+
+                    }
+
+                }
+
+            },500)
+
+            $(hideButton).unbind("click");//关闭的时候，事件解除绑定
+
+        }
+    }
+
+    //点击侧滑选择企业名称
+    $('#companyname_input').on('click', function () {
+
+        document.activeElement.blur();
+
+        setTimeout(function(){
+
+            jfFrameFlyShow.mainFrameShow({
+                "flyTime": "0.3s",//侧拉飞入平滑时间
+
+                "flyEleArea": "search_company_name",//侧拉飞入的元素class选择器
+
+                "hideButton": "goback",//侧拉返回关闭按钮的class选择器
+
+                hideFn: function () {
+
+                    window.history.back();
+                }
+            })
+
+        },300)
+
+    });
+
+
+    //获取验证码倒计时
+    var div_code_send = document.getElementsByClassName('code_send')[0];
+    div_code_send.addEventListener('click',function(){
+        var _this = this;
+        this.classList.add('gray_span');
+        var time = 60;
+        this.innerText = time + '秒';
+        var innerText_change=setInterval(function(){
+            time--;
+            _this.innerText = time + '秒';
+            if(!time){
+                clearInterval(innerText_change);
+                _this.innerText = '重新获取';
+                _this.classList.remove('gray_span');
+            }
+        },1000)
+    });
+
+
+</script>

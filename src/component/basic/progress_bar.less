@@ -113,7 +113,7 @@
     .step {
       .step_green {
         color: #4fba9c;
-        opacity: .80;
+        opacity: .40;
       }
     }
 
@@ -183,11 +183,38 @@
     .step {
       span.step_green {
         color: #f39800;
-        opacity: .80;
+        opacity: .40;
       }
     }
   }
 
+  .red_show {
+    .show.step {
+      &:after {
+        content: "";
+        background: #fc6c59;
+      }
+      .title {
+        color: #fc6c59;
+        &:after {
+          content: "";
+          background: #fc6c59;
+        }
+      }
+      .min_text{
+        color: #4a4a4a;
+        span.green_text{
+          color: #fc6c59;
+        }
+      }
+    }
+    .step {
+      span.step_green {
+        color: #fc6c59;
+        opacity: .40;
+      }
+    }
+  }
 }
 
 

@@ -137,6 +137,26 @@
       }
     }
 
+    //2018.3.14 add 处理中、失败
+
+    .inhand.record_lists{
+      > div:last-child span {
+        &:first-child{
+          color: #ffa316;
+        }
+
+      }
+    }
+
+    .fail.record_lists{
+      > div:last-child span {
+        &:first-child{
+          color: #fc6c59;
+        }
+
+      }
+    }
+
     .nopassed.record_lists{
       > div:last-child span {
         &:first-child{
@@ -199,4 +219,18 @@
       background: none;
     }
   }
+}
+
+
+.red_show {
+
+  .show.step{
+
+    .title{
+
+      color: red;
+    }
+
+  }
+
 }

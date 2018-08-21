@@ -61,5 +61,5 @@ typings/
 # jf
 .idea
 build
-dist
+dis
 config.js

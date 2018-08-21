@@ -1,0 +1,78 @@
+/*感叹号*/
+.swal2-icon.swal2-info{
+  color: #4fba9c;
+  border-color: #4fba9c;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+  .time{
+    display: block;
+    margin-left: 45%;
+    margin-top: 10px;
+    .time-hour{
+      width: 5px;
+      height: 31px;
+      background-color: #46b48b;
+      border-radius: 20px;
+    }
+    .time-min{
+      width: 20px;
+      height: 5px;
+      position: absolute;
+      top: 38px;
+      background-color: #46b48b;
+      border-radius: 20px;
+    }
+  }
+}
+
+
+.animate-time-icon{
+  -webkit-animation: animate-info-icon 1s ease-in-out;
+  animation: animate-info-icon 1s ease-in-out;
+}
+@-webkit-keyframes animate-info-icon {
+  0% {
+    -webkit-transform:rotate(-360deg);
+    transform-origin: bottom center;
+    transform:rotate(-360deg);
+    opacity:0.6
+  }
+  100% {
+    -webkit-transform:rotate(0deg);
+    transform-origin: bottom center;
+    transform:rotate(0deg);
+    opacity:1
+  }
+}
+@keyframes animate-info-icon {
+  0% {
+    -webkit-transform:rotate(-360deg);
+    transform-origin: bottom center;
+    transform:rotate(-360deg);
+    opacity:0.6
+  }
+  100% {
+    -webkit-transform:rotate(0deg);
+    transform-origin: bottom center;
+    transform:rotate(0deg);
+    opacity:1
+  }
+}
+.animate-time-min{
+  -webkit-animation: animate-time-min 1s;
+  animation: animate-time-min 1s;
+}
+@-webkit-keyframes animate-time-min {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+
+
+}
+
+

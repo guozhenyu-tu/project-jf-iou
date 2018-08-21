@@ -32,7 +32,7 @@
         </div>
 
         <div class="main_mid">
-            <p class="title">转让白条额度</p>
+            <p class="title">选择借款金额</p>
 
             <p class="num"><span class="money_num">2000</span></p>
 
@@ -48,55 +48,65 @@
                 <span class="max">5000</span>
             </div>
 
-            <div class="get_money">
-                <!--存在手续费时，去掉class值noreduced-->
-                    <span>转让服务费：</span>
-                    <span>5.00</span>
-            </div>
+            <!--<div class="get_money">-->
+                <!--&lt;!&ndash;存在手续费时，去掉class值noreduced&ndash;&gt;-->
+                    <!--<span>转让服务费：</span>-->
+                    <!--<span>5.00</span>-->
+            <!--</div>-->
         </div>
 
         <div class="date_main">
-            <p class="title">后付款方式</p>
+            <p class="title">选择还款方式</p>
 
             <div class="date_tab">
-                <label>
+
+                <!--分期不可选中，只要在label标签添加class值 gray_nochecked ，分期变为不可选。点击时，会有小提示-->
+                <!--增加推荐选择 需要在lable标签中添加class值 hot_checked.即可-->
+                <!--反之，分期可选中，删除添加的class值即可-->
+                <label class="gray_nochecked">
+                    <input type="radio" class="choose_radio" name="dateData">
+                    <div>
+                        <p><span>2000.00</span> x 1期/月</p>
+                        <!--<p>含服务费<span>90.00</span>/月</p>-->
+                    </div>
+                </label>
+                <label class="">
+                    <input type="radio" class="choose_radio" name="dateData">
+                    <div>
+                        <p><span>2100.00</span> x 2期/月</p>
+                        <!--<p>含服务费<span>100.00</span>/月</p>-->
+                    </div>
+                </label>
+                <label class="">
                     <input type="radio" class="choose_radio" name="dateData" checked>
                     <div>
-                        <p><span>2000.00</span> x 1期</p>
-                        <p>含服务费<span>90.00</span>/月</p>
+                        <p><span>2000.00</span> x 1期/月</p>
+                        <!--<p>含服务费<span>90.00</span>/月</p>-->
                     </div>
                 </label>
                 <label>
                     <input type="radio" class="choose_radio" name="dateData">
                     <div>
-                        <p><span>2100.00</span> x 2期</p>
-                        <p>含服务费<span>100.00</span>/月</p>
-                    </div>
-                </label>
-                <label>
-                    <input type="radio" class="choose_radio" name="dateData" checked>
-                    <div>
-                        <p><span>2000.00</span> x 1期</p>
-                        <p>含服务费<span>90.00</span>/月</p>
-                    </div>
-                </label>
-                <label>
-                    <input type="radio" class="choose_radio" name="dateData">
-                    <div>
-                        <p><span>2100.00</span> x 2期</p>
-                        <p>含服务费<span>100.00</span>/月</p>
+                        <p><span>2100.00</span> x 2期/月</p>
+                        <!--<p>含服务费<span>100.00</span>/月</p>-->
                     </div>
                 </label>
 
 
             </div>
+
+            <!--<div class="noclick_tips"><span>X期</span><span>最大转让金额为XXXX</span></div>-->
         </div>
+
+
 
     </div>
 
 
 
 </div>
+
+
 
 <div class="salary_bottom">
     <a onclick="jfCustomerService.click()">
@@ -109,14 +119,26 @@
         <img src="../../images/bottom_images/common_problem.png">
         <span>常见问题</span>
     </a>
-</div>
 
-
-<div class="bottom_btn borrow_fixed_btn">
-    <div class="fix_bar"></div>
-    <div class="fix_btn"><a href="confirm_borrow.html">去转让获取现金</a></div>
 
 </div>
+<div class="none_box"></div>
+
+
+    <!--删除“gray_button_background”class值，可换为橙色按钮-->
+
+    <div class="yellow_borrow_bt_btn gray_button_background">
+
+
+
+        <a href="confirm_borrow.html">提交</a>
+        
+    </div>
+    
+
+
+
+
 
 
 <script>
@@ -156,5 +178,18 @@
         //指定客服
         'b040d96757bf55ea302f9fbfb0ecd062'
     );
+
+    //点击选分期，分期无法选中，弹出小提示
+    var clickTips=document.getElementsByClassName('gray_nochecked');
+
+    for (var i=0;i<clickTips.length;i++) {
+
+        clickTips[i].addEventListener('click',function () {
+
+           jfShowTips.toastShow({'text':'x期最大转让金额为XXXX'})//totast提示
+
+        },false)
+
+    }
 
 </script>

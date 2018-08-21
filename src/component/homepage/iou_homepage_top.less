@@ -18,6 +18,8 @@ button {
   background-position: center;
   background-origin: content-box;
 
+
+
   @media screen and(max-width: 320px) {
 
     height: 130px;
@@ -37,14 +39,14 @@ button {
 
     &:nth-child(1) {
 
-      font-size: 16px;
+      font-size: 18px;
       padding-top: 10px;
-      line-height: 15px;
+      line-height: 20px;
 
       @media screen and(max-width: 320px) {
 
         font-size: 12px;
-        line-height: 10px;
+        line-height: 25px;
 
       }
 
@@ -58,8 +60,8 @@ button {
 
     &:nth-child(2) {
 
-      font-size: 50px;
-      line-height: 66px;
+      font-size: 38px;
+      line-height: 60px;
 
       @media screen and(max-width: 320px) {
 
@@ -72,10 +74,14 @@ button {
 
     &:nth-child(3) {
 
+      display: none;
+
       font-size: 16px;
       line-height: 15px;
 
       @media screen and(max-width: 320px) {
+
+        display: none;
 
         font-size: 12px;
         line-height: 10px;
@@ -93,8 +99,9 @@ button {
     margin: 10px auto;
     padding: 8px 0;
     border-radius: 20px;
-    background-color: #ffffff;
-    color: #46b48b;
+    background-color: #ffb700;
+    //color: #46b48b;
+    color: white;
     font-size: 14px;
     border: none;
 
@@ -125,18 +132,128 @@ button {
 /*********已激活按钮变的样式*********/
 .quota_state_checked {
 
+  p {
+
+    color: #ffffff;
+
+    &:nth-child(1) {
+
+      font-size: 16px;
+      padding-top: 15px;
+      line-height: 15px;
+
+      @media screen and(max-width: 320px) {
+
+        font-size: 12px;
+        line-height: 15px;
+
+      }
+
+      @media screen and(min-width: 414px) {
+
+        padding-top: 15px;
+
+      }
+
+    }
+
+    &:nth-child(2) {
+
+      font-size: 40px;
+      line-height: 66px;
+
+      @media screen and(max-width: 320px) {
+
+        font-size: 33px;
+        line-height: 45px;
+
+      }
+
+    }
+
+    &:nth-child(3) {
+
+      display: block;
+
+      font-size: 16px;
+      line-height: 15px;
+
+      @media screen and(max-width: 320px) {
+
+        font-size: 12px;
+        line-height: 10px;
+
+      }
+
+    }
+
+  }
+
+
+
+
   .quota_state {
-    width: 20%;
-    border-radius: 6px;
-    padding: 6px 0;
+
+    //width: 20%;
+    padding: 4px 0;
+    background:none;
+    border: none;
+    color: white;
+    font-size: 16px;
+
+  }
+
+  .activated_state{
+
+    width: 40px;
+
+    height: 36px;
+
+  }
+
+  .activated_state{
+
+    background: url("../images/activated_state.png") center no-repeat;
+
+    background-size: 100%;
+
+    display: inline-block;
+
+    //position: absolute;
+    //
+    //top:5%;
+    //
+    //right: 2%;
+
+    margin-right: 4px;
+
+    width: 20px;
+
+    height: 20px;
+
+    vertical-align: text-bottom;
+
+  }
+
+  .examine_state{
+
+    background: url("../images/examine_state.png") center no-repeat;
+
+    background-size: 100%;
+
+    display: inline-block;
+
+    margin-right: 4px;
+
+    width: 20px;
+
+    height: 20px;
+
+    vertical-align: text-bottom;
+
   }
 
 }
-
-
-
-
-
 
 
 

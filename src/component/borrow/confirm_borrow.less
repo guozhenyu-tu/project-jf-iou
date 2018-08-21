@@ -214,6 +214,23 @@ input {
 
 }
 
+.wait_page{
+  padding-top: 20px;
+
+  .wait_title{
+    text-align: center;
+    font-size: 22px;
+    color: #4fba9c;
+    margin-bottom: 20px;
+  }
+  .wait_text{
+
+    text-align: center;
+    margin: 30px auto;
+  }
+
+}
+
 /****************************/
 /**************弹窗**************/
 .selective_use_popup {
@@ -259,12 +276,17 @@ input {
   max-height: 85%;
   background-color: #ffffff;
   position: absolute;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate3d(-50%,-62%,0);
   margin: 0 auto;
   padding: 5px 0;
   display: none;
+  overflow: hidden;
+
+  @media screen and(max-width: 370px){
+    transform: translate3d(-50%,-55%,0);
+  }
 
   .selective_use_heard {
     margin: 5px 15px;
@@ -362,7 +384,7 @@ input {
 
     &:nth-child(4) {
      // height: 90px;
-      overflow: scroll;
+      overflow:auto;
       margin: 0 auto;
       border-top: none;
       border-bottom: 1px #dddddd solid;
@@ -372,6 +394,11 @@ input {
       border-bottom-right-radius: 3px;
       min-width: 150px;
       max-height: 300px;
+
+      @media screen and(max-width: 370px){
+        max-height: 265px;
+      }
+
 
       .plan_inline_list {
 
@@ -436,6 +463,35 @@ input {
 }
 
 
+
+/****底部黄色按钮****/
+
+
+.ag_yellow_borrow_btn{
+
+  margin-left: 5%;
+
+  width: 90%;
+
+
+  a{
+    width: 100%;
+    display: block;
+    height: 50px;
+    background: linear-gradient(left,#ffb700,#ff7800);
+    color: #ffffff;
+    border-radius: 50px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 auto;
+
+    &:active{
+      opacity: 0.6;
+    }
+  }
+
+}
 
 
 

@@ -1,0 +1,422 @@
+.return_bankcard_all{
+  width: 100%;
+  padding-top: 15px;
+  &>div{
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &>.contact_info{
+    //margin: 0 auto 20px;
+    width: 90%;
+    background-color: rgb(254,244,232);
+    padding: 5px 0;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 2px 5px 0 #ebebeb;
+    margin-top: -10px;
+    img{
+      width: 12px;
+      height: 12px;
+      vertical-align: middle;
+      margin-left: 6%;
+      margin-right: 2px;
+      display: inline-block;
+    }
+    span{
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 12px;
+    }
+    .tips{
+      width: 87%;
+    }
+  }
+}
+
+//借多少
+.borrow_how_part{
+  padding: 0 15px;
+  border-radius: 10px 10px 0 0 ;
+  width: 90%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px 0 #ebebeb;
+  .borrow_input_box {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 70%;
+      label{
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        span{
+          font-size: 20px;
+          margin-right:5px;
+          vertical-align: middle;
+          color: #4a4a4a;
+        }
+        .money_with{
+          border: none;
+          background: none;
+          font-size: 32px;
+          color: #4a4a4a;
+          width: 80%;
+          vertical-align: middle;
+          &::placeholder{
+            color: #ababab;
+            vertical-align: middle;
+          }
+        }
+        .money_with::placeholder{
+          font-size: 24px;
+          color: rgb(222,222,222);
+        }
+      }
+    }
+    .right{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 30%;
+      font-size: 14px;
+      color: #4fba9c;
+      line-height: 20px;
+      .input_box_button{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+      }
+      .borrow_all{
+        display: inline-block;
+        position: relative;
+        img{
+          padding: 10px 0 10px 20px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}
+
+.borrow_show_tips{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 10px 0;
+  width: 100%;
+  &:after{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid #dddddd;
+    bottom: 0;
+    left: 0;
+    transform: scaleY(0.5);
+  }
+  .left{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    .tittle_how{
+      font-size: 16px;
+      color: #4a4a4a;
+      padding-left: 17px;
+      position: relative;
+      white-space: nowrap;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 15px;
+        background-color: #4fba9c;
+        left: 2px;
+        top: 20%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+    .how_fonts{
+      margin-left: 2%;
+      margin-top: 5px;
+      font-size: 14px;
+      color: #ababab;
+    }
+  }
+  .right{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    img{
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+      vertical-align: middle;
+    }
+    .how_all{
+      vertical-align: middle;
+      font-size: 14px;
+      color: #4fba9c;
+      white-space: nowrap;
+    }
+  }
+}
+
+.borrow_list {
+  align-items: center!important;
+  justify-content: space-between!important;
+}
+
+.borrow_list_font {
+  color: #f39800;
+  //color: #4fba9c;
+}
+
+.card_select {
+  width: 100%;
+  text-align: center;
+  color: #ababab;
+}
+
+.bank_select {
+  display: none!important;
+
+  .bank_font {
+    font-size: 14px;
+    display: block;
+  }
+
+  .bank_name_plate {
+    padding: 0;
+  }
+
+  .bank_icon_plate {
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
+.icon_right {
+  width: 20px;
+  height: 20px;
+  position: relative;
+
+  &:before{
+    content: "";
+    position: absolute;
+    right: 2px;
+    top: 6px;
+    display: block;
+    width: 6px;
+    height:6px;
+    border-top: solid 1px #ababab;
+    border-right: solid 1px #ababab;
+    transform: rotate(45deg);
+  }
+
+}
+
+.show_card {
+
+  .bank_select {
+    display: flex!important;
+  }
+
+}
+
+.month_time {
+  padding: 10px 0;
+  width: 96%;
+  margin-left: 2%;
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 14px;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px #dddddd solid;
+    transform: scaleY(0.3);
+  }
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+
+}
+
+.borrow_time {
+
+  .tips_title {
+    text-align: center;
+  }
+
+}
+
+
+/****************************/
+/**************弹窗**************/
+
+.selective_use {
+
+  .close_plate {
+    top: 12%;
+  }
+
+}
+
+.close_plate {
+  background-color: #ffffff;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 8px 10px;
+  z-index: 700;
+
+  img {
+    width: 12px;
+    height: 12px;
+  }
+
+}
+
+
+
+.popup_use_block {
+
+  .selective_use_popup {
+    display: block;
+  }
+
+  .selective_use_plate {
+    display: block;
+  }
+
+}
+
+/***去除圆角***/
+.tips_title {
+  width: 100%;
+  background-color: #fef4e8;
+  padding: 5px 0;
+
+  img {
+    width: 12px;
+    height: 12px;
+    vertical-align: middle;
+    margin-left: 6%;
+    margin-right: 2px;
+    display: inline-block;
+  }
+
+  .tips {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    color: #f39800;
+  }
+
+
+}
+
+/***短信验证码***/
+.message_input {
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px #eee solid;
+  width: 50%;
+}
+
+.tel_input {
+  padding: 15px 0;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: 0;
+    border-top: 1px #dddddd solid;
+    transform: scaleY(0.3);
+  }
+
+}
+
+.tel_font {
+  color: #4a4a4a;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/***页面切换***/
+.ovfHiden {
+  overflow: hidden;
+  height: 100%;
+}
+
+.top_search {
+  z-index: 501;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f9;
+  transition: transform .3s;
+  display: none;
+  transform: translate3d(100%, 0, 0);
+  max-width: 992px;
+  overflow: auto;
+
+}
+
+.unfind_flex {
+  justify-content: space-between!important;
+}
+
+
+.next_corner {
+  &:before {
+    content: "";
+    position: absolute;
+    right: 2px;
+    top: 24px;
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-top: solid 1px #ababab;
+    border-right: solid 1px #ababab;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
