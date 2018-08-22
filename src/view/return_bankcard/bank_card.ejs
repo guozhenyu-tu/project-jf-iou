@@ -10,7 +10,21 @@
 
 <%- include('../../component/return_bankcard/bank_card.ejs')%>
 
+<!--弹出层-->
+<%- include('../../component/return_bankcard/popup_tips.ejs')%>
+
 <script src="../../js/jquery-3.0.0.min.js"></script>
+<script>
+
+    window.onload=function () {
+
+        //页面加载完的借钱说明
+        borrowMoneyTips();
+
+    }
+
+</script>
+
 </body>
 
 </html>

@@ -1,0 +1,135 @@
+.borrow_money_tips {
+  width: 80%;
+  position: fixed;
+  top: 30%;
+  left: 10%;
+  z-index: 668;
+  display: none;
+
+  @media (max-width: 320px) {
+    top: 20%;
+  }
+
+}
+
+.popup_tips_plate {
+  width: 100%;
+  position: relative;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 10px 0;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 130px;
+    top: -92px;
+    left: 0;
+    background-image: url("../images/img_cloud_white.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+}
+
+.borrow_money_title {
+  width: 100%;
+  margin-top: 35px;
+  text-align: center;
+}
+
+.popup_tips_title {
+  display: inline-block;
+  color: #03b490;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 25px;
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height:10px;
+    left: 0;
+    top: 7px;
+    background-image: url("../images/icon_green_three.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height:10px;
+    right: 0;
+    top: 7px;
+    background-image: url("../images/icon_green_three.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    transform: rotate(180deg);
+  }
+
+}
+
+.borrow_money_details {
+  margin-left: 50px;
+  margin-right: 25px;
+  margin-top: 10px;
+
+  li {
+    color: #4a4a4a;
+    font-size: 16px;
+    padding: 2px 0;
+    font-weight: bold;
+  }
+
+}
+
+.notice_font {
+  margin-left: 33px;
+  margin-right: 25px;
+  color: #4a4a4a;
+  font-size: 14px;
+  padding-bottom: 15px;
+}
+
+.popup_tips_close {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+}
+
+.show_borrow_tips {
+
+  .selective_use_popup {
+    display: block;
+  }
+
+  .borrow_money_tips {
+    display: block;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
