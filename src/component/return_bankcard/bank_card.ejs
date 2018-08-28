@@ -36,8 +36,12 @@
         <div class="contact_info">
             <div>
                 <div class="borrow_show_tips">
-                    <div class="left">
+                    <div class="left no_width">
                         <span class="tittle_how">怎么借</span>
+                    </div>
+                    <!--嘉会员免息额度显示-->
+                    <div class="ticket_money"><img src="../../images/ticket_icon_white.png">
+                        <span>已免息<span>123.00</span></span>
                     </div>
                 </div>
 
@@ -308,7 +312,7 @@
 
         <div class="doing_bottom">
             <div class="bottom_orange_btn">
-                <a href="apply_success_doing.html">下一步</a>
+                <a href="apply_success_doing.html">确认提交</a>
             </div>
         </div>
     </div>
@@ -337,7 +341,7 @@
     }
 
 
-    /*弹框*/
+    /*规则说明-弹框*/
     document.getElementsByClassName('how_all')[0].addEventListener('click',function(){
 
         jfShowTips.dialogShow({
@@ -348,6 +352,43 @@
             "checkBtnText":"返回",
             "checkFn": function () {
                 jfShowTips.dialogRemove()
+            }
+        });
+
+    },false)
+
+    /*确认放弃优惠券-弹框*/
+    document.getElementsByClassName('bottom_orange_btn')[0].addEventListener('click',function(){
+
+        jfShowTips.dialogShow({
+            "mainText": "放弃使用优惠券？",
+            "minText": "<p style='display: none;'>放弃使用优惠券？</p>",
+            "noCheck": false,
+            "noCancel": false,
+            "cancleBtnText":"不放弃",
+            "checkBtnText":"放弃",
+            "checkFn": function () {
+                jfShowTips.dialogRemove()
+
+                document.activeElement.blur();
+
+                setTimeout(function(){
+
+                    jfFrameFlyShow.mainFrameShow({
+                        "flyTime": "0.3s",//侧拉飞入平滑时间
+
+                        "flyEleArea": "search_company_name",//侧拉飞入的元素class选择器
+
+                        "hideButton": "goback",//侧拉返回关闭按钮的class选择器
+
+                        hideFn: function () {
+
+                            window.history.back();
+                        }
+                    })
+
+                },300)
+
             }
         });
 
@@ -604,8 +645,8 @@
         }
     }
 
-    //点击侧滑选择企业名称
-    $('#companyname_input').on('click', function () {
+    //点击侧滑选择企业名称  #companyname_input
+ /*   $('.dialog_cancel').on('click', function () {
 
         document.activeElement.blur();
 
@@ -627,7 +668,7 @@
         },300)
 
     });
-
+*/
 
     //获取验证码倒计时
     var div_code_send = document.getElementsByClassName('code_send')[0];
