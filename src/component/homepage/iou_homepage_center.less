@@ -1,7 +1,77 @@
 /*****************************/
 /**************首页中心部分************/
 .iou_homepage_center {
+  //嘉会员优惠券
+  .ticket_info{
+    font-size: 0;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      transform: scaley(0.3);
+      background-color: #e5e5e5;
+      //border-bottom: 1px solid #e5e5e5;
+    }
+    div:first-child{
+      width: 25%;
+      @media screen and (max-width: 320px){
+        width: 22.5%;
+      }
+      img{
+        width: 34px;
+        height: 34px;
+        margin-left: 40%;
+        @media screen and (max-width: 320px){
+          width: 32px;
+          height: 32px;
+        }
+      }
+    }
+    div:nth-child(2){
+      font-size: 13px;
+      @media screen and (max-width: 320px){
+        font-size: 12px;
+      }
+      flex: 1;
+      p{
+        display: inline-block;
+        span{
+          margin: 0 4px;
+        }
+      }
+    }
+    a{
+      display: block;
+      background-color: #ffb700;
+      padding: 2px 8px;
+      border-radius: 50px;
+      margin-right: 15px;
+      font-size: 14px;
+      box-sizing: border-box;
+      color: #ffffff;
+      white-space: nowrap;
+      @media screen and (max-width: 320px){
+        font-size: 12px;
+      }
+    }
+  }
 
+  .wait{
+    a{
+      display: none;
+    }
+  }
 
   //首页入口banner图
   .banner_in{
@@ -337,6 +407,8 @@
         background-color: #ffffff;
 
         &.coming_soon{
+          /*禁止点击*/
+          pointer-events: none;
           >.left_img{
 
             &:first-child{
