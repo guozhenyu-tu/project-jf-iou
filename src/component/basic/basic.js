@@ -395,6 +395,8 @@ var jfShowTips = {
 
         var checkFn = details.checkFn || null;
 
+        var noCheckFn = details.noCheckFn || null;
+
         var checkBtnText=details.checkBtnText ||'确认';
 
         var cancleBtnText=details.cancleBtnText ||'取消';
@@ -437,6 +439,13 @@ var jfShowTips = {
             thisAddDialog.getElementsByClassName('dialog_check')[0].addEventListener('click',checkFn,false);
 
         }
+
+        if(noCheckFn) {
+
+            thisAddDialog.getElementsByClassName('dialog_cancel')[0].addEventListener('click',noCheckFn,false);
+
+        }
+
 
 
     },

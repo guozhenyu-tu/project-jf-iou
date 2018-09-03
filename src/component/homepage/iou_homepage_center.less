@@ -24,14 +24,12 @@
       //border-bottom: 1px solid #e5e5e5;
     }
     div:first-child{
-      width: 25%;
-      @media screen and (max-width: 320px){
-        width: 22.5%;
-      }
+      //padding-right: 20px;
+      //width: 25%;
       img{
         width: 34px;
         height: 34px;
-        margin-left: 40%;
+        margin:0 25px 0 20px;
         @media screen and (max-width: 320px){
           width: 32px;
           height: 32px;
@@ -45,9 +43,16 @@
       }
       flex: 1;
       p{
-        display: inline-block;
-        span{
+        //display: inline-block;
+        span>span{
           margin: 0 4px;
+        }
+      }
+      .rule{
+        color: #ffb700;
+        padding:5px 20px 5px 30px;
+        @media screen and (max-width: 320px){
+          padding-left: 15px;
         }
       }
     }
@@ -63,6 +68,7 @@
       white-space: nowrap;
       @media screen and (max-width: 320px){
         font-size: 12px;
+        padding: 1px 5px;
       }
     }
   }
@@ -570,6 +576,22 @@
 
   opacity: 0.4;
 
+}
+
+/*弹框字体*/
+.boom_text_all{
+  @media screen and (max-width: 320px){
+    margin-left: 5px;
+    width: 105%;
+  }
+  .boom_text{
+    line-height: 30px;
+    font-size: 15px;
+    @media screen and (max-width: 320px){
+      font-size: 13px;
+      line-height: 25px;
+    }
+  }
 }
 
 
