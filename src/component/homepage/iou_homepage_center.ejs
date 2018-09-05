@@ -97,7 +97,7 @@
             </div>
             <div>
                 <p>5000元代还信用卡，3期免费用</p>
-                <p>2018-08-14<span>到</span>2018-08-21<span>可用</span></p>
+                <p><span>08-14<span>到</span>08-21<span>可用</span></span><span class="rule">规则</span></p>
             </div>
             <a href="../return_bankcard/bank_card.html">立即使用</a>
         </div>
@@ -206,25 +206,25 @@
 
 </div>
 
+<script>
 
+    /*优惠券规则-弹框*/
+    document.getElementsByClassName('rule')[0].addEventListener('click',function(){
 
+        jfShowTips.dialogShow({
+            "mainText": "使用规则",
+            "minText": "<ul class='boom_text_all'>" +
+            "               <li class='boom_text'>需要满足嘉白条代还信用卡使用规则</li>" +
+            "               <li class='boom_text'>借款金额小于等于免息券限制的金额</li>" +
+            "               <li class='boom_text'>分期期数等于免息券限制的期数</li>" +
+            "               <li class='boom_text'>满足嘉会员的用券规则</li>" +
+            "               <li class='boom_text'>最终解释权归嘉会员和嘉白条所有</li>" +
+            "           </ul>",
+            "noCheck": true,
+            "noCancel": false,
+            "cancleBtnText":"知道了",
+            "checkBtnText":"",
+        });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    },false)
+</script>
