@@ -453,3 +453,54 @@
 .bank_information {
   width: 100%;
 }
+
+/*开发样式重叠，单拉出来复制样式*/
+.bank_doing_bottom {
+  margin-top: 45px;
+
+  @media screen and(max-width: 370px){
+
+    margin-top:15px
+  ;
+  }
+
+  .bottom_orange_btn {
+    width: 90%;
+    margin: 5px auto;
+    padding-bottom: 10px;
+    a {
+      width: 100%;
+      display: block;
+      height: 50px;
+      background: linear-gradient(left, #ffb700, #ff7800);
+      color: #ffffff;
+      border-radius: 50px;
+      font-size: 18px;
+      text-align: center;
+      line-height: 50px;
+      margin: 0 auto;
+
+      &:active {
+        opacity: 0.6;
+      }
+    }
+
+  }
+  .gray_button_background{
+    a{
+      background: -webkit-linear-gradient(left, #dddddd, #dddddd);
+      background: linear-gradient(left, #dddddd, #dddddd);
+    }
+  }
+}
+
+/*底部确认协议*/
+.banker{
+  input:checked:after{
+    border-bottom: solid 1px #ffb700;
+    border-right: solid 1px #ffb700;
+  }
+  a{
+    color: #ffb700;
+  }
+}

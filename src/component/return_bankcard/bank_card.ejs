@@ -280,11 +280,18 @@
 
         </div>
 
-        <div class="doing_bottom">
-            <div class="bottom_orange_btn">
+        <div class="agreement banker">
+            <label><input type="checkbox"  class="tate_y">我已经阅读并同意</label><a href="../borrow/agreement_borrow.html">《嘉白条服务协议》</a>
+        </div>
+
+        <div class="bank_doing_bottom">
+            <div class="bottom_orange_btn gray_button_background">
                 <a id="companyname_input">去还信用卡</a>
             </div>
         </div>
+
+
+
     </div>
 
 
@@ -674,6 +681,37 @@
     });
 */
 
+    //同意服务协议
+    function checkedService() {
+
+        //window.onload=function () {
+
+        // document.getElementsByClassName('bottom_btn')[0].className = 'bottom_btn gray_button_background';
+
+        var clickText=document.getElementsByClassName('agreement')[0].getElementsByTagName('label')[0];
+
+        clickText.addEventListener('click',function () {
+
+            var checkedBorrow=document.getElementsByClassName('tate_y')[0];
+
+            if (checkedBorrow.checked ==true) {
+
+                document.getElementsByClassName('bottom_orange_btn ')[0].className = 'bottom_orange_btn ';
+
+            }else {
+
+                document.getElementsByClassName('bottom_orange_btn ')[0].className = 'bottom_orange_btn gray_button_background';
+
+            }
+        },false)
+
+        // }
+
+    }
+
+    checkedService();
+
+
     //获取验证码倒计时
     var div_code_send = document.getElementsByClassName('code_send')[0];
     div_code_send.addEventListener('click',function(){
@@ -691,6 +729,8 @@
             }
         },1000)
     });
+
+
 
 
 </script>
