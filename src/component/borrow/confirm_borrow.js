@@ -85,11 +85,11 @@ function checkedService() {
 
             if (checkedBorrow.checked ==true) {
 
-                document.getElementsByClassName('blue_bottom_btn')[0].className = 'blue_bottom_btn';
+                document.getElementsByClassName('ag_yellow_borrow_btn ')[0].className = 'ag_yellow_borrow_btn ';
 
             }else {
 
-                document.getElementsByClassName('blue_bottom_btn')[0].className = 'blue_bottom_btn gray_button_background';
+                document.getElementsByClassName('ag_yellow_borrow_btn ')[0].className = 'ag_yellow_borrow_btn gray_button_background';
 
             }
         },false)
