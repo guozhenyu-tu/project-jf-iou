@@ -122,10 +122,101 @@
 
 
 
+//首页代还信用卡
+.homepage_popup_tips {
+  top: 35%;
 
+  .popup_tips_plate {
+    &:after {
+      background-image: url("../images/img_homepage_cloud.png");
+      height: calc(~"100vw/667*240");
+      top: -118px;
 
+      @media (min-width: 412px) {
+        top: -130px;
+      }
 
+      @media (max-width: 360px) {
+        top: -114px;
+      }
 
+      @media (max-width: 320px) {
+        top: -100px;
+      }
+
+    }
+  }
+
+  .popup_tips_title {
+    margin-top: -50px;
+    z-index: 1;
+    letter-spacing: 2px;
+    font-weight: normal;
+
+    @media (max-width: 320px) {
+      letter-spacing: 0;
+    }
+
+    &:after{
+      display: none;
+    }
+
+    &:before {
+      display: none;
+    }
+
+  }
+
+  .borrow_money_details {
+    margin-top: -15px;
+    margin-bottom: 15px;
+
+    @media (max-width: 320px) {
+      margin-left: 35px;
+      margin-right: 15px;
+    }
+
+    li {
+      font-size: 14px;
+      font-weight: normal;
+
+      @media (max-width: 320px) {
+        font-size: 12px;
+      }
+
+    }
+  }
+
+}
+
+.tips_popup_font {
+  color: #ffb700;
+  font-size: 16px;
+
+  @media (max-width: 320px) {
+    font-size: 14px;
+  }
+
+}
+
+.popup_btn {
+  background-color: #24d291;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 16px;
+  border: none;
+  width: 82%;
+  margin: 0 9%;
+  margin-bottom: 5px;
+
+  @media (max-width: 320px) {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+}
 
 
 
