@@ -13,7 +13,7 @@ function monthTime() {
 
 }
 
-function showChooseBox() {
+function showBankCard() {
 
     var takeNow = document.getElementsByClassName('repayment_plan')[0]; //还款计划
 
