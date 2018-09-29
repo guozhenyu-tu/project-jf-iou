@@ -2,53 +2,78 @@
 <!--完善信息-->
 
 <div class="certification_main">
-    <p>完善信息</p>
 
       <div>
-        <a class="need" href="id_card.html">
-            <p><img src="../../images/icon_id_card.png"></p>
-            <p>身份认证</p>
-        </a>
+          <!--增加class名字：“go_ingo”，是去认证按钮-->
+          <a class="go_ingo" href="contact_info.html">
+              <img src="../../images/main/icon_contact.png">
+              <p>
+                  <span>联系信息<span class="orange_font">(*必填)</span></span>
+                  <!--如不需显示，在下方span标签中增加display:"none";即可-->
+                  <span style=""><img src="../../images/main/text_icon.png">认证通过，获得额度提升</span>
+              </p>
+              <div class="choose_box">去认证</div>
+              <!--字体颜色：red_font:红色；green_font:绿色；orange_font:橙色；默认黑色-->
+              <div class="style green_font">已通过<img src="../../images/main/success.png"></div>
+          </a>
 
-        <a class="need" href="contact_info.html">
-            <p><img src="../../images/icon_contact.png"></p>
-            <p>联系信息</p>
-        </a>
+          <!--增加class名字：“go_ingo”，是去认证按钮-->
+          <a class="" href="success.html">
+              <img src="../../images/main/icon_phone.png">
+              <p>
+                  <span>手机认证<span class="">(选填)</span></span>
+                  <!--如不需显示，在下方span标签中增加display:"none";即可-->
+                  <span style="display: none"><img src="../../images/main/text_icon.png">认证通过，获得额度提升</span>
+              </p>
 
-          <!--需要添加提示：加入class值：“phone”-->
-        <a class="select phone">
-            <p><img src="../../images/icon_phone.png"></p>
-            <!--<p class="red_tips_font">* 选填，可提高授信额度</p>-->
-            <p>手机认证</p>
-            <div class="phone_tip">
-                <span class="tip_up">
-                    <span>提额5000元呦</span>
-                    <span>享受专属还信用卡特权</span>
-                </span>
-                            <span class="tip_down">
-                    <span>手机认证</span>
-                </span>
-            </div>
-        </a>
+              <div class="choose_box">去认证</div>
+              <!--字体颜色：red_font:红色；green_font:绿色；orange_font:橙色；默认黑色-->
+              <div class="style green_font">已通过<img src="../../images/main/success.png"></div>
+          </a>
 
-        <!--<a class="cancle">-->
-            <!--<p><img src="../../images/icon_bank_card.png"><<im-->
-            <!--<p>银行卡认证</p>-->
-        <!--</a>-->
+          <!--增加class名字：“go_ingo”，是去认证按钮-->
+          <a class="" href="fail.html">
+              <img src="../../images/main/icon_phone.png">
+              <p>
+                  <span>手机认证<span class="orange_font">(*必填)</span></span>
+                  <!--如不需显示，在下方span标签中增加display:"none";即可-->
+                  <span style=""><img src="../../images/main/text_icon.png">认证通过，获得额度提升</span>
+              </p>
 
+              <div class="choose_box">去认证</div>
+              <!--字体颜色：red_font:红色；green_font:绿色；orange_font:橙色；默认黑色-->
+              <div class="style red_font">未通过<img src="../../images/main/no_go.png"></div>
+          </a>
+
+          <!--增加class名字：“go_ingo”，是去认证按钮-->
+          <a class="" href="progress.html">
+              <img src="../../images/main/icon_contact.png">
+              <p>
+                  <span>联系信息<span class="">(选填)</span></span>
+                  <!--如不需显示，在下方span标签中增加display:"none";即可-->
+                  <span style="display: none"><img src="../../images/main/text_icon.png">认证通过，获得额度提升</span>
+              </p>
+
+              <div class="choose_box">去认证</div>
+              <!--字体颜色：red_font:红色；green_font:绿色；orange_font:橙色；默认黑色-->
+              <div class="style orange_font">审核中<img src="../../images/main/loding.png"></div>
+          </a>
     </div>
+
 </div>
 
 
 
+<!--
 <div class="agreement">
     <label><input type="checkbox" class="">我已经阅读并同意</label><a href="authorise_agreement.html">《个人信息授权协议》</a>
 </div>
+-->
 
 
 <%- include('../basic/one_green_btn.ejs',{
-"hrefone":"progress.html",
-"btntext":"提交"
+"hrefone":"../homepage/homepage.html",
+"btntext":"返回首页"
 })%>
 
 

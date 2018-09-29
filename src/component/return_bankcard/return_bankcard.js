@@ -68,8 +68,9 @@ function showBankCard() {
         },false)
 
     }
+}
 
-    //选择月份，关闭弹窗
+    /*//选择月份，关闭弹窗
     var selectMonth = document.getElementsByClassName('month_time');
 
     for (var i=0;i<selectMonth.length;i++) {
@@ -84,4 +85,4 @@ function showBankCard() {
 
 }
 
-
+*/
