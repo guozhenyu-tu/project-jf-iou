@@ -1,17 +1,26 @@
 
 
-<div class="contact_info">
+<div class="contact_info id_tips">
     <!--身份认证-->
+    <label class="ti_box tip_b">
+        <!--如需不显示，在style中增加样式：display:none;-->
+        <span class="ti_span " style="">根据监管要求需要实名注册</span>
+    </label>
     <div>
+        <!--如需不显示在下方的label中加入style="display:none"-->
         <label class="input_list">
             <div class="title_n title_code">姓名</div>
-            <div class="input_form_n">葫芦娃</div>
+            <div class="input_form_n">
+                <!--如需不可编辑 在下方input中加入readonly 即可-->
+                <input placeholder="请输入姓名" value="葫芦娃" type="text"/></div>
         </label>
 
+        <!--如需不显示在下方的label中加入style="display:none"-->
         <label class="input_list ">
             <div class="title_n title_code">身份证号码</div>
             <div  class="input_form_n">
-                <input placeholder="请输入身份证号码" type="text"/>
+                <!--如需不可编辑 在下方input中加入readonly 即可-->
+                <input placeholder="请输入身份证号码" type="text" value="12345677889"/>
             </div>
         </label>
 
@@ -31,6 +40,9 @@
 </div>
 
 
+<div class="agreement">
+    <label><input type="checkbox" class="checkbox">我已经阅读并同意</label><a href="authorise_agreement.html">《个人信息授权协议》</a>
+</div>
 
 <div class="in_btn_gray">
     <a>提交</a>
@@ -67,10 +79,10 @@
 
             setTimeout(function(){
 
-                //jfShowTips.loadingRemove(); //loading动画
+               jfShowTips.loadingRemove(); //loading动画
 
 
-                //  window.location.href="fail.html"
+               window.location.href="success.html"
 
             },3000)
         }
@@ -98,10 +110,33 @@
 
 
 
+    /*填写信息，同意协议按钮变色*/
+
     var input = document.getElementsByTagName('input');
     var length = input.length;
     while(length--){
-        input[length].addEventListener('input',function () {
+
+        if(input[length].type=='checkbox'){
+
+            input[length].addEventListener('change',inputAndCheckbox)
+
+        }
+
+        else {
+
+            input[length].addEventListener('input',inputAndCheckbox)
+
+        }
+
+
+
+
+    }
+
+    function inputAndCheckbox() {
+
+
+        if(document.getElementsByClassName('checkbox')[0].checked){
             var input = document.getElementsByTagName('input');
             var input_value = true;
             var length = input.length;
@@ -110,15 +145,19 @@
                     input_value = false;
                 }
             }
-            if(input_value){
+            if(input_value == true){
                 var button = document.getElementsByClassName('in_btn_gray')[0];
                 button.classList.add('in_green');
             }else{
                 var button = document.getElementsByClassName('in_btn_gray')[0];
                 button.classList.remove('in_green');
             }
-        })
-    }
+        }
+        else{
+            var button = document.getElementsByClassName('in_btn_gray')[0];
+            button.classList.remove('in_green');
+        }
 
+    }
 
 </script>

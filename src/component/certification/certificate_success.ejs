@@ -1,13 +1,38 @@
 <div class="success_page">
     <%- include('../basic/icon_success.ejs')%>
 
-    <p class="success_title">认证成功</p>
+    <p class="success_title">注册成功</p>
 
-    <p class="success_text">恭喜您，完成联系人信息认证！</p>
+    <p class="success_text">已获得500.00元信用额度</p>
 
     <%- include('../basic/one_green_btn.ejs',{
-    "hrefone":"main.html",
-    "btntext":"返回"
+    "hrefone":"../homepage/homepage.html",
+    "btntext":"返回首页"
     })%>
 
+    <p class="success_text over_time_txt"><span id="time_over">3</span>s后自动返回首页</p>
+
+
 </div>
+
+
+
+<script>
+
+    /*倒计时3秒-跳转回首页*/
+    window.onload=function(){
+        var myspan=document.getElementById("time_over");
+        var timer=3;
+        var flag;
+        function daoji(){
+            timer=timer-1;
+            myspan.innerHTML=timer;
+            if(timer==0){
+                location.href="../homepage/homepage.html";
+                clearInterval(flag);
+            }
+        }
+        flag=setInterval(daoji,1000);
+    }
+
+</script>
