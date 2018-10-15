@@ -1,319 +1,249 @@
-/*****************************/
-/**************首页顶部************/
-button {
-
-  outline: none;
-
-}
-
-.iou_homepage_top {
-
-  position: relative;
-  width: 100%;
-  height: 165px;
+.iou_homepage_top{
+  width: 94%;
+  height: 100px;
   background-image: url("../images/background_green.png");
+  background-position: bottom;
   background-size: 100%;
   background-repeat: no-repeat;
-  text-align: center;
-  background-position: center;
-  background-origin: content-box;
-
-
-
-  @media screen and(max-width: 320px) {
-
-    height: 130px;
-
+  padding: 0 3%;
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .homepage_logo{
+    width: 76px;
+    height: 76px;
+    opacity: .9;
   }
+  /*右侧可编辑部分*/
 
-  @media screen and(min-width: 414px) {
-
-    height: 175px;
-
-  }
-
-    /*********图片上的文字*********/
-  p {
-
-    color: #ffffff;
-
-    &:nth-child(1) {
-
-      font-size: 18px;
-      padding-top: 10px;
-      line-height: 20px;
-
-      @media screen and(max-width: 320px) {
-
-        font-size: 12px;
-        line-height: 25px;
-
-      }
-
-      @media screen and(min-width: 414px) {
-
-        padding-top: 15px;
-
-      }
-
-    }
-
-    &:nth-child(2) {
-
-      font-size: 38px;
-      line-height: 60px;
-
-      @media screen and(max-width: 320px) {
-
-        font-size: 33px;
-        line-height: 45px;
-
-      }
-
-    }
-
-    &:nth-child(3) {
-
+  /*免费激活*/
+  .homepage_sign_up{
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .up_number,.go_more,.review_box_show,.pass_box_show{
       display: none;
-
-      font-size: 16px;
-      line-height: 15px;
-
-      @media screen and(max-width: 320px) {
-
-        display: none;
-
-        font-size: 12px;
-        line-height: 10px;
-
+    }
+    .hello_text{
+      margin-left: 7%;
+      font-size: 20px;
+      color: #ffffff;
+      @media screen and (max-width: 320px){
+        font-size: 16px;
+        margin-left: 4%;
       }
+      @media screen and (min-width: 360px) and (max-width: 375px){
+        font-size: 18px;
+        margin-left: 5%;
+      }
+    }
+    .sign_up{
+      display: inline-block;
+      text-align: center;
+      line-height: 20px;
+      font-size: 14px;
+      min-width: 25%;
+      padding: 4px;
+      border-radius: 50px;
+      background-color: #ffb700;
+      color: #ffffff;
+      @media screen and (max-width: 320px){
+        font-size: 12px;
+      }
+    }
+  }
 
+  /*免费提额*/
+  .up_more{
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .hello_text,.sign_up,.review_box_show,.pass_box_show{
+      display: none;
+    }
+    .go_more{
+      display: inline-block;
+      text-align: center;
+      line-height: 20px;
+      font-size: 14px;
+      min-width: 25%;
+      padding: 4px;
+      border-radius: 50px;
+      background-color: #ffb700;
+      color: #ffffff;
+      @media screen and (max-width: 320px){
+        font-size: 12px;
+      }
+    }
+    .up_number{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      font-size: 18px;
+      color: #ffffff;
+      margin-left: 8%;
+      @media screen and (max-width: 320px){
+        font-size: 16px;
+        margin-left: 4%;
+      }
+      @media screen and (min-width: 360px) and (max-width: 375px){
+        font-size: 18px;
+        margin-left: 5%;
+      }
+      /*可用额度*/
+      >.user_money{
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-bottom: 2px;
+        font-size: 18px;
+        @media screen and (max-width: 320px){
+          margin-bottom: 1px;
+          font-size: 16px;
+        }
+        &:after{
+          content: '';
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          background-image: url("../images/home_page_line.png");
+          background-size: 100%;
+          background-repeat: no-repeat;
+        }
+        @media screen and (max-width: 320px){
+          &:after{
+            content: '';
+            bottom: -1px;
+          }
+        }
+        >span:first-child{
+          margin-right: 4px;
+          display: inline-block;
+          width: 76px;
+          text-align: justify;
+          @media screen and (max-width: 320px) {
+            width: 68px;
+            margin-right: 2px;
+          }
+          &:after{
+            content: '';
+            display: inline-block;
+            width: 100%;
+          }
+        }
+        >span:last-child{
+          margin-left: 4px;
+          @media screen and (max-width: 320px){
+            margin-left: 2px;
+          }
+        }
+      }
+      /*总额度*/
+      >.all_money{
+        display: flex;
+        align-items: center;
+        margin-top: 2px;
+        font-size: 18px;
+        @media screen and (max-width: 320px){
+          margin-top: 1px;
+          font-size: 16px;
+        }
+        >span:first-child{
+          margin-right: 4px;
+          display: inline-block;
+          width: 76px;
+          text-align: justify;
+          @media screen and (max-width: 320px) {
+            width: 68px;
+            margin-right: 2px;
+          }
+          &:after{
+            content: '';
+            display: inline-block;
+            width: 100%;
+          }
+        }
+        >span:last-child{
+          margin-left: 4px;
+          @media screen and (max-width: 320px){
+            margin-left: 2px;
+          }
+        }
+      }
     }
 
   }
-
-  /*********额度状态*********/
-  .quota_state {
-
-    width: 25%;
-    margin: 10px auto;
-    padding: 8px 0;
-    border-radius: 20px;
-    background-color: #ffb700;
-    //color: #46b48b;
-    color: white;
-    font-size: 14px;
-    border: none;
-
-    &:active {
-
-      opacity: .80;
-
+  /*审核中状态*/
+  .homepage_review_show{
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .hello_text,.up_number,.sign_up,.go_more,.pass_box_show{
+      display: none;
     }
-
-    @media screen and(min-width: 750px) {
-
-      margin: 15px auto;
-
+    .review_box_show{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      color: #ffffff;
+      .review_up_text{
+        display: flex;
+        align-items: center;
+        img{
+          width: 18px;
+          height: 18px;
+          margin-right: 4px;
+        }
+        font-size: 16px;
+      }
+      .review_down_text{
+        font-size: 16px;
+        margin-top: 2px;
+      }
     }
-
-    @media screen and(max-width: 320px) {
-
-      width: 25%;
-      font-size: 14px;
-      padding: 3px 0;
-
+  }
+  /*未通过状态*/
+  .homepage_pass_show{
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .hello_text,.up_number,.sign_up,.go_more,.review_box_show{
+      display: none;
     }
-
+    .pass_box_show{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      color: #ffffff;
+      .not_pass_text{
+        display: flex;
+        align-items: center;
+        img{
+          width: 18px;
+          height: 18px;
+          margin-right: 4px;
+        }
+        font-size: 16px;
+      }
+      .not_pass_text{
+        font-size: 16px;
+        margin-top: 2px;
+      }
+    }
   }
 
 }
-
-/*********已激活按钮变的样式*********/
-.quota_state_checked {
-
-  p {
-
-    color: #ffffff;
-
-    &:nth-child(1) {
-
-      font-size: 16px;
-      padding-top: 15px;
-      line-height: 15px;
-
-      @media screen and(max-width: 320px) {
-
-        font-size: 12px;
-        line-height: 15px;
-
-      }
-
-      @media screen and(min-width: 414px) {
-
-        padding-top: 15px;
-
-      }
-
-    }
-
-    &:nth-child(2) {
-
-      font-size: 40px;
-      line-height: 66px;
-
-      @media screen and(max-width: 320px) {
-
-        font-size: 33px;
-        line-height: 45px;
-
-      }
-
-    }
-
-    &:nth-child(3) {
-
-      display: block;
-
-      font-size: 16px;
-      line-height: 15px;
-
-      @media screen and(max-width: 320px) {
-
-        font-size: 12px;
-        line-height: 10px;
-
-      }
-
-    }
-
-  }
-
-
-
-
-  .quota_state {
-
-    //width: 20%;
-    padding: 4px 0;
-    background:none;
-    border: none;
-    color: white;
-    font-size: 16px;
-    @media screen and(max-width: 320px) {
-
-      font-size: 14px;
-
-    }
-
-  }
-
-  .activated_state{
-
-    width: 40px;
-
-    height: 36px;
-
-  }
-
-  .activated_state{
-
-    background: url("../images/activated_state.png") center no-repeat;
-
-    background-size: 100%;
-
-    display: inline-block;
-
-    //position: absolute;
-    //
-    //top:5%;
-    //
-    //right: 2%;
-
-    margin-right: 4px;
-
-    width: 20px;
-
-    height: 20px;
-
-    vertical-align: text-bottom;
-
-  }
-
-  .examine_state{
-
-    background: url("../images/examine_state.png") center no-repeat;
-
-    background-size: 100%;
-
-    display: inline-block;
-
-    margin-right: 4px;
-
-    width: 20px;
-
-    height: 20px;
-
-    vertical-align: text-bottom;
-
-  }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

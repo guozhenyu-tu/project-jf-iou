@@ -71,12 +71,31 @@
                  }
         }
 
+      /*单位地址-文本域文字居中*/
+      .work_text{
+        textarea{
+          &::placeholder{
+            line-height: 88px;
+          }
+        }
+      }
+      /*居住地-文本域文字居中*/
+      .live_text{
+        textarea{
+          &::placeholder{
+            line-height: 44px;
+          }
+        }
+      }
+
       .input_form>input, .input_form>textarea, .input_form>select{
         border: none;
         width: 100%;
         outline: none;
         font-size: 14px;
+
       }
+
       &:after{
         content: "";
         position: absolute;
