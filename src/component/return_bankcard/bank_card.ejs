@@ -404,10 +404,9 @@
         });
 
     },false)
-
     //loading动画,10s后会自动移除
     jfShowTips.loadingShow({
-        "text":"<span class='bank_card_lod_text'>请先完成提额认证<span>页面跳转中</span></span>"
+        "text":"<span class='bank_card_lod_text'>请先完成提额认证<!--<span>跳转中</span>--></span>"
     })
 
     setTimeout(function(){
@@ -417,7 +416,7 @@
 
         window.location.href="../certification/main.html"
 
-    },2000)
+    },20000)
     $(document).ready(function(){
         var max_money = $('#borrow_money_max').text();
         $('.money_with:eq(0)').attr('value',max_money);
