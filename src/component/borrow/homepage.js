@@ -84,6 +84,10 @@ var chooseSalary={
 
         var salaryTotal=parseFloat(document.getElementsByClassName('max')[0].innerHTML)-parseFloat(document.getElementsByClassName('min')[0].innerHTML);
 
+        var addBtn = document.getElementsByClassName('add_money_btn')[0];
+
+        var noneBtn = document.getElementsByClassName('none_money_btn')[0];
+
         var firstPointX;
 
         var lastPonintX;
@@ -96,11 +100,51 @@ var chooseSalary={
 
         var coinMove;//钱币移动的距离
 
+        var changeNum = 100;//点击按钮变换金额幅度
+
         initNum();//初始化数据
 
         thisMoveCoin.addEventListener("touchstart",startFn,false);
 
         thisMoveCoin.addEventListener("touchmove",moveFn,false);
+
+        addBtn.addEventListener('click',function () {
+
+            if(+saveMoneyEle.innerHTML < +document.getElementsByClassName('max')[0].innerHTML){
+
+                if(+document.getElementsByClassName('max')[0].innerHTML - saveMoneyEle.innerHTML < 100){
+
+                    changeNum = +document.getElementsByClassName('max')[0].innerHTML - saveMoneyEle.innerHTML;
+
+                }
+
+                saveMoneyEle.innerHTML = +(saveMoneyEle.innerHTML) + changeNum;
+
+                initNum();
+
+                changeNum = 100;
+
+            }
+        });
+
+        noneBtn.addEventListener('click',function () {
+
+            if(+saveMoneyEle.innerHTML > +document.getElementsByClassName('min')[0].innerHTML){
+
+                if(+saveMoneyEle.innerHTML - document.getElementsByClassName('min')[0].innerHTML < 100){
+
+                    changeNum = +saveMoneyEle.innerHTML - document.getElementsByClassName('min')[0].innerHTML;
+
+                }
+
+                saveMoneyEle.innerHTML = +(saveMoneyEle.innerHTML) - changeNum;
+
+                initNum();
+
+                changeNum = 100;
+
+            }
+        });
 
         //初始化数据
         function initNum(){
@@ -126,7 +170,25 @@ var chooseSalary={
 
             coinMove=initGreenWidth;
 
-            translateFn(thisMoveCoin)
+            translateFn(thisMoveCoin);
+
+            if(+saveMoneyEle.innerHTML >= +document.getElementsByClassName('max')[0].innerHTML){
+
+                addBtn.classList.add('gray_btn');
+
+            }else{
+
+                addBtn.classList.remove('gray_btn');
+
+            }
+
+            if(+saveMoneyEle.innerHTML <= +document.getElementsByClassName('min')[0].innerHTML){
+
+                noneBtn.classList.add('gray_btn');
+            }
+            else{
+                noneBtn.classList.remove('gray_btn');
+            }
         }
 
         function startFn(e){
@@ -222,6 +284,24 @@ var chooseSalary={
 
 
 
+            }
+
+            if(+saveMoneyEle.innerHTML >= +document.getElementsByClassName('max')[0].innerHTML){
+
+                addBtn.classList.add('gray_btn');
+
+            }else{
+
+                addBtn.classList.remove('gray_btn');
+
+            }
+
+            if(+saveMoneyEle.innerHTML <= +document.getElementsByClassName('min')[0].innerHTML){
+
+                noneBtn.classList.add('gray_btn');
+            }
+            else{
+                noneBtn.classList.remove('gray_btn');
             }
 
         }

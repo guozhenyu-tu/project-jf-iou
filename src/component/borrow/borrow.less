@@ -329,9 +329,9 @@
 
     .main_mid{
 
-      //padding: 15px 0;
+      padding: 15px 0;
 
-      padding-bottom: 15px;
+      //padding-bottom: 15px;
 
       @media screen and(max-width: 360px){
         padding: 10px 0;
@@ -340,6 +340,9 @@
         text-align: center;
         margin-bottom: 18px;
         margin-top: -5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         @media screen and(max-width: 380px) {
           margin-bottom: 15px;
@@ -350,10 +353,42 @@
         @media screen and(max-width: 360px){
           margin-bottom: 10px;
         }
+
+        .add_money_btn,.none_money_btn{
+          width: 26px;
+          height: 26px;
+          font-size: 18px;
+          background: #4cbb9b;
+          text-align: center;
+          line-height: 26px;
+          opacity: .6;
+          color: #ffffff;
+          border: none;
+          border-radius: 100px;
+          @media screen and (max-width: 330px){
+            width: 20px;
+            height: 20px;
+            font-size: 16px;
+            line-height: 20px;
+          }
+          @media screen and (max-width: 380px){
+            width: 22px;
+            height: 22px;
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+
+        .gray_btn{
+          background: #dddddd;
+        }
+
         .money_num{
           font-size: 40px;
           color: #ffa316;
           display: inline-block;
+          margin-left: 10px;
+          margin-right: 10px;
 
           @media screen and(max-width: 380px) {
             font-size: 36px;
