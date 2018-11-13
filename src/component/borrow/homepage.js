@@ -258,7 +258,25 @@ var chooseSalary={
 
                     if(thisBalance>=50){//超过50，则加100,否则维持原来整数
 
-                        showMoneyNum=showMoneyNum-thisBalance+100;
+                        if(+document.getElementsByClassName('max')[0].innerHTML - saveMoneyEle.innerHTML > 100){
+
+                            showMoneyNum=showMoneyNum-thisBalance+100;
+
+                        }else{
+
+                            if(parseFloat(document.getElementsByClassName('green')[0].style.width) > parentEleWidth-10){
+
+                                saveMoneyEle.innerHTML = document.getElementsByClassName('max')[0].innerHTML;
+
+                                return;
+
+                            }else{
+
+                                showMoneyNum=showMoneyNum-thisBalance;
+
+                            }
+
+                        }
                     }else {
                         showMoneyNum=showMoneyNum-thisBalance;
                     }

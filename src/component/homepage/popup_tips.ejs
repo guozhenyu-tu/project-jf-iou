@@ -6,13 +6,10 @@
         <div class="popup_tips_plate">
             <div class="borrow_money_title"><p class="popup_tips_title">代还信用卡</p></div>
 
-            <ul class="borrow_money_details">
-                <li>借款打到指定信用卡、<span class="tips_popup_font">可还信用卡</span>、<span class="tips_popup_font">可提现</span>（以发卡行规则为准）</li>
-
-                <li>日费用<span class="tips_popup_font">0.049%</span>、年化<span class="tips_popup_font">17.64%</span>、借款分期还，比借呗、微粒贷、银行信用卡分期还优惠</li>
-            </ul>
-
-            <button class="popup_btn">免费激活</button>
+            <div class="tp_p_box">
+                <p class="tp_box_text">支持<span class="popup_tips_title tp_none">福豆组合福利</span></p>
+                <p class="tp_box_text">支付宝、微信、工资还款</p>
+            </div>
         </div>
 
         <div class="popup_tips_close"><img src="../../images/icon_borrow_close.png"></div>
@@ -21,9 +18,8 @@
 
 
 <script>
-
     //页面加载完的免费激活弹窗
-    //borrowMoneyTips();
+    borrowMoneyTips();
 
     //点击“免费激活”按钮，关闭弹窗
     /*document.getElementsByClassName('popup_btn')[0].addEventListener('click',function () {
